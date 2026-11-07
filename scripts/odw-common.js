@@ -5,6 +5,7 @@
    Notes: v5.3 Migrates map modals to standalone physical files fetched via 
           Hybrid Fetch, integrating the external v7 map zoom engine. Plus new subnav snippet for WWII.
    ========================================================================== */
+
 import { initRouter } from './odw-router.js';
 
 // === 1. CROSS-PAGE BOOKMARK JUMP ENGINE ===
@@ -27,34 +28,12 @@ if (window.location.hash) {
     });
 }
 
-// === AUTOMATIC LEGACY PATH SANITIZER ===
-// If running on the subdomain, auto-clean old /oakdalewarmemorial/ paths in HTML markup
-if (!window.location.pathname.includes('/oakdalewarmemorial/')) {
-    // Fix all hardcoded hyperlinks
-    document.querySelectorAll('a[href*="/oakdalewarmemorial/"]').forEach(a => {
-        const oldHref = a.getAttribute('href');
-        a.setAttribute('href', oldHref.replace('/oakdalewarmemorial/', '/'));
-    });
-    // Fix all hardcoded image paths
-    document.querySelectorAll('img[src*="/oakdalewarmemorial/"]').forEach(img => {
-        const oldSrc = img.getAttribute('src');
-        img.setAttribute('src', oldSrc.replace('/oakdalewarmemorial/', '/'));
-    });
-}
-
 // ==========================================================================
 // DOM LOADED EVENT
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
     const eraType = document.body.getAttribute("data-era");
-    let rootPrefix = document.body.getAttribute("data-root") || "./"; 
-    
-    // === SMART ENVIRONMENT ADAPTOR ===
-    // Strips out /oakdalewarmemorial/ on standalone subdomains (like GitHub),
-    // but keeps it intact if running inside a subfolder environment (like W3Schools).
-    if (!window.location.pathname.includes('/oakdalewarmemorial/')) {
-        rootPrefix = rootPrefix.replace('/oakdalewarmemorial/', '/');
-    }
+    const rootPrefix = document.body.getAttribute("data-root") || "./"; 
 
     if (eraType) {
         initRouter(eraType, rootPrefix); 
@@ -81,10 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const navSnippetFile = (eraType && eraType.includes("ww2")) 
             ? "snippets/odw-ww2-story-nav-snippet.html" 
             : "snippets/odw-story-nav-snippet.html";
+        
         fetch(rootPrefix + navSnippetFile)
             .then(res => res.text())
             .then(html => {
                 storyNavSocket.innerHTML = html.replace(/\{ROOT\}/g, rootPrefix);
+                
+                // === UNIFIED FOOTNOTE HIGHLIGHTING ENGINE ===
+                // This fires immediately after either the 4-panel or 6-panel grid is injected
+                const currentUrl = window.location.href.split('#')[0].split('?')[0];
+                const footnoteLinks = document.querySelectorAll('.story-footnote-link, .story-footnote-link-02, .story-top-tab');                
+                footnoteLinks.forEach(link => {
+                    // link.href gets the absolute parsed URL from the DOM
+                    if (link.href === currentUrl) {
+                        link.classList.add('selected');
+                    }
+                });
             })
             .catch(err => console.error("Story Nav Injection Error:", err));
     }
@@ -129,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "workman_w.html", 
                 "young_a.html"
             ];
+
             const ww2Roster = [
                 "adams_k_t_j.html",
                 "canniff_j.html",
@@ -154,18 +146,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 "watkins_i_w.html",
                 "williams_g_r.html",
                 "williams_g_j.html"
-            ];
+                ];
+
             const roster = (eraType === "ww1-profile") ? ww1Roster : ww2Roster;
             const currentFile = window.location.pathname.split("/").pop();
             const index = roster.indexOf(currentFile);
+
             if (index !== -1) {
                 const prev = index > 0 ? roster[index - 1] : null;
                 const next = index < roster.length - 1 ? roster[index + 1] : null;
                 const backLink = (eraType === "ww1-profile") ? "ww1-fallen.html" : "ww2-fallen.html";
+
                 navSocket.innerHTML = `
                     <div class="nav-btn-box left">${prev ? `<a href="${prev}" class="profile-nav-btn">&larr; Prev</a>` : ''}</div>
                     <div class="nav-btn-box center"><a href="${backLink}" class="profile-nav-btn">Back to List</a></div>
-                    <div class="nav-btn-box right">${next ? `<a href="${next}" class="profile-nav-btn">Next &rarr;</a>`}</div>
+                    <div class="nav-btn-box right">${next ? `<a href="${next}" class="profile-nav-btn">Next &rarr;</a>` : ''}</div>
                 `;
             }
         }
@@ -225,6 +220,7 @@ document.addEventListener('click', (e) => {
             const caption = document.getElementById('modal-caption-text');
             const htmlTarget = document.getElementById('modal-target-html');
             const mapInstructions = document.getElementById('modal-map-instructions');
+
             if (targetImg) targetImg.style.display = 'none';
             if (caption) caption.style.display = 'none';
             if (mapInstructions) mapInstructions.style.display = 'none'; 
@@ -237,12 +233,15 @@ document.addEventListener('click', (e) => {
             } else {
                 modal.setAttribute('data-theme', 'paneled'); 
             }
+
             if (htmlTarget) {
                 htmlTarget.style.display = 'block';
                 htmlTarget.innerHTML = '<div style="padding: 40px 20px; text-align: center; font-style: italic; opacity: 0.7;">Retrieving archive data...</div>';
             }
+
             document.body.style.overflow = 'hidden';
             modal.classList.add('modal-active');
+
             const targetType = fetchTrigger.getAttribute('data-target');
             if (targetType === 'modal') {
                 const selector = fetchTrigger.getAttribute('href'); 
@@ -258,6 +257,7 @@ document.addEventListener('click', (e) => {
 
         // CLOSE MODAL LOGIC
         if (e.target.closest('.modal-close-btn') || e.target.id === 'odw-lightbox-modal') {
+            
             if (history.state && history.state.isHybridModal) {
                 history.back(); 
             } else {
@@ -267,6 +267,7 @@ document.addEventListener('click', (e) => {
                 
                 const mapInstructions = document.getElementById('modal-map-instructions');
                 if (mapInstructions) mapInstructions.style.display = 'none';
+
                 setTimeout(() => {
                     const htmlTarget = document.getElementById('modal-target-html');
                     if (htmlTarget) htmlTarget.innerHTML = '';
@@ -294,6 +295,7 @@ async function executeHybridFetch(url, container) {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const htmlString = await response.text();
+
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
         const template = doc.querySelector('#hybrid-summary-payload');
@@ -302,11 +304,13 @@ async function executeHybridFetch(url, container) {
             container.innerHTML = ''; 
             container.appendChild(template.content.cloneNode(true));
             history.pushState({ isHybridModal: true }, '', url);
+
             setTimeout(() => {
                 if (typeof window.initMapZoomEngine === 'function') {
                     window.initMapZoomEngine();
                 }
             }, 50);
+
         } else {
             console.warn('Target page is missing the #hybrid-summary-payload template.');
             window.location.href = url; 
