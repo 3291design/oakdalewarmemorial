@@ -9,15 +9,15 @@
     <meta name="author" content="Melanie Copleston, 3291design">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS -- USING ABSOLUTE PATHS! -->
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+   <link rel="stylesheet" href="/css/odw-core.css">
+   <link rel="stylesheet" href="/css/odw-typography.css">
+   <link rel="stylesheet" href="/css/odw-profiles.css">
+   <link rel="stylesheet" href="/css/odw-components.css">
   
 </head>
 
 <!-- CRITICAL: data-era must be "ww1-profile" for the Prev/Next pagination to load -->
-<body data-era="ww1-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww1-profile" data-root="/">
   
   <div class="main-container">
 
@@ -34,7 +34,7 @@
         <!-- Flexbox Core Presentation Component -->
         <div class="flex-container">
             <div class="image">
-                <img src="/oakdalewarmemorial/images/blank_man.gif" alt="William Arthur Lloyd Portrait Placeholder" class="soldier-portrait-img">
+                <img src="/images/blank_man.gif" alt="William Arthur Lloyd Portrait Placeholder" class="soldier-portrait-img">
             </div>
 
             <div class="profile">
@@ -49,13 +49,13 @@
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
             <a href="#modal-medals-lloyd-w" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
-                    <img alt="1914-1915 Star Medal Ribbon" src="/oakdalewarmemorial/images/medal_1914-15-star_sm.jpg" class="medal-ribbon-img">
+                    <img alt="1914-1915 Star Medal Ribbon" src="/images/medal_1914-15-star_sm.jpg" class="medal-ribbon-img">
                 </div>
                 <div class="soldier-medals-box">
-                    <img alt="Victory Medal Ribbon" src="/oakdalewarmemorial/images/medal_victory_sm.jpg" class="medal-ribbon-img">
+                    <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
                 </div>
                 <div class="soldier-medals-box">
-                    <img alt="British War Medal Ribbon" src="/oakdalewarmemorial/images/medal_war_sm.jpg" class="medal-ribbon-img">
+                    <img alt="British War Medal Ribbon" src="/images/medal_war_sm.jpg" class="medal-ribbon-img">
                 </div>
             </a>
         </div> 
@@ -65,20 +65,20 @@
             
             <!-- Profile Artifact Dock with Dual Buttons (SVGs Stripped) -->
             <div class="profile-artifact-dock">
-                <a href="/oakdalewarmemorial/images/lloyd_w_headstone.jpg" 
+                <a href="/images/lloyd_w_headstone.jpg" 
                 data-lightbox="artifact" 
                 data-caption="Military Gravestone: Sapper William Arthur Lloyd<br />Killed in Action, 30 November 1915, (Aged 22)" 
                 class="artifact-btn btn-gravestone">
                     <span class="artifact-label">Gravestone Photo</span>
                 </a>
                
-                <a href="/oakdalewarmemorial/stories/mh-ww1_gallipoli_campaign.html" 
+                <a href="/stories/mh-ww1_gallipoli_campaign.html" 
                    class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
                    data-target="sidebar">
                     <span class="artifact-label">Gallipoli Campaign</span>
                 </a>
 
-                <a href="/oakdalewarmemorial/ww1/ww1-timeline.html?jump=event-30nov1915" 
+                <a href="/ww1/ww1-timeline.html?jump=event-30nov1915" 
                 class="artifact-btn btn-timeline">
                     <span class="artifact-label">View Timeline</span>
                 </a>
@@ -88,7 +88,7 @@
             <div class="bio-text">
                 <div class="bio-inline-thumb">
                     <a href="#modal-pink-farm" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                        <img src="/oakdalewarmemorial/images/pink_farm_cemetery.jpg" alt="Beautiful sunlit panorama of Pink Farm Cemetery, Gallipoli, Turkey">
+                        <img src="/images/pink_farm_cemetery.jpg" alt="Beautiful sunlit panorama of Pink Farm Cemetery, Gallipoli, Turkey">
                     </a>
                     <span class="bio-thumb-caption">
                         Pink Farm Cemetery, Helles.<br>
@@ -103,7 +103,7 @@
             </div>
             
             <div class="bio-text">
-                In late 1915 the division was in <a href="/oakdalewarmemorial/stories/mh-ww1_gallipoli_campaign.html" class="hybrid-fetch-trigger soldier-link">Gallipoli</a>, stationed at the Helles Front at the southern tip of the peninsula. Sapper W A Lloyd (Deal/1361/S) was shot in the head and killed in action 30 November 1915, aged 22. He lies in <a href="http://www.cwgc.org/find-a-cemetery/cemetery/66301/PINK%20FARM%20CEMETERY,%20HELLES" target="_blank" rel="noopener" class="profile-external-link">Pink Farm Cemetery, Helles</a>.
+                In late 1915 the division was in <a href="/stories/mh-ww1_gallipoli_campaign.html" class="hybrid-fetch-trigger soldier-link">Gallipoli</a>, stationed at the Helles Front at the southern tip of the peninsula. Sapper W A Lloyd (Deal/1361/S) was shot in the head and killed in action 30 November 1915, aged 22. He lies in <a href="http://www.cwgc.org/find-a-cemetery/cemetery/66301/PINK%20FARM%20CEMETERY,%20HELLES" target="_blank" rel="noopener" class="profile-external-link">Pink Farm Cemetery, Helles</a>.
             </div>
 
             <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
@@ -140,10 +140,10 @@
               </div>
               <hr class="basic">
               
-              <p class="display-text">William Arthur Lloyd, a farmer's son from Tir Sais Farm, enlisted in April 1915 and served as a Sapper in the Royal Marines Divisional Engineers. Deployed to the perilous Helles Front at the southern tip of the Gallipoli peninsula, he endured the brutal conditions of the campaign. On 30 November 1915, at just 22 years of age, Sapper Lloyd was shot in the head and killed in action. He rests today in Pink Farm Cemetery at Helles. <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww1/lloyd_w_a.html">Read Full Profile</a></p>
+              <p class="display-text">William Arthur Lloyd, a farmer's son from Tir Sais Farm, enlisted in April 1915 and served as a Sapper in the Royal Marines Divisional Engineers. Deployed to the perilous Helles Front at the southern tip of the Gallipoli peninsula, he endured the brutal conditions of the campaign. On 30 November 1915, at just 22 years of age, Sapper Lloyd was shot in the head and killed in action. He rests today in Pink Farm Cemetery at Helles. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/lloyd_w_a.html">Read Full Profile</a></p>
               
               <!-- Story Sidebar Trigger -->
-                  <a href="/oakdalewarmemorial/stories/mh-ww1_gallipoli_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                  <a href="/stories/mh-ww1_gallipoli_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                  <span class="artifact-label">Gallipoli Campaign</span>
                   </a>
           </div>
@@ -159,17 +159,17 @@
           
           <div class="medal-display-row">
               <div class="medal-item">
-                  <img alt="1914-1915 Star Medal" src="/oakdalewarmemorial/images/medal_1914-15-star_lg.jpg">
+                  <img alt="1914-1915 Star Medal" src="/images/medal_1914-15-star_lg.jpg">
                   <p class="medal-title">1914-1915 Star</p>
               </div>
               
               <div class="medal-item">
-                  <img alt="Victory Medal" src="/oakdalewarmemorial/images/medal_victory_lg.jpg">
+                  <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
               
               <div class="medal-item">
-                  <img alt="British War Medal" src="/oakdalewarmemorial/images/medal_war_lg.jpg">
+                  <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
@@ -179,7 +179,7 @@
   <!-- THUMBNAIL MODAL (Pink Farm Cemetery) -->
   <template id="modal-pink-farm">
       <div class="modal-photo-showcase">
-          <img src="/oakdalewarmemorial/images/pink_farm_cemetery.jpg" alt="Pink Farm Cemetery, Gallipoli, Turkey">
+          <img src="/images/pink_farm_cemetery.jpg" alt="Pink Farm Cemetery, Gallipoli, Turkey">
           
           <div class="modal-caption">
               Pink Farm Cemetery, Helles, Gallipoli
@@ -194,6 +194,6 @@
   </template> <!-- End Thumbnail Modal -->
 
     <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+    <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>

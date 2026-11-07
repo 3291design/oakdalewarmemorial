@@ -9,15 +9,15 @@
     <meta name="author" content="Melanie Copleston, 3291design">
     
    <!-- SYSTEM LAYOUT MODULAR STYLESHEETS -- USING ABSOLUTE PATHS! -->
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-   <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+   <link rel="stylesheet" href="/css/odw-core.css">
+   <link rel="stylesheet" href="/css/odw-typography.css">
+   <link rel="stylesheet" href="/css/odw-profiles.css">
+   <link rel="stylesheet" href="/css/odw-components.css">
   
 </head>
 
 <!-- CRITICAL: data-era must be "ww1-profile" for the Prev/Next pagination to load -->
-<body data-era="ww1-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww1-profile" data-root="/">
   
   <div class="main-container">
 
@@ -34,9 +34,9 @@
         <!-- Flexbox Core Presentation Component -->
         <div class="flex-container">
             <div class="image">
-                <a href="/oakdalewarmemorial/images/lovell_george-lg.jpg"
+                <a href="/images/lovell_george-lg.jpg"
                   data-lightbox="artifact"
-                  data-caption="Military portrait of George Lovell"><img src="/oakdalewarmemorial/images/lovell_george-sm.jpg" alt="George Lovell Portrait" class="soldier-portrait-img">
+                  data-caption="Military portrait of George Lovell"><img src="/images/lovell_george-sm.jpg" alt="George Lovell Portrait" class="soldier-portrait-img">
                 </a>
             </div>
 
@@ -52,13 +52,13 @@
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
             <a href="#modal-medals-lovell-g" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
-                    <img alt="1914 Star Medal Ribbon" src="/oakdalewarmemorial/images/medal_1914-star_sm.jpg" class="medal-ribbon-img">
+                    <img alt="1914 Star Medal Ribbon" src="/images/medal_1914-star_sm.jpg" class="medal-ribbon-img">
                 </div>
                 <div class="soldier-medals-box">
-                    <img alt="Victory Medal Ribbon" src="/oakdalewarmemorial/images/medal_victory_sm.jpg" class="medal-ribbon-img">
+                    <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
                 </div>
                 <div class="soldier-medals-box">
-                    <img alt="British War Medal Ribbon" src="/oakdalewarmemorial/images/medal_war_sm.jpg" class="medal-ribbon-img">
+                    <img alt="British War Medal Ribbon" src="/images/medal_war_sm.jpg" class="medal-ribbon-img">
                 </div>
             </a>
         </div> 
@@ -68,20 +68,20 @@
             
             <!-- Profile Artifact Dock with Dual Buttons (SVGs Stripped for CSS Styling) -->
             <div class="profile-artifact-dock">
-                <a href="/oakdalewarmemorial/images/lovell_g_headstone.jpg" 
+                <a href="/images/lovell_g_headstone.jpg" 
                    data-lightbox="artifact" 
                    data-caption="Military Gravestone: Lance Corporal George Lovell<br />Killed in Action, May 13, 1915 (Aged 23)"
                    class="artifact-btn btn-gravestone">
                    <span class="artifact-label">Gravestone Photo</span>
                 </a>
 
-                <a href="/oakdalewarmemorial/stories/mh-ww1_2nd-battle-ypres.html" 
+                <a href="/stories/mh-ww1_2nd-battle-ypres.html" 
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
                    data-target="sidebar">
                     <span class="artifact-label">2nd Battle of Ypres</span>
                 </a>
 
-                <a href="/oakdalewarmemorial/ww1/ww1-timeline.html?jump=event-13may1915" 
+                <a href="/ww1/ww1-timeline.html?jump=event-13may1915" 
                 class="artifact-btn btn-timeline">
                     <span class="artifact-label">View Timeline</span>
                 </a>
@@ -92,7 +92,7 @@
             
             <div class="bio-inline-thumb">
                 <a href="#modal-bailleul-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                    <img src="/oakdalewarmemorial/images/bailleul_cemetery.jpg" alt="Beautiful landscape view of Bailleul Communal Cemetery Extension, France, showcasing rows of immaculate graves under a clear sky">
+                    <img src="/images/bailleul_cemetery.jpg" alt="Beautiful landscape view of Bailleul Communal Cemetery Extension, France, showcasing rows of immaculate graves under a clear sky">
                 </a>
                 <span class="bio-thumb-caption">
                         Bailleul Communal Cemetery Extension, France.<br>
@@ -100,7 +100,7 @@
                 </span>
             </div>
                 
-            <div class="bio-text">On 13 May 1915, Lance Corporal Lovell was killed in action—a day marked by ceaseless rain and crushing German shelling during the <a href="/oakdalewarmemorial/stories/mh-ww1_2nd-battle-ypres.html" class="hybrid-fetch-trigger soldier-link">2nd Battle of Ypres</a>. His battalion, part of 12th Brigade, was in reserve at Shell Trap Farm near the Frezenberg Ridge. German attacks resulted in fierce fighting with great loss of life, but with little change in the frontlines.
+            <div class="bio-text">On 13 May 1915, Lance Corporal Lovell was killed in action—a day marked by ceaseless rain and crushing German shelling during the <a href="/stories/mh-ww1_2nd-battle-ypres.html" class="hybrid-fetch-trigger soldier-link">2nd Battle of Ypres</a>. His battalion, part of 12th Brigade, was in reserve at Shell Trap Farm near the Frezenberg Ridge. German attacks resulted in fierce fighting with great loss of life, but with little change in the frontlines.
             </div>
             
             <div class="bio-text">Lance Corporal G Lovell (1883) was killed in action on 13 May 1915, aged 23. He lies in <a href="http://www.cwgc.org/find-a-cemetery/cemetery/2000048/BAILLEUL%20COMMUNAL%20CEMETERY%20EXTENSION,%20NORD" target="_blank" rel="noopener" class="profile-external-link">Bailleul Communal Cemetery Extension, France</a>. He is commemorated also on the Battalion Memorial in St Cadoc's Church, Trevethin, and on the 'H' Company Memorial, formerly in the now defunct St Mary's Church, Crumlin.
@@ -146,10 +146,10 @@
               </div>
               <hr class="basic">
               
-              <p class="display-text">George Lovell, an Oakdale collier and the second son of William and Lydia Lovell, arrived in France in November 1914 with the 2nd Battalion Monmouth Regiment. On May 13, 1915—amidst ceaseless rain and heavy shelling near Shell Trap Farm and the Frezenberg Ridge—his battalion faced ferocious German assaults during the bitter engagements of the Second Battle of Ypres. Lance Corporal Lovell was killed in action that day at age 23 and now rests in the Bailleul Communal Cemetery Extension. <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww1/lovell_g.html">Read Full Profile</a></p>
+              <p class="display-text">George Lovell, an Oakdale collier and the second son of William and Lydia Lovell, arrived in France in November 1914 with the 2nd Battalion Monmouth Regiment. On May 13, 1915—amidst ceaseless rain and heavy shelling near Shell Trap Farm and the Frezenberg Ridge—his battalion faced ferocious German assaults during the bitter engagements of the Second Battle of Ypres. Lance Corporal Lovell was killed in action that day at age 23 and now rests in the Bailleul Communal Cemetery Extension. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/lovell_g.html">Read Full Profile</a></p>
               
               <!-- IStory Sidebar Trigger -->
-                  <a href="/oakdalewarmemorial/stories/mh-ww1_2nd-battle-ypres.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                  <a href="/stories/mh-ww1_2nd-battle-ypres.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                  <span class="artifact-label">2nd Battle of Ypres</span>
                   </a>
           </div>
@@ -165,17 +165,17 @@
           
           <div class="medal-display-row">
               <div class="medal-item">
-                  <img alt="1914 Star Medal" src="/oakdalewarmemorial/images/medal_1914-star_lg.jpg">
+                  <img alt="1914 Star Medal" src="/images/medal_1914-star_lg.jpg">
                   <p class="medal-title">1914 Star</p>
               </div>
               
               <div class="medal-item">
-                  <img alt="Victory Medal" src="/oakdalewarmemorial/images/medal_victory_lg.jpg">
+                  <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
               
               <div class="medal-item">
-                  <img alt="British War Medal" src="/oakdalewarmemorial/images/medal_war_lg.jpg">
+                  <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
@@ -185,7 +185,7 @@
   <!-- THUMBNAIL MODAL (Bailleul Cemetery) -->
   <template id="modal-bailleul-cemetery">
       <div class="modal-photo-showcase">
-          <img src="/oakdalewarmemorial/images/bailleul_cemetery.jpg" alt="Bailleul Communal Cemetery Extension, France">
+          <img src="/images/bailleul_cemetery.jpg" alt="Bailleul Communal Cemetery Extension, France">
           
           <div class="modal-caption">
               Bailleul Communal Cemetery Extension, France
@@ -200,6 +200,6 @@
   </template> <!-- End Thumbnail Modal -->
 
     <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+    <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
