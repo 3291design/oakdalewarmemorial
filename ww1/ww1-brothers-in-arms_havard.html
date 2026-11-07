@@ -7,15 +7,15 @@
     <meta name="description" content="A shared memorial profile for brothers from Oakdale who served in World War I.">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS -- USING ABSOLUTE PATHS! -->
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+    <link rel="stylesheet" href="/css/odw-core.css">
+    <link rel="stylesheet" href="/css/odw-typography.css">
+    <link rel="stylesheet" href="/css/odw-profiles.css">
+    <link rel="stylesheet" href="/css/odw-components.css">
 
 </head>
 
 <!-- CRITICAL: data-era must be "ww1-profile" for the Prev/Next pagination to load -->
-<body data-era="ww1-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww1-profile" data-root="/">
   
   <div class="main-container">
 
@@ -46,7 +46,7 @@
         <!-- CARD A: THOMAS -->
         <div class="shared-profile-card" id="card-thomas">
           <div class="photo" style="float: left; margin-right: 20px;">
-            <img src="/oakdalewarmemorial/images/blank_man.gif" alt="Thomas Havard Portrait Placeholder" class="soldier-portrait-img" style="width: 100px;">
+            <img src="/images/blank_man.gif" alt="Thomas Havard Portrait Placeholder" class="soldier-portrait-img" style="width: 100px;">
           </div>
           <div class="profile" style="line-height: 1.5em;">
             <span class="subhead_sm2">Thomas B. Havard</span>
@@ -56,20 +56,20 @@
             <br class="soldier-detail">Regiment: <strong>2nd Bn Monmouth</strong>
           </div>
           <div class="profile-artifact-dock" style="clear: both; text-align: left; margin: 20px 0px;">
-            <a href="/oakdalewarmemorial/stories/mh-ww1_2nd-battle-ypres.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
+            <a href="/stories/mh-ww1_2nd-battle-ypres.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
                 <span class="artifact-label">2nd Battle of Ypres</span>
             </a>
           </div>
           <div class="bio-text" style="margin-bottom: 0px !important;"><strong>Thomas Benjamin</strong>, an athlete and colliery electrician, was the first to deploy to France in late 1914. By the spring of 1915, his unit was stationed in the treacherous Ypres Salient in Flanders. During the Battle of Frezenberg Ridge—a grueling phase of the Second Battle of Ypres—Thomas's brigade was subjected to a devastating bombardment near Shell Trap Farm. On May 8, 1915, as his unit successfully repulsed waves of fierce German infantry assaults, Thomas was killed in action at the age of 23. 
             <br />
-            <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww1/havard_t_b.html">View Thomas's full profile...</a>
+            <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/havard_t_b.html">View Thomas's full profile...</a>
           </div>
         </div>
 
         <!-- CARD B: EARNEST -->
         <div class="shared-profile-card" id="card-earnest">
           <div class="photo" style="float: left; margin-right: 20px;">
-            <img src="/oakdalewarmemorial/images/blank_man.gif" alt="Earnest Havard Portrait Placeholder" class="soldier-portrait-img" style="width: 100px;">
+            <img src="/images/blank_man.gif" alt="Earnest Havard Portrait Placeholder" class="soldier-portrait-img" style="width: 100px;">
           </div>
           <div class="profile" style="line-height: 1.5em;">
             <span class="subhead_sm2">Earnest Havard</span>
@@ -79,12 +79,12 @@
             <br class="soldier-detail">Regiment: <strong>2nd Bn Monmouth</strong>
           </div>
           <div class="profile-artifact-dock" style="clear: both; text-align: left; margin: 20px 0px;">
-            <a href="/oakdalewarmemorial/stories/mh-ww1_battle_of_cambrai.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
+            <a href="/stories/mh-ww1_battle_of_cambrai.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
                 <span class="artifact-label">Battle of Cambrai</span>
             </a>
           </div>
           <div class="bio-text" style="margin-bottom: 0px !important;"><strong>Earnest</strong>, a coalminer, arrived in France in February 1915 and endured nearly three years of relentless trench warfare, rising to the rank of Lance Corporal. In late November 1917, his battalion was thrust into the Battle of Cambrai. Caught in a dangerous salient near Masnières as the initial British offensive met with overwhelming German counter-attacks, Earnest was killed in action on December 2, 1917. Like his brother before him, he fell at the age of 23. 
-            <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww1/havard_e.html">View Earnest's full profile...</a>
+            <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/havard_e.html">View Earnest's full profile...</a>
           </div>
         </div>
 
@@ -120,7 +120,7 @@
   <!-- THUMBNAIL MODAL (Menin Gate Memorial) -->
   <template id="modal-menin-gate">
       <div class="modal-photo-showcase">
-          <img src="/oakdalewarmemorial/images/menin_gate_memorial.jpg" alt="The Menin Gate Memorial at Ypres, Belgium spanning the road">
+          <img src="/images/menin_gate_memorial.jpg" alt="The Menin Gate Memorial at Ypres, Belgium spanning the road">
           
           <div class="modal-caption">
               Menin Gate Memorial, Ypres, Belgium
@@ -137,7 +137,7 @@
   <!-- THUMBNAIL MODAL (Cambrai Memorial) -->
   <template id="modal-cambrai">
       <div class="modal-photo-showcase">
-          <img src="/oakdalewarmemorial/images/cambrai_memorial.jpg" alt="Cambrai Memorial at Louverval, France landscape panel">
+          <img src="/images/cambrai_memorial.jpg" alt="Cambrai Memorial at Louverval, France landscape panel">
           
           <div class="modal-caption">
               Cambrai Memorial, Louverval, France
@@ -152,6 +152,6 @@
   </template> <!-- End Thumbnail Modal -->
 
   <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-  <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
