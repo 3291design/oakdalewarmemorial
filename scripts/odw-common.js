@@ -27,6 +27,21 @@ if (window.location.hash) {
     });
 }
 
+// === AUTOMATIC LEGACY PATH SANITIZER ===
+// If running on the subdomain, auto-clean old /oakdalewarmemorial/ paths in HTML markup
+if (!window.location.pathname.includes('/oakdalewarmemorial/')) {
+    // Fix all hardcoded hyperlinks
+    document.querySelectorAll('a[href*="/oakdalewarmemorial/"]').forEach(a => {
+        const oldHref = a.getAttribute('href');
+        a.setAttribute('href', oldHref.replace('/oakdalewarmemorial/', '/'));
+    });
+    // Fix all hardcoded image paths
+    document.querySelectorAll('img[src*="/oakdalewarmemorial/"]').forEach(img => {
+        const oldSrc = img.getAttribute('src');
+        img.setAttribute('src', oldSrc.replace('/oakdalewarmemorial/', '/'));
+    });
+}
+
 // ==========================================================================
 // DOM LOADED EVENT
 // ==========================================================================
