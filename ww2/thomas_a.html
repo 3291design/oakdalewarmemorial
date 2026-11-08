@@ -7,12 +7,12 @@
     <meta name="description" content="A website dedicated to the memory of men from Oakdale, Wales, UK who served during World War II.">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS - ABSOLUTE PATHS -->
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+    <link rel="stylesheet" href="/css/odw-core.css">
+    <link rel="stylesheet" href="/css/odw-typography.css">
+    <link rel="stylesheet" href="/css/odw-profiles.css">
+    <link rel="stylesheet" href="/css/odw-components.css">
 </head>
-<body data-era="ww2-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww2-profile" data-root="/">
   
   <div class="main-container">
     <!-- TIER 1: AUTOMATED HEADER SOCKET -->
@@ -24,8 +24,8 @@
             
             <!-- SOLDIER PORTRAIT -->
             <div class="image">
-                <a href="/oakdalewarmemorial/images/thomas-albert_lg.jpg" data-lightbox="artifact" data-caption="Pte. Albert Thomas">
-                    <img src="/oakdalewarmemorial/images/thomas-albert_sm.jpg" alt="Pte. Albert Thomas Portrait" class="soldier-portrait-img">
+                <a href="/images/thomas-albert_lg.jpg" data-lightbox="artifact" data-caption="Pte. Albert Thomas">
+                    <img src="/images/thomas-albert_sm.jpg" alt="Pte. Albert Thomas Portrait" class="soldier-portrait-img">
                 </a>
             </div>
             
@@ -45,22 +45,22 @@
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 810px)" srcset="/oakdalewarmemorial/images/medal_1939-45-star_plain-sm_tall.jpg">
-                        <img alt="1939-1945 Star" src="/oakdalewarmemorial/images/medal_1939-45-star_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 810px)" srcset="/images/medal_1939-45-star_plain-sm_tall.jpg">
+                        <img alt="1939-1945 Star" src="/images/medal_1939-45-star_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 810px)" srcset="/oakdalewarmemorial/images/medal_france-germany-star_sm_tall.jpg">
-                        <img alt="France and Germany Star" src="/oakdalewarmemorial/images/medal_france-germany-star_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 810px)" srcset="/images/medal_france-germany-star_sm_tall.jpg">
+                        <img alt="France and Germany Star" src="/images/medal_france-germany-star_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 810px)" srcset="/oakdalewarmemorial/images/medal_1939-45-war_sm_tall.jpg">
-                        <img alt="1939-1945 War" src="/oakdalewarmemorial/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 810px)" srcset="/images/medal_1939-45-war_sm_tall.jpg">
+                        <img alt="1939-1945 War" src="/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
             </a>
@@ -72,11 +72,11 @@
             
             <!-- Interactive Artifact Action Dock -->
             <div class="profile-artifact-dock">
-                <a href="/oakdalewarmemorial/images/thomas-albert_and-emma.jpg" 
+                <a href="/images/thomas-albert_and-emma.jpg" 
                    data-lightbox="artifact" data-caption="Albert Thomas and wife Lucy (Irene)" class="artifact-btn btn-group-photo">
                     <span class="artifact-label">Family Photo</span>
                 </a>
-                <a href="/oakdalewarmemorial/stories/mh-ww2-nw-europe.html" 
+                <a href="/stories/mh-ww2-nw-europe.html" 
                 class="artifact-btn btn-story hybrid-fetch-trigger" 
                 data-target="sidebar"><span class="artifact-label">NW Europe Campaign</span>
                 </a>
@@ -93,20 +93,20 @@
             <!-- Bio Inline Thumbnail Trigger -->
             <div class="bio-inline-thumb">
                 <a href="#modal-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                    <img src="/oakdalewarmemorial/images/penmaen_chapel.jpg" alt="Penmaen Chapel and historic gravestones, Wales">
+                    <img src="/images/penmaen_chapel.jpg" alt="Penmaen Chapel and historic gravestones, Wales">
                 </a>
                 <span class="bio-thumb-caption">
                     Penmaen Congregational Chapelyard<br>
                     <span class="bio-thumb-sub">Photo: J. Agg / Geograph / CC BY-SA 2.0</span>
                 </span>
-                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/oakdalewarmemorial/images/thomas-albert_gravestone.jpg" 
+                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/images/thomas-albert_gravestone.jpg" 
                 data-lightbox="artifact" 
                 data-caption="Military Gravestone: Pte. Albert Thomas,<br />Penmaen Congregational Chapelyard,<br />Died in Service, 08 January 1946 (Age 28)"
                 class="artifact-btn btn-gravestone">
                     <span class="artifact-label">Gravestone Photo</span>
                 </a></div>
                 <div style="width: 100%; text-align: center; margin: 10px 0px;">
-                <a href="/oakdalewarmemorial/odw-local-grave-sites.html#penmaen" class="artifact-btn btn-gravestone" style="width: 200px;">
+                <a href="/odw-local-grave-sites.html#penmaen" class="artifact-btn btn-gravestone" style="width: 200px;">
                     <span class="artifact-label">Local War Graves</span>
                 </a></div>
             </div>
@@ -120,7 +120,7 @@
                 Following the formal surrender of Nazi Germany, Albert survived the war but passed away on 8 January 1946 at the age of 28, while still on active military service during the post-war demobilisation period.
             </div>
             <div class="bio-casualty">
-                Albert Thomas' body was returned home to his grieving family and wife in South Wales, and he was laid to rest in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Penmaen Congregational Chapelyard</a> near Oakdale, where his grave is meticulously maintained by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019457/albert-thomas/" target="_blank" class="soldier-link">3911230</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/oakdalewarmemorial/odw-memorial.html">Oakdale War Memorial</a>.
+                Albert Thomas' body was returned home to his grieving family and wife in South Wales, and he was laid to rest in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Penmaen Congregational Chapelyard</a> near Oakdale, where his grave is meticulously maintained by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019457/albert-thomas/" target="_blank" class="soldier-link">3911230</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/odw-memorial.html">Oakdale War Memorial</a>.
             </div>
             
             <!-- NAVIGATION ENGINE SOCKET -->
@@ -149,8 +149,8 @@
                     <strong>Fate:</strong> Died on Active Service (Demobilisation Period), 08 January 1946 (Age: 28 years old)
                 </div>
                 <hr class="basic">
-                <p class="display-text">Enlisting in the South Wales Borderers and later transferring in Normandy to the 1st Bn. The Tyneside Scottish (Black Watch), Pte. Thomas fought through France, Belgium, and Germany. Having survived combat in Europe, he passed away during active demobilisation on 8 January 1946 and is buried in Penmaen Congregational Chapelyard, Wales. <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww2/thomas_a.html">Read Full Profile</a></p>
-                <a href="/oakdalewarmemorial/stories/mh-ww2-nw-europe.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                <p class="display-text">Enlisting in the South Wales Borderers and later transferring in Normandy to the 1st Bn. The Tyneside Scottish (Black Watch), Pte. Thomas fought through France, Belgium, and Germany. Having survived combat in Europe, he passed away during active demobilisation on 8 January 1946 and is buried in Penmaen Congregational Chapelyard, Wales. <span class="pointer">&#9658;&nbsp;</span><a href="/ww2/thomas_a.html">Read Full Profile</a></p>
+                <a href="/stories/mh-ww2-nw-europe.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                     <span class="artifact-label">NW Europe Campaign</span>
                 </a>
             </div>
@@ -166,15 +166,15 @@
             <hr class="basic">
             <div class="medal-display-row">
                 <div class="medal-item">
-                    <img alt="1939-1945 Star Medal" src="/oakdalewarmemorial/images/medal_1939-45-star_plain-lg.jpg">
+                    <img alt="1939-1945 Star Medal" src="/images/medal_1939-45-star_plain-lg.jpg">
                     <p class="medal-title">1939-1945 Star</p>
                 </div>
                 <div class="medal-item">
-                    <img alt="France & Germany Star" src="/oakdalewarmemorial/images/medal_france-germany-star_lg.jpg">
+                    <img alt="France & Germany Star" src="/images/medal_france-germany-star_lg.jpg">
                     <p class="medal-title">France &amp; Germany Star</p>
                 </div>
                 <div class="medal-item">
-                    <img alt="1939-1945 War" src="/oakdalewarmemorial/images/medal_1939-45-war_lg.jpg">
+                    <img alt="1939-1945 War" src="/images/medal_1939-45-war_lg.jpg">
                     <p class="medal-title">War Medal 1939–1945</p>
                 </div>
             </div>
@@ -185,7 +185,7 @@
     <!-- THUMBNAIL MODAL -->
     <template id="modal-cemetery">
         <div class="modal-photo-showcase">
-            <img src="/oakdalewarmemorial/images/penmaen_chapel.jpg" alt="Penmaen Chapel and historic gravestones, Wales">
+            <img src="/images/penmaen_chapel.jpg" alt="Penmaen Chapel and historic gravestones, Wales">
             <div class="modal-caption">
                 Penmaen Congregational Chapelyard, Wales
             </div>
@@ -199,6 +199,6 @@
     <!-- END THUMBNAIL MODAL -->
   
   <!-- MASTER UNIFIED INJECTION ENGINE - ABSOLUTE PATH -->
-  <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>

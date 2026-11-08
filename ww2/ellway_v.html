@@ -7,12 +7,12 @@
     <meta name="description" content="A website dedicated to the memory of men from Oakdale, Wales, UK who served during World War II.">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS - ABSOLUTE PATHS -->
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+    <link rel="stylesheet" href="/css/odw-core.css">
+    <link rel="stylesheet" href="/css/odw-typography.css">
+    <link rel="stylesheet" href="/css/odw-profiles.css">
+    <link rel="stylesheet" href="/css/odw-components.css">
 </head>
-<body data-era="ww2-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww2-profile" data-root="/">
   
   <div class="main-container">
     <!-- TIER 1: AUTOMATED HEADER SOCKET -->
@@ -24,7 +24,7 @@
             
             <!-- PORTRAIT IMAGE (Active Placeholder) -->
             <div class="image">
-                <img src="/oakdalewarmemorial/images/blank_man.gif" alt="Vernon Ellway Portrait Placeholder" class="soldier-portrait-img">
+                <img src="/images/blank_man.gif" alt="Vernon Ellway Portrait Placeholder" class="soldier-portrait-img">
             </div>
             
             <!-- PROFILE DETAILS -->
@@ -43,15 +43,15 @@
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 630px)" srcset="/oakdalewarmemorial/images/medal_defence_sm_tall.jpg">
-                        <img alt="1939-1945 Star" src="/oakdalewarmemorial/images/medal_defence_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 630px)" srcset="/images/medal_defence_sm_tall.jpg">
+                        <img alt="1939-1945 Star" src="/images/medal_defence_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 630px)" srcset="/oakdalewarmemorial/images/medal_1939-45-war_sm_tall.jpg">
-                        <img alt="1939-1945 War" src="/oakdalewarmemorial/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 630px)" srcset="/images/medal_1939-45-war_sm_tall.jpg">
+                        <img alt="1939-1945 War" src="/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
             </a>
@@ -67,7 +67,7 @@
                     class="artifact-btn hybrid-fetch-trigger btn-clipping" data-target="modal">
                     <span class="artifact-label">Newspaper Article</span>
                 </a>
-                <a href="/oakdalewarmemorial/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar"><span class="artifact-label">UK Home Front</span></a>
+                <a href="/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar"><span class="artifact-label">UK Home Front</span></a>
                 <a href="#" 
                     class="artifact-btn btn-timeline">
                     <span class="artifact-label">View Timeline</span>
@@ -81,13 +81,13 @@
             <!-- Bio Inline Thumbnail Trigger -->
             <div class="bio-inline-thumb">
                 <a href="#modal-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                    <img src="/oakdalewarmemorial/images/jerusalem_graveyard.jpg" alt="Jerusalem Graveyard, Wales">
+                    <img src="/images/jerusalem_graveyard.jpg" alt="Jerusalem Graveyard, Wales">
                 </a>
                 <span class="bio-thumb-caption">
                     Jerusalem Chapelyard (Woodfieldside)<br>
                     <span class="bio-thumb-sub">Photo: Friends of Jerusalem Graveyard</span>
                 </span>
-                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/oakdalewarmemorial/odw-local-grave-sites.html#jerusalem" class="artifact-btn btn-gravestone" style="width: 200px;">
+                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/odw-local-grave-sites.html#jerusalem" class="artifact-btn btn-gravestone" style="width: 200px;">
                     <span class="artifact-label">Local War Graves
                     </span></a></div>
             </div>
@@ -101,7 +101,7 @@
                 While stationed on active duty, Aircraftman 2nd Class Ellway was killed on 30 October 1941, just eight days after his 23rd birthday.
             </div>
             <div class="bio-casualty">
-                Following the tragedy, Aircraftman Vernon Ellway's body was returned home to his grieving family. He was laid to rest in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Jerusalem Chapelyard</a>, Woodfieldside, where his grave is meticulously cared for by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019564/vernon-ellway/" target="_blank" class="soldier-link">1031941</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/oakdalewarmemorial/odw-memorial.html">Oakdale War Memorial</a>.
+                Following the tragedy, Aircraftman Vernon Ellway's body was returned home to his grieving family. He was laid to rest in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Jerusalem Chapelyard</a>, Woodfieldside, where his grave is meticulously cared for by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019564/vernon-ellway/" target="_blank" class="soldier-link">1031941</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/odw-memorial.html">Oakdale War Memorial</a>.
             </div>
             
             <!-- NAVIGATION ENGINE SOCKET -->
@@ -129,8 +129,8 @@
                     <strong>Fate:</strong> Died on Active Service, 30 October 1941 (Age: 23 years old)
                 </div>
                 <hr class="basic">
-                <p class="display-text">Serving in the Royal Air Force Volunteer Reserve, Aircraftman Ellway provided essential ground support and technical maintenance across domestic training command airfields. He passed away on active service on 30 October 1941 at age 23 and rests in Jerusalem Chapelyard, Woodfieldside. <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww2/ellway_v.html">Read Full Profile</a></p>
-                <a href="/oakdalewarmemorial/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                <p class="display-text">Serving in the Royal Air Force Volunteer Reserve, Aircraftman Ellway provided essential ground support and technical maintenance across domestic training command airfields. He passed away on active service on 30 October 1941 at age 23 and rests in Jerusalem Chapelyard, Woodfieldside. <span class="pointer">&#9658;&nbsp;</span><a href="/ww2/ellway_v.html">Read Full Profile</a></p>
+                <a href="/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                     <span class="artifact-label">UK Home Front</span>
                 </a>
             </div>
@@ -146,11 +146,11 @@
             
             <div class="medal-display-row">
                 <div class="medal-item">
-                    <img alt="Defence Medal" src="/oakdalewarmemorial/images/medal_defence_lg.jpg">
+                    <img alt="Defence Medal" src="/images/medal_defence_lg.jpg">
                      <p class="medal-title">Defence Medal</p>
                 </div>      
                 <div class="medal-item">
-                    <img alt="1939–1945 War" src="/oakdalewarmemorial/images/medal_1939-45-war_lg.jpg">
+                    <img alt="1939–1945 War" src="/images/medal_1939-45-war_lg.jpg">
                     <p class="medal-title">War Medal 1939–1945</p>
                 </div>
             </div>
@@ -160,7 +160,7 @@
     <!-- THUMBNAIL MODAL -->
     <template id="modal-cemetery">
         <div class="modal-photo-showcase">
-            <img src="/oakdalewarmemorial/images/jerusalem_graveyard.jpg" alt="Cemetery or Memorial Name">
+            <img src="/images/jerusalem_graveyard.jpg" alt="Cemetery or Memorial Name">
             
             <div class="modal-caption">
                 Jerusalem Chapelyard (Woodfieldside), Wales
@@ -178,12 +178,12 @@
     <template id="modal-newspaper">
         <div class="mini-profile-content">
             <div class="sidebar-abbreviated-story">
-                <img src="/oakdalewarmemorial/images/ellway-vernon_news-article.jpg" alt="Newspaper Article clipping for Vernon Ellway">
+                <img src="/images/ellway-vernon_news-article.jpg" alt="Newspaper Article clipping for Vernon Ellway">
             </div>
         </div>
     </template>
   
   <!-- MASTER UNIFIED INJECTION ENGINE - ABSOLUTE PATH -->
-  <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
