@@ -39,15 +39,16 @@
 
             <div class="profile">
                 <div class="soldier-name">Richard Henry Harvey*</div>
-                <div class="soldier-detail">Age: <strong>32</strong></div>
+                <div class="soldier-detail">Died: <strong>22 April 1916</strong></div>
+                <div class="soldier-detail">Age: <strong>32 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Private</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>19883</strong></div>
                 <div class="soldier-detail">Regiment: <strong>4th Battalion South Wales Borderers</strong></div>
                 <div class="soldier-detail">Medals: <strong>Victory, British War</strong></div>
             </div>
             
-            <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-harvey-r" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+             <!-- Medal Trigger Structure (Gold Standard Applied) -->
+            <a href="#modal-medals" class="medal medal-2 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -85,14 +86,15 @@
                         <span class="bio-thumb-sub">Photo: Memorials Officer / Wikimedia</span>
                     </span>
                 </div>
-                
-                <strong>Richard Henry Harvey</strong>, of Oakdale, born in Glamorgan, husband of Alice had a young daughter. He served in the 4th Battalion South Wales Borderers, part of 40th Brigade, in southern <a href="/stories/mh-ww1_mesopotamian_campaign.html" class="hybrid-fetch-trigger soldier-link">Mesopotamia</a> in 1916.
+
+            <div class="bio-text">
+                <strong>Richard Henry Harvey</strong> was a Glamorgan-born coal miner who lived in Oakdale with his wife, Alice, and their young daughter. The son of Charles Harvey, Richard enlisted for military service in the 4th Battalion, South Wales Borderers &mdash; a battle-hardened unit that had already survived the horrors of the Gallipoli campaign in 1915 before being reassigned to the harsh, disease-ridden landscapes of the southern <a href="/stories/mh-ww1_mesopotamian_campaign.html" class="hybrid-fetch-trigger soldier-link">Mesopotamian</a> theatre (modern-day Iraq) in early 1916. There, they were attached to the 40th Brigade, 13th (Western) Division, tasked with breaking through a stubborn Ottoman blockade to rescue a starved British garrison trapped at Kut-al-Amara.
             </div>
-            
-            <div class="bio-text">On 22 April 1916 the brigade attacked the Turkish positions at Sannaiyat, advancing across a quagmire, in what proved to be the last desperate assault to break through to Kut. The attack was repulsed with heavy losses.
+            <div class="bio-text">
+                The climax of Private Harvey's service came on the morning of 22 April 1916 during the catastrophic Third Battle of Sannaiyat. The brigade was ordered to launch a desperate, frontal assault against heavily fortified Turkish positions. Nature, however, had turned the battlefield into a death trap; seasonal flooding from the Tigris River had transformed the terrain into a knee-deep quagmire of thick mud. With absolutely no natural cover, the men of the 4th Battalion advanced valiantly through the swamp, only to be cut down en masse by a devastating curtain of Ottoman machine-gun and artillery fire. The assault was completely repulsed with staggering casualties, marking the final failed attempt to save the garrison at Kut.
             </div>
-            
-            <div class="bio-text">Private R H Harvey (19883) was killed in action on 22 April 1916, aged 32, and is commemorated on the <a href="http://www.cwgc.org/find-a-cemetery/cemetery/88400/BASRA%20MEMORIAL" target="_blank" rel="noopener" class="profile-external-link">Basra Memorial</a>, Iraq.
+            <div class="bio-text">
+                Tragically, 30-year-old Private Richard Henry Harvey was killed in action during the chaotic advance. Because the waterlogged, fiercely contested battlefield made the recovery and identification of the fallen impossible, he has no known grave. Instead, his name is permanently chiseled into Panels 16 and 62 of the <a href="#modal-basra-memorial" class="hybrid-fetch-trigger" data-target="modal" class="soldier-link">Basra Memorial</a> in Iraq, which honors more than 40,000 Commonwealth soldiers who died in the region with no identifiable resting place. Though his name was omitted from the physical Oakdale War Memorial, his memory was preserved by his widow, Alice—who later relocated to Pengam Road, Ystrad Mynach—and he remains locally commemorated on the neighboring Ystrad Mynach and Hengoed Roll of Honour.
             </div>
             
             <!-- Archive Source Note -->
@@ -145,29 +147,29 @@
           </div>
       </div>
   </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MEDAL MODAL (Harvey) -->
-  <template id="modal-medals-harvey-r">
-      <div class="mini-profile-content">
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-2">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Pte. Richard Henry Harvey</h2>
           <hr class="basic">
-          
           <div class="medal-display-row">
               <div class="medal-item">
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
       </div>
-  </template> <!-- End Medal Modal -->
+  </template> 
+  <!-- END MEDAL MODAL -->
 
-  <!-- THUMBNAIL MODAL (Basra Memorial) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-basra-memorial">
       <div class="modal-photo-showcase">
           <img src="/images/basra_memorial.jpg" alt="Basra War Memorial, Iraq">
@@ -175,16 +177,16 @@
           <div class="modal-caption">
               Basra War Memorial, Iraq
           </div>
-          
           <div class="modal-showcase-link-wrap">
               <a href="http://www.cwgc.org/find-a-cemetery/cemetery/88400/BASRA%20MEMORIAL" target="_blank" rel="noopener" class="plain-text">
                   <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
               </a>
           </div>
       </div>
-  </template> <!-- End Thumbnail Modal -->
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
-    <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/scripts/odw-common.js"></script>
+  <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>

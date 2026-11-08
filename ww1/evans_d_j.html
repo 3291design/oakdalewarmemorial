@@ -39,7 +39,8 @@
 
             <div class="profile">
                 <div class="soldier-name">David John Evans*</div>
-                <div class="soldier-detail">Age: <strong>24 (?)</strong></div>
+                <div class="soldier-detail">Died: <strong>19 December 1917</strong></div>
+                <div class="soldier-detail">Age: <strong>24 years old(?)</strong></div>
                 <div class="soldier-detail">Rank: <strong>Gunner</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>44181</strong></div>
                 <div class="soldier-detail">Regiment: <strong>Royal Garrison Artillery</strong></div>
@@ -47,7 +48,7 @@
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-evans" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+            <a href="#modal-medals" class="medal medal-2 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -66,14 +67,16 @@
                    class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
                    data-target="sidebar"><span class="artifact-label">Palestine Campaign</span>
                 </a>
-
                 <a href="/ww1/ww1-timeline.html?jump=event-19dec1917" 
                 class="artifact-btn btn-timeline">
                     <span class="artifact-label">View Timeline</span>
                 </a>
             </div>
             
-            <!-- Biography Body Paragraphs with Floating Thumbnail -->
+            <div class="bio-text">
+                <strong>David John Evans</strong> enlisted in the Royal Garrison Artillery (RGA) responsible for the army's heaviest ordnance, operating massive howitzers and siege guns designed to destroy fortified positions and clear the way for infantry advances. Evans was assigned to the 380th Siege Battery, which was deployed to the Middle Eastern theatre as part of the heavy artillery group supporting the XXI Corps of the Egyptian Expeditionary Force.
+            </div>
+             <!-- Biography Body Paragraphs with Floating Thumbnail -->
             <div class="bio-text">
                 <!-- Thumbnail Trigger -->
                 <div class="bio-inline-thumb">
@@ -85,17 +88,15 @@
                         <span class="bio-thumb-sub">Photo: CWGC Archive</span>
                     </span>
                 </div>
-                <strong>David John Evans</strong>, of Oakdale, <em>(eldest son of Henry and Mary Evans of Pontypridd?)</em> served in the Royal Garrison Artillery. In late 1917 he was in the 380th Siege Battery, a heavy artillery unit of XXI Corps, part of the Egyptian Expeditionary Force in <a href="/stories/mh-ww1_palestine_campaign.html" class="hybrid-fetch-trigger soldier-link">Palestine</a>, part of the Ottoman Empire.
-            </div>
-            
             <div class="bio-text">
-                At the beginning of November, having captured Beersheba from the Turks, the Expeditionary Force took Gaza and pushed north, with XXI Corps on the left nearer the coast, taking Jerusalem in early December.
+                In late 1917, Gunner Evans and his battery were thrust against the forces of the Ottoman Empire. Following the capture of Beersheba, the Expeditionary Force turned its sights onto the heavily defended coastal stronghold of Gaza. The heavy howitzers of the 380th Siege Battery eventually shattered the Turkish lines, allowing Allied forces to capture Gaza in early November. From there, Evans's corps pushed northward along the Mediterranean coast, forcing the Ottoman retreat and ultimately facilitating the Allied entry into Jerusalem.
             </div>
-            
             <div class="bio-text">
-                Gunner D J Evans (44181) died of wounds 19 December 1917, <em>aged 24?</em>, and is buried in the <a href="http://www.cwgc.org/find-a-cemetery/cemetery/72001/RAMLEH%20WAR%20CEMETERY" target="_blank" rel="noopener" class="profile-external-link">Ramleh War Cemetery</a>, Palestine (now modern day Israel).
+                During the intense fighting that accompanied this rapid northern advance, Gunner Evans was mortally wounded and evacuated to a field hospital behind the lines where, on 19 December 1917, he succumbed to his wounds. Records indicate he was approximately 24 years old at the time of his passing, and he was noted as the eldest son of Henry and Mary Evans of nearby Pontypridd.
             </div>
-            
+            <div class="bio-text">
+                Gunner Evans was laid to rest in the <a href="#modal-ramleh" class="hybrid-fetch-trigger soldier-link" data-target="modal">Ramleh War Cemetery</a>, now modern-day Israel—a central burial site chosen for soldiers who died in the medical facilities at Ramleh and Lydda during the push toward Jerusalem.
+            </div>
             <!-- Archive Source Note -->
             <div class="archive-source-note">
                 <span class="source-heading">Additional information taken from the Army Registers of Soldiers' Effects, 1901-1929:</span>
@@ -132,14 +133,11 @@
           <div class="sidebar-abbreviated-story">
               <div class="war-front">Beyond the Western Front | The Palestine Campaign</div>
               <h2 class="subhead_sm">Gunner David John Evans</h2>
-              
               <div class="bio-text">
                   <strong>Fate:</strong> Died of Wounds, 19 December 1917 (Aged 24)
               </div>
               <hr class="basic">
-              
               <p class="display-text">Twenty-four-year-old David John Evans served in the Royal Garrison Artillery. In late 1917, he was in the 380th Siege Battery, a heavy artillery unit of XXI Corps, part of the Egyptian Expeditionary Force. After taking part in the push north through Gaza and the capture of Jerusalem, Gunner Evans died of wounds on 19 December 1917. He is buried in the Ramleh War Cemetery in modern-day Israel. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/evans_d_j.html">Read Full Profile</a></p>
-              
               <!-- Story Sidebar Trigger -->
               <a href="/stories/mh-ww1_palestine_campaign.html" 
                  class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
@@ -150,7 +148,7 @@
   </template>
 
   <!-- MEDAL MODAL (Evans) -->
-  <template id="modal-medals-evans">
+  <template id="modal-medals">
       <div class="mini-profile-content">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Gunner David John Evans</h2>
@@ -161,31 +159,30 @@
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
       </div>
-  </template> <!-- End Medal Modal -->
+  </template> 
+  <!-- END MEDAL MODAL -->
 
-  <!-- THUMBNAIL MODAL (Ramleh War Cemetery) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-ramleh">
       <div class="modal-photo-showcase">
           <img src="/images/ramleh_war_cemetery.jpg" alt="Beautiful sunlit rows of headstones at Ramleh War Cemetery">
-          
           <div class="modal-caption">
               Ramleh War Cemetery, Israel
           </div>
-          
           <div class="modal-showcase-link-wrap">
               <a href="http://www.cwgc.org/find-a-cemetery/cemetery/72001/RAMLEH%20WAR%20CEMETERY" target="_blank" rel="noopener" class="plain-text">
                   <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
               </a>
           </div>
       </div>
-  </template> <!-- End Thumbnail Modal -->
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
   <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
   <script type="module" src="/scripts/odw-common.js"></script>
