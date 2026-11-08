@@ -42,8 +42,9 @@
             </div>
 
             <div class="profile">
-                <div class="soldier-name">Thomas George Coombs</div>
-                <div class="soldier-detail">Age: <strong>21</strong></div>
+                <div class="soldier-name">Thomas G. Coombs</div>
+                <div class="soldier-detail">Died: <strong>11 August 1917</strong></div>
+                <div class="soldier-detail">Age: <strong>21 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Private</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>17288</strong></div>
                 <div class="soldier-detail">Regiment: <strong>6th (Service) Battalion South Wales Borderers</strong></div>
@@ -51,7 +52,7 @@
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-coombs" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+            <a href="#modal-medals" class="medal medal-3 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="1914-1915 Star Medal Ribbon" src="/images/medal_1914-15-star_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -74,12 +75,6 @@
                    class="artifact-btn btn-group-photo">
                     <span class="artifact-label">View Group Photo</span>
                 </a>
-                <a href="/images/coombs_tg_headstone.jpg" 
-                data-lightbox="artifact" 
-                data-caption="Military Gravestone: Private Thomas George Coombs<br>Killed in Action, 11 August 1917 (Aged 21)" 
-                class="artifact-btn btn-gravestone">
-                    <span class="artifact-label">Gravestone Photo</span>
-                </a>
                 <a href="/stories/mh-ww1_third-ypres.html" 
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
                    data-target="sidebar"><span class="artifact-label">Passchendaele</span>
@@ -91,27 +86,34 @@
             </div>
 
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
-            <div class="bio-text"><strong>Thomas George Coombs</strong>, was a collier at Celynen Colliery, born in Crumlin, in 1896 to Thomas and Susan Ellen (nee Bradford) Coombs. He arrived in France in September 1915 with the 6th (Service) Battalion South Wales Borderers.
-            </div>
             
-                <!-- Thumbnail Trigger (Gold Standard Applied with CSS Class) -->
+            <!-- Thumbnail Trigger (Gold Standard Applied with CSS Class) -->
                 <div class="bio-inline-thumb">
                     <a href="#modal-the-huts" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
                         <img src="/images/the_huts_cemetery.jpg" alt="The Huts Cemetery near Ypres, Belgium showing uniform rows of white headstones beneath mature trees">
                     </a>
                     <span class="bio-thumb-caption">
-                        The Huts Cemetery, Ypres, Belgium.<br>
+                        The Huts Cemetery, Ypres, Belgium<br>
                         <span class="bio-thumb-sub">Photo: CWGC Archive</span>
                     </span>
+                    <div style="width: 100%; text-align: center; margin: 10px 0px;">
+                        <a href="/images/coombs_tg_headstone.jpg" 
+                            data-lightbox="artifact" 
+                            data-caption="Military Gravestone: Private Thomas George Coombs<br>Killed in Action, 11 August 1917 (Aged 21)" 
+                            class="artifact-btn btn-gravestone">
+                            <span class="artifact-label">Gravestone Photo</span>
+                        </a>
+                    </div>
                 </div>
-                
                 <div class="bio-text">
-                On 10 August 1917, the 25th Division, with his battalion as pioneers, captured Westhoek, Pilckem Ridge, in the rain with mud underfoot during the <a href="/stories/mh-ww1_third-ypres.html" class="hybrid-fetch-trigger soldier-link">Third Battle of Ypres</a>, Flanders. The Germans counter-attacked on the night of 10 August, but were repulsed.
-            </div>
-            
-            <div class="bio-text">
-                Private T G Coombs (17288) was killed in action 11 August 1917, aged 21, and is buried in the <a href="https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/15500/the-huts-cemetery/" target="_blank" rel="noopener" class="profile-external-link">Huts Cemetery</a>, southwest of Ieper (Ypres). He is commemorated also at <a href="http://www.newbridgewarmemorial.co.uk/celynen_roll.html" target="_blank">Celynen Collieries Workmen's Institute</a>, Newbridge; the original Newbridge War Memorial now at the National Museum Wales, St Fagans and on that memorial's replacement in the High Street, Newbridge. Additional information can be found on the <a href="http://www.newbridgewarmemorial.co.uk/men/coombs_thomas_george.html" target="_blank">Newbridge War Memorial</a> website.
-            </div>
+                    <strong>Thomas George Coombs</strong>, was a collier at Celynen Colliery, born in Crumlin, in 1896 to Thomas and Susan Ellen (nee Bradford) Coombs. He arrived in France in September 1915 with the 6th (Service) Battalion South Wales Borderers.
+                </div>
+                <div class="bio-text">
+                    On 10 August 1917, the 25th Division, with his battalion as pioneers, captured Westhoek, Pilckem Ridge, in the rain with mud underfoot during the <a href="/stories/mh-ww1_third-ypres.html" class="hybrid-fetch-trigger soldier-link">Third Battle of Ypres</a>, Flanders. The Germans counter-attacked on the night of 10 August, but were repulsed.
+                </div>
+                <div class="bio-text">
+                    Private T G Coombs (17288) was killed in action 11 August 1917, aged 21, and is buried in the <a href="#modal-the-huts" class="hybrid-fetch-trigger soldier-link" data-target="modal">Huts Cemetery</a>, southwest of Ieper (Ypres). He is commemorated also at <a href="http://www.newbridgewarmemorial.co.uk/celynen_roll.html" target="_blank">Celynen Collieries Workmen's Institute</a>, Newbridge; the original Newbridge War Memorial now at the National Museum Wales, St Fagans and on that memorial's replacement in the High Street, Newbridge. Additional information can be found on the <a href="http://www.newbridgewarmemorial.co.uk/men/coombs_thomas_george.html" target="_blank">Newbridge War Memorial</a> website.
+                </div>
             
             <!-- Archive Source Note -->
             <div class="archive-source-note">
@@ -147,14 +149,12 @@
           <div class="sidebar-abbreviated-story">
               <div class="war-front">The Western Front | Passchendaele (Third Ypres)</div>
               <h2 class="subhead_sm">Pte. Thomas G. Coombs</h2>
-              
               <div class="bio-text">
                   <strong>Fate:</strong> Killed in Action, 11 August 1917 (Aged 21)
               </div>
               <hr class="basic">
-              
-              <p class="display-text">Twenty-one-year-old collier Thomas George Coombs traded the Celynen Colliery for the trenches of France in 1915. Serving as a pioneer with the 6th South Wales Borderers, he endured the brutal rain and mud of the Third Battle of Ypres. On 11 August 1917, his division successfully captured Westhoek on Pilckem Ridge. Tragically, Private Coombs fell in action the very next day during the fierce aftermath. Today, he rests peacefully at The Huts Cemetery near Ypres, a long way from his home in the Welsh valleys. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/coombs_t_g.html">Read Full Profile</a></p>
-              
+              <p class="display-text">
+                Twenty-one-year-old collier Thomas George Coombs traded the Celynen Colliery for the trenches of France in 1915. Serving as a pioneer with the 6th South Wales Borderers, he endured the brutal rain and mud of the Third Battle of Ypres. On 11 August 1917, his division successfully captured Westhoek on Pilckem Ridge. Tragically, Private Coombs fell in action the very next day during the fierce aftermath. Today, he rests peacefully at The Huts Cemetery near Ypres, a long way from his home in the Welsh valleys. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/coombs_t_g.html">Read Full Profile</a></p>
               <!-- Story Sidebar Trigger -->
               <a href="/stories/mh-ww1_third-ypres.html" 
                  class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
@@ -163,27 +163,25 @@
           </div>
       </div>
   </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MEDAL MODAL (Coombs) -->
-  <template id="modal-medals-coombs">
-      <div class="mini-profile-content">
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-3">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Pte. Thomas George Coombs</h2>
           <hr class="basic">
-          
           <div class="medal-display-row">
               <!-- Medal Panel 1 -->
               <div class="medal-item">
                   <img alt="1914-1915 Star Medal" src="/images/medal_1914-15-star_lg.jpg">
                   <p class="medal-title">1914-1915 Star</p>
               </div>
-              
               <!-- Medal Panel 2 -->
               <div class="medal-item">
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <!-- Medal Panel 3 -->
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
@@ -192,23 +190,23 @@
           </div>
       </div>
   </template>
+  <!-- END MEDAL MODAL -->
 
-  <!-- THUMBNAIL MODAL (The Huts Cemetery) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-the-huts">
       <div class="modal-photo-showcase">
           <img src="/images/the_huts_cemetery.jpg" alt="The Huts Cemetery near Ypres, Belgium showing uniform rows of white headstones beneath mature trees">
-          
           <div class="modal-caption">
               The Huts Cemetery, Ypres, Belgium
           </div>
-          
           <div class="modal-showcase-link-wrap">
               <a href="https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/15500/the-huts-cemetery/" target="_blank" rel="noopener" class="plain-text"><span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website</a>
           </div>
       </div>
-  </template>
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
-    <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/scripts/odw-common.js"></script>
+  <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
