@@ -7,12 +7,12 @@
     <meta name="description" content="A website dedicated to the memory of men from Oakdale, Wales, UK who served during World War II.">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS - ABSOLUTE PATHS -->
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-core.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-typography.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-profiles.css">
-    <link rel="stylesheet" href="/oakdalewarmemorial/css/odw-components.css">
+    <link rel="stylesheet" href="/css/odw-core.css">
+    <link rel="stylesheet" href="/css/odw-typography.css">
+    <link rel="stylesheet" href="/css/odw-profiles.css">
+    <link rel="stylesheet" href="/css/odw-components.css">
 </head>
-<body data-era="ww2-profile" data-root="/oakdalewarmemorial/">
+<body data-era="ww2-profile" data-root="/">
   
   <div class="main-container">
     <!-- TIER 1: AUTOMATED HEADER SOCKET -->
@@ -24,7 +24,7 @@
             
             <!-- PORTRAIT IMAGE (Active Placeholder) -->
             <div class="image">
-                <img src="/oakdalewarmemorial/images/blank_man.gif" alt="[SOLDIER NAME] Portrait Placeholder" class="soldier-portrait-img">
+                <img src="/images/blank_man.gif" alt="[SOLDIER NAME] Portrait Placeholder" class="soldier-portrait-img">
             </div>
             
             <!-- PROFILE DETAILS -->
@@ -43,8 +43,8 @@
                 <div class="soldier-medals-box">
                     <picture>
                         <!-- Swap to TALL image only when 810px or wider to match medal layout state -->
-                        <source media="(min-width: 545px)" srcset="/oakdalewarmemorial/images/medal_1939-45-war_sm_tall.jpg">
-                        <img alt="1939-1945 War" src="/oakdalewarmemorial/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
+                        <source media="(min-width: 545px)" srcset="/images/medal_1939-45-war_sm_tall.jpg">
+                        <img alt="1939-1945 War" src="/images/medal_1939-45-war_sm.jpg" class="medal-ribbon-img">
                     </picture>
                 </div>
             </a>
@@ -56,7 +56,7 @@
             
             <!-- Interactive Artifact Action Dock -->
             <div class="profile-artifact-dock">
-                <a href="/oakdalewarmemorial/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar"><span class="artifact-label">UK Home Front</span></a>
+                <a href="/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar"><span class="artifact-label">UK Home Front</span></a>
                 <a href="#" 
                     class="artifact-btn btn-timeline">
                     <span class="artifact-label">View Timeline</span>
@@ -70,13 +70,13 @@
             <!-- Bio Inline Thumbnail Trigger -->
             <div class="bio-inline-thumb">
                 <a href="#modal-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                    <img src="/oakdalewarmemorial/images/jerusalem_graveyard.jpg" alt="Jerusalem Graveyard, Wales">
+                    <img src="/images/jerusalem_graveyard.jpg" alt="Jerusalem Graveyard, Wales">
                 </a>
                 <span class="bio-thumb-caption">
                     Jerusalem Chapelyard (Woodfieldside)<br>
                     <span class="bio-thumb-sub">Photo: Friends of Jerusalem Graveyard</span>
                 </span>
-                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/oakdalewarmemorial/odw-local-grave-sites.html#jerusalem" class="artifact-btn btn-gravestone" style="width: 200px;">
+                <div style="width: 100%; text-align: center; margin: 10px 0px;"><a href="/odw-local-grave-sites.html#jerusalem" class="artifact-btn btn-gravestone" style="width: 200px;">
                     <span class="artifact-label">Local War Graves
                     </span></a></div>
             </div>
@@ -90,7 +90,7 @@
                 On 6 April 1942, tragedy struck through the inherent hazards of naval service. While on duty aboard ship in Cardiff Docks, Lemuel suffered a severe accidental fall. The traumatic injuries sustained proved fatal, and he passed away that same day, joining the ranks of thousands of servicemen who gave their lives in line-of-duty accidents while keeping Britain's supply routes open.
             </div>
             <div class="bio-casualty">
-                Following his death, Lemuel’s body was returned to his grieving family in the Sirhowy Valley. He was laid to rest with military honors in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Jerusalem Chapelyard</a>, Woodfieldside, Wales, where his grave is meticulously cared for by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019562/lemuel-george-daniels/" target="_blank" class="soldier-link">D/JX 311941</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/oakdalewarmemorial/odw-memorial.html">Oakdale War Memorial</a>.
+                Following his death, Lemuel’s body was returned to his grieving family in the Sirhowy Valley. He was laid to rest with military honors in <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Jerusalem Chapelyard</a>, Woodfieldside, Wales, where his grave is meticulously cared for by the Commonwealth War Graves Commission (view listing: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/4019562/lemuel-george-daniels/" target="_blank" class="soldier-link">D/JX 311941</a>). His name remains proudly honoured within the local history of Oakdale, keeping his memory alive for the generations that follow on the <a href="/odw-memorial.html">Oakdale War Memorial</a>.
             </div>
             
             <!-- NAVIGATION ENGINE SOCKET -->
@@ -118,8 +118,8 @@
                     <strong>Fate:</strong> Died on Active Service, 6 April 1942 (Age: 27 years old)
                 </div>
                 <hr class="basic">
-                <p class="display-text">Serving as an Able Seaman with the Royal Navy attached to H.M.S. President III, AB Daniels was stationed at domestic gunnery instruction depots supporting naval air defense. He passed away on active service on 6 April 1942 at the age of 27 and lies buried in Jerusalem Chapelyard, Woodfieldside. <span class="pointer">&#9658;&nbsp;</span><a href="/oakdalewarmemorial/ww2/daniels_l_g.html">Read Full Profile</a></p>
-                <a href="/oakdalewarmemorial/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                <p class="display-text">Serving as an Able Seaman with the Royal Navy attached to H.M.S. President III, AB Daniels was stationed at domestic gunnery instruction depots supporting naval air defense. He passed away on active service on 6 April 1942 at the age of 27 and lies buried in Jerusalem Chapelyard, Woodfieldside. <span class="pointer">&#9658;&nbsp;</span><a href="/ww2/daniels_l_g.html">Read Full Profile</a></p>
+                <a href="/stories/mh-ww2-home-front.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                     <span class="artifact-label">UK Home Front</span>
                 </a>
             </div>
@@ -135,7 +135,7 @@
             
             <div class="medal-display-row">
                 <div class="medal-item">
-                    <img alt="1939-1945 Star Medal" src="/oakdalewarmemorial/images/medal_1939-45-war_lg.jpg">
+                    <img alt="1939-1945 Star Medal" src="/images/medal_1939-45-war_lg.jpg">
                     <p class="medal-title">War Medal 1939–1945</p>
                 </div>
             </div>
@@ -145,7 +145,7 @@
     <!-- THUMBNAIL MODAL -->
     <template id="modal-cemetery">
         <div class="modal-photo-showcase">
-            <img src="/oakdalewarmemorial/images/jerusalem_graveyard.jpg" alt="Cemetery or Memorial Name">
+            <img src="/images/jerusalem_graveyard.jpg" alt="Cemetery or Memorial Name">
             
             <div class="modal-caption">
                 Jerusalem Chapelyard (Woodfieldside), Wales
@@ -161,6 +161,6 @@
     <!-- END THUMBNAIL MODAL -->
   
   <!-- MASTER UNIFIED INJECTION ENGINE - ABSOLUTE PATH -->
-  <script type="module" src="/oakdalewarmemorial/scripts/odw-common.js"></script>
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
