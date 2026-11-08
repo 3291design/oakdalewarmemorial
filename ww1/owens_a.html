@@ -39,7 +39,8 @@
 
             <div class="profile">
                 <div class="soldier-name">Arthur Owens</div>
-                <div class="soldier-detail">Age: <strong>24</strong></div>
+                <div class="soldier-detail">Died: <strong>24 March 1918</strong></div>
+                <div class="soldier-detail">Age: <strong>24 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Private</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>39344</strong></div>
                 <div class="soldier-detail">Regiment: <strong>Monmouthshire and 5th (Service) Battalion South Wales Borderers</strong></div>
@@ -47,7 +48,7 @@
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-owens" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+            <a href="#modal-medals" class="medal medal-2 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -66,7 +67,6 @@
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
                    data-target="sidebar"><span class="artifact-label">German Spring Offensive</span>
                 </a>
-
                 <a href="/ww1/ww1-timeline.html?jump=event-24mar1918"
                class="artifact-btn btn-timeline">
                    <span class="artifact-label">View Timeline</span>
@@ -74,7 +74,6 @@
             </div>
 
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
-            <div class="bio-text">
                 <!-- Thumbnail Trigger -->
                 <div class="bio-inline-thumb">
                     <a href="#modal-arras" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
@@ -85,13 +84,12 @@
                         <span class="bio-thumb-sub">Photo: CWGC Archive</span>
                     </span>
                 </div>
+            <div class="bio-text">
                 <strong>Arthur Owens</strong>, husband of Ada Jane, served initially in the Monmouthshire Regiment before transferring to the 5th (Service) Battalion, South Wales Borderers. By early 1918, this highly specialized unit was operating as the vital pioneer battalion for the 19th (Western) Division, attached to the British Third Army.
             </div>
-            
             <div class="bio-text">
                 On 24 March 1918, during the opening clashes of the First Battle of Bapaume—a critical, high-intensity phase of the <a href="/stories/mh-ww1_spring_offensive.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">German Spring Offensive</a> (<em>Kaiserschlacht</em>)—the British lines faced overwhelming numbers, forcing a fighting retreat across the old Somme battlefields to prevent a total breakthrough.
             </div>
-            
             <div class="bio-text">
                 Private A Owens (39344) was tragically killed in action during this stubborn defensive withdrawal on 24 March 1918, aged 24. Because his resting place could not be identified or recovered following the retreat, he is missing in action and is commemorated on the historic <a href="http://www.cwgc.org/find-a-cemetery/cemetery/82700/ARRAS%20MEMORIAL" target="_blank" rel="noopener" class="profile-external-link">Arras Memorial, France</a>. His name stands among those who fell in the Arras and Artois sectors with no known grave.
             </div>
@@ -124,45 +122,44 @@
           <div class="sidebar-abbreviated-story">
               <div class="war-front">The Western Front | German Spring Offensive</div>
               <h2 class="subhead_sm">Pte. Arthur Owens</h2>
-              
               <div class="bio-text">
                   <strong>Fate:</strong> Killed in Action, 24 March 1918 (Aged 24)
               </div>
               <hr class="basic">
-              
-              <p class="display-text">Arthur Owens served as a pioneer with the 5th (Service) Battalion, South Wales Borderers. During the opening days of the devastating German Spring Offensive in March 1918, his division was caught in the desperate First Battle of Bapaume. Overwhelmed by sheer numbers, British forces fought a bitter retreating action across the old Somme battlefields. Private Owens was killed in action during this withdrawal at the age of 24. With no known grave, he is remembered on the Arras Memorial. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/owens_a.html">Read Full Profile</a></p>
-              
-              <!-- Story Sidebar Trigger -->
-              <a href="/stories/mh-ww1_spring_offensive.html" 
+              <p class="display-text">
+                Arthur Owens served as a pioneer with the 5th (Service) Battalion, South Wales Borderers. During the opening days of the devastating German Spring Offensive in March 1918, his division was caught in the desperate First Battle of Bapaume. Overwhelmed by sheer numbers, British forces fought a bitter retreating action across the old Somme battlefields. Private Owens was killed in action during this withdrawal at the age of 24. With no known grave, he is remembered on the Arras Memorial. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/owens_a.html">Read Full Profile</a>
+            </p>
+            <!-- Story Sidebar Trigger -->
+            <a href="/stories/mh-ww1_spring_offensive.html" 
                 class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
-                 <span class="artifact-label">German Spring Offensive</span>
-              </a>
+                <span class="artifact-label">German Spring Offensive</span>
+            </a>
           </div>
       </div>
   </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MEDAL MODAL (Owens) -->
-  <template id="modal-medals-owens">
-      <div class="mini-profile-content">
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-2">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Pte. Arthur Owens</h2>
           <hr class="basic">
-          
           <div class="medal-display-row">
               <div class="medal-item">
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
       </div>
-  </template> <!-- End Medal Modal -->
+  </template>
+  <!-- END MEDAL MODAL -->
 
-  <!-- THUMBNAIL MODAL (Arras Memorial) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-arras">
       <div class="modal-photo-showcase">
           <img src="/images/arras_memorial.jpg" alt="Beautiful wide stone cloister panorama of the Arras Memorial, France, showing columns inscribed with names of the missing">
@@ -177,9 +174,10 @@
               </a>
           </div>
       </div>
-  </template> <!-- End Thumbnail Modal -->
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
-    <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/scripts/odw-common.js"></script>
+  <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>

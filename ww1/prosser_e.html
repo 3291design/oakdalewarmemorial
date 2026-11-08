@@ -39,7 +39,8 @@
 
             <div class="profile">
                 <div class="soldier-name">Earnest Prosser</div>
-                <div class="soldier-detail">Age: <strong>26</strong></div>
+                <div class="soldier-detail">Died: <strong>23 September 1916</strong></div>
+                <div class="soldier-detail">Age: <strong>26 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Private</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>10145</strong></div>
                 <div class="soldier-detail">Regiment: <strong>2nd Battalion Welsh</strong></div>
@@ -47,7 +48,7 @@
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-prosser" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+            <a href="#modal-medals" class="medal medal-3 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="1914-1915 Star Medal Ribbon" src="/images/medal_1914-15-star_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -69,7 +70,6 @@
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
                    data-target="sidebar"><span class="artifact-label">Battle of Flers–Courcelette</span>
                 </a>
-
                 <a href="/ww1/ww1-timeline.html?jump=event-23sep1916"
                class="artifact-btn btn-timeline">
                    <span class="artifact-label">View Timeline</span>
@@ -77,9 +77,6 @@
             </div>
 
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
-            <div class="bio-text"><strong>Earnest Prosser</strong> was an underground colliery worker from Blackwood, the son of Frederick and Charlotte Prosser. He answered the call early in the conflict, deploying overseas and arriving in France in January 1915 to join the veteran 2nd Battalion, Welsh Regiment, operating as part of the British 1st Division.
-            </div>
-            
             <div class="bio-inline-thumb">
                 <a href="#modal-thiepval" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
                     <img src="/images/thiepval-cemetary_sm.jpg" alt="Thiepval Memorial to the Missing of the Somme, France">
@@ -89,11 +86,14 @@
                     <span class="bio-thumb-sub">Photo: CWGC Archive</span>
                 </span>
             </div>
-                
-            <div class="bio-text">In late September 1916, his division was heavily engaged in the <a href="/stories/mh-ww1_battle-fleurs.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Battle of Flers–Courcelette</a>—the final general British offensive of the tragic <a href="/stories/mh-ww1_somme.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Somme campaign</a>. Although the main coordinated attack was officially called off on 22 September, intense artillery duels and localized front-line adjustments continued to tear up the ground between Albert and Bapaume over the subsequent days.
+            <div class="bio-text">
+                <strong>Earnest Prosser</strong> was an underground colliery worker from Blackwood, the son of Frederick and Charlotte Prosser. He answered the call early in the conflict, deploying overseas and arriving in France in January 1915 to join the veteran 2nd Battalion, Welsh Regiment, operating as part of the British 1st Division.
             </div>
-            
-            <div class="bio-text">Private E Prosser (10145) was killed in action during these fierce sector holdouts on 23 September 1916, aged 26. Because his resting place could never be recovered from the pulverized Somme landscape, he is commemorated on the historic <a href="http://www.cwgc.org/find-a-cemetery/cemetery/80800/THIEPVAL%20MEMORIAL" target="_blank" rel="noopener" class="profile-external-link">Thiepval Memorial, France</a>. His name is permanently engraved alongside more than 72,000 others who fell in the Somme Sector and have no known grave.
+            <div class="bio-text">
+                In late September 1916, his division was heavily engaged in the <a href="/stories/mh-ww1_battle-fleurs.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Battle of Flers–Courcelette</a>—the final general British offensive of the tragic <a href="/stories/mh-ww1_somme.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Somme campaign</a>. Although the main coordinated attack was officially called off on 22 September, intense artillery duels and localized front-line adjustments continued to tear up the ground between Albert and Bapaume over the subsequent days.
+            </div>
+            <div class="bio-text">
+                Private E Prosser (10145) was killed in action during these fierce sector holdouts on 23 September 1916, aged 26. Because his resting place could never be recovered from the pulverized Somme landscape, he is commemorated on the historic <a href="http://www.cwgc.org/find-a-cemetery/cemetery/80800/THIEPVAL%20MEMORIAL" target="_blank" rel="noopener" class="profile-external-link">Thiepval Memorial, France</a>. His name is permanently engraved alongside more than 72,000 others who fell in the Somme Sector and have no known grave.
             </div>
 
             <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
@@ -124,14 +124,11 @@
           <div class="sidebar-abbreviated-story">
               <div class="war-front">The Western Front | Battle of Flers–Courcelette</div>
               <h2 class="subhead_sm">Pte. Earnest Prosser</h2>
-              
               <div class="bio-text">
                   <strong>Fate:</strong> Killed in Action, 23 September 1916 (Aged 26)
               </div>
               <hr class="basic">
-              
               <p class="display-text">Earnest Prosser, an underground colliery worker from Blackwood, served with the veteran 2nd Battalion, Welsh Regiment. In late September 1916, his division fought through the final grinding phases of the Battle of Flers-Courcelette on the Somme. Private Prosser was killed in action during relentless front-line shelling and sector adjustments on 23 September 1916 at the age of 26. With no known grave, he is commemorated on the Thiepval Memorial. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/prosser_e.html">Read Full Profile</a></p>
-              
               <a href="/stories/mh-ww1_battle-fleurs.html" 
                  class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
                  <span class="artifact-label">Battle of Flers–Courcelette</span>
@@ -139,51 +136,49 @@
           </div>
       </div>
   </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MEDAL MODAL (Prosser) -->
-  <template id="modal-medals-prosser">
-      <div class="mini-profile-content">
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-3">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Pte. Earnest Prosser</h2>
           <hr class="basic">
-          
           <div class="medal-display-row">
               <div class="medal-item">
                   <img alt="1914-1915 Star Medal" src="/images/medal_1914-15-star_lg.jpg">
                   <p class="medal-title">1914-1915 Star</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
       </div>
-  </template> <!-- End Medal Modal -->
+  </template>
+  <!-- END MEDAL MODAL -->
 
-   <!-- THUMBNAIL MODAL (Thiepval) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-thiepval">
       <div class="modal-photo-showcase">
           <img src="/images/thiepval-cemetary_lg.jpg" alt="Thiepval Memorial to the Missing of the Somme, France">
-          
           <div class="modal-caption">
               Thiepval Memorial, Somme, France
           </div>
-          
           <div class="modal-showcase-link-wrap">
               <a href="http://www.cwgc.org/find-a-cemetery/cemetery/80800/THIEPVAL%20MEMORIAL" target="_blank" rel="noopener" class="plain-text">
                   <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
               </a>
           </div>
       </div>
-  </template> <!-- End Thumbnail Modal -->
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
   <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
-   <script type="module" src="/scripts/odw-common.js"></script>
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>

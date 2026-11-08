@@ -42,7 +42,8 @@
 
             <div class="profile">
                 <div class="soldier-name">Albert Stewart Price</div>
-                <div class="soldier-detail">Age: <strong>18</strong></div>
+                <div class="soldier-detail">Died: <strong>5 April 1915</strong></div>
+                <div class="soldier-detail">Age: <strong>18 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Private</strong></div>
                 <div class="soldier-detail">Regtl. No.: <strong>2693</strong></div>
                 <div class="soldier-detail">Regiment: <strong>1st (Rifle) Battalion Monmouthshire</strong></div>
@@ -50,7 +51,7 @@
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals-price-a-s" class="medal hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+            <a href="#modal-medals" class="medal medal-3 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
                 <div class="soldier-medals-box">
                     <img alt="1914-1915 Star Medal Ribbon" src="/images/medal_1914-15-star_sm.jpg" class="medal-ribbon-img">
                 </div>
@@ -73,35 +74,31 @@
                    data-target="sidebar">
                     <span class="artifact-label">Early Trench Warfare</span>
                 </a>
-
                 <a href="/ww1/ww1-timeline.html?jump=event-05apr1915"
                class="artifact-btn btn-timeline">
                    <span class="artifact-label">View Timeline</span>
                </a>
             </div>
 
-            <div class="bio-text"><b>Albert Stewart Price</b> was born in Aberdare, Glamorgan, the second son of Jonah and Harriet Price, who later settled down in the growing colliery community of Oakdale. He worked as a local coal miner before enlisting in the 1st (Rifle) Battalion, Monmouthshire Regiment—a dedicated Territorial Force unit. Albert deployed overseas early, arriving in France with his battalion in February 1915.
+            <div class="bio-text">
+                <b>Albert Stewart Price</b> was born in Aberdare, Glamorgan, the second son of Jonah and Harriet Price, who later settled down in the growing colliery community of Oakdale. He worked as a local coal miner before enlisting in the 1st (Rifle) Battalion, Monmouthshire Regiment—a dedicated Territorial Force unit. Albert deployed overseas early, arriving in France with his battalion in February 1915.
             </div>
-            
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
-                <div class="bio-inline-thumb">
-                    <a href="#modal-bailleul-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                        <img src="/images/bailleul_cemetery.jpg" alt="Immaculate white stone headstone rows extending across green turf at Bailleul Communal Cemetery, France">
-                    </a>
-                    <span class="bio-thumb-caption">
+            <div class="bio-inline-thumb">
+                <a href="#modal-bailleul-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
+                    <img src="/images/bailleul_cemetery.jpg" alt="Immaculate white stone headstone rows extending across green turf at Bailleul Communal Cemetery, France">
+                </a>
+                <span class="bio-thumb-caption">
                         Bailleul Communal Cemetery, France.<br>
-                        <span class="bio-thumb-sub">Photo: CWGC Archive</span>
-                    </span>
-                </div>
-                
-                <div class="bio-text">
+                    <span class="bio-thumb-sub">Photo: CWGC Archive</span>
+                </span>
+            </div>
+            <div class="bio-text">
                 Only two months after arriving on the continent, his unit was pushed into heavy service securing front line sectors along the <a href="/stories/mh-ww1_armentieres_1915.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Western Front</a>. Private Albert S. Price (2693) sustained catastrophic combat injuries and died of wounds on 5 April 1915, aged just 18.
             </div>
-            
             <div class="bio-text">
                 He was interred at <a href="http://www.cwgc.org/find-a-cemetery/cemetery/2000048/BAILLEUL%20COMMUNAL%20CEMETERY%20EXTENSION,%20NORD" target="_blank" rel="noopener" class="profile-external-link">Bailleul Communal Cemetery, France</a>, which was actively utilized by the medical staff managing nearby No. 8 Casualty Clearing Station. He is also formally commemorated on the Battalion War Memorial mounted inside St Woolos Cathedral, Newport.
             </div>
-            
             <!-- Archive Source Note -->
             <div class="archive-source-note">
                 <span class="source-heading">Additional information taken from the Army Registers of Soldiers' Effects, 1901-1929:</span>
@@ -136,13 +133,12 @@
           <div class="sidebar-abbreviated-story">
               <div class="war-front">The Western Front | Early Trench Warfare in Flanders</div>
               <h2 class="subhead_sm">Pte. Albert Stewart Price</h2>
-              
               <div class="bio-text">
                   <strong>Fate:</strong> Died of Wounds, 5 April 1915 (Aged 18)
               </div>
               <hr class="basic">
-              
-              <p class="display-text">Albert Stewart Price, a young coal miner from Oakdale, enlisted in the 1st (Rifle) Battalion, Monmouthshire Regiment. Deploying to France in February 1915, he was thrust into early front-line trench duties on the Western Front. Just two months later, at only 18 years of age, Private Price sustained severe combat wounds and tragically died on 5 April 1915. He rests in Bailleul Communal Cemetery Extension. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/price_a_s.html">Read Full Profile</a></p>
+              <p class="display-text">
+                Albert Stewart Price, a young coal miner from Oakdale, enlisted in the 1st (Rifle) Battalion, Monmouthshire Regiment. Deploying to France in February 1915, he was thrust into early front-line trench duties on the Western Front. Just two months later, at only 18 years of age, Private Price sustained severe combat wounds and tragically died on 5 April 1915. He rests in Bailleul Communal Cemetery Extension. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/price_a_s.html">Read Full Profile</a></p>
               
               <!-- Story Sidebar Trigger -->
                 <a href="/stories/mh-ww1_armentieres_1915.html" 
@@ -152,51 +148,49 @@
           </div>
       </div>
   </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MEDAL MODAL (Price) -->
-  <template id="modal-medals-price-a-s">
-      <div class="mini-profile-content">
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-3">
           <div class="award-verify">Award Verification</div>
           <h2 class="subhead_sm">Medals Awarded: Pte. Albert Stewart Price</h2>
           <hr class="basic">
-          
           <div class="medal-display-row">
               <div class="medal-item">
                   <img alt="1914-1915 Star Medal" src="/images/medal_1914-15-star_lg.jpg">
                   <p class="medal-title">1914-1915 Star</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
                   <p class="medal-title">Victory Medal</p>
               </div>
-              
               <div class="medal-item">
                   <img alt="British War Medal" src="/images/medal_war_lg.jpg">
                   <p class="medal-title">British War Medal</p>
               </div>
           </div>
       </div>
-  </template> <!-- End Medal Modal -->
+  </template>
+  <!-- END MEDAL MODAL -->
 
-  <!-- THUMBNAIL MODAL (Bailleul Communal Cemetery Extension) -->
+  <!-- THUMBNAIL MODAL -->
   <template id="modal-bailleul-cemetery">
       <div class="modal-photo-showcase">
           <img src="/images/bailleul_cemetery.jpg" alt="Immaculate white stone headstone rows extending across green turf at Bailleul Communal Cemetery, France">
-          
           <div class="modal-caption">
               Bailleul Communal Cemetery Extension, France
           </div>
-          
           <div class="modal-showcase-link-wrap">
               <a href="http://www.cwgc.org/find-a-cemetery/cemetery/2000048/BAILLEUL%20COMMUNAL%20CEMETERY%20EXTENSION,%20NORD" target="_blank" rel="noopener" class="plain-text">
                   <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
               </a>
           </div>
       </div>
-  </template> <!-- End Thumbnail Modal -->
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
 
-    <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
-    <script type="module" src="/scripts/odw-common.js"></script>
+  <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
