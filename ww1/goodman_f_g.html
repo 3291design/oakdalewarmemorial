@@ -38,11 +38,11 @@
             </div>
 
             <div class="profile">
-                <div class="soldier-name">Frederick G. Goodman</div>
+                <div class="soldier-name" id="soldier-name" style="letter-spacing: -.15px;">Frederick G. Goodman</div>
                 <div class="soldier-detail">Died: <strong>25 July 1917</strong></div>
                 <div class="soldier-detail">Age: <strong>33 years old</strong></div>
-                <div class="soldier-detail">Rank: <strong>Private</strong></div>
-                <div class="soldier-detail">Regtl. No.: <strong>19476</strong></div>
+                <div class="soldier-detail" style="margin-bottom: clamp(0px, 4vw, -30px) !important;">Rank: <strong>Private</strong></div>
+                <div class="soldier-detail" style="margin-top: clamp(0x, 4vw, -30px) !important;">Service No.: <strong>19476 <sup class="citation-link"><a href="#service-number">[†]</a></strong></div>
                 <div class="soldier-detail">Regiment: <strong>South Wales Borderers</strong></div>
                 <div class="soldier-detail">Medals: <strong>1914-1915 Star, Victory, British War</strong></div>
             </div>
@@ -78,7 +78,7 @@
             
             <!-- Biography Body Paragraphs -->
             <div class="bio-text">
-                <strong>Frederick George Goodman</strong>, was a coal miner from Brithdir, South Wales, who left the collieries to enlist in the war effort in April 1915. Joining the South Wales Borderers under service number 19476, his military journey quickened when he arrived on the Western Front in September 1915. This crucial timeline indicates he was sent out as a vital reinforcement for the 1st Battalion, South Wales Borderers, right as they were thrown into the devastating and bloody fighting of the Battle of Loos. From that baptism of fire onward, Goodman endured years in the trenches, with his battalion going on to face some of the most harrowing campaigns of the war, including the Somme and Passchendaele.
+                <span class="bio-text-name">Frederick George Goodman</span>, was a coal miner from Brithdir, South Wales, who left the collieries to enlist in the war effort in April 1915. Joining the South Wales Borderers under service number 19476, his military journey quickened when he arrived on the Western Front in September 1915. This crucial timeline indicates he was sent out as a vital reinforcement for the 1st Battalion, South Wales Borderers, right as they were thrown into the devastating and bloody fighting of the Battle of Loos. From that baptism of fire onward, Goodman endured years in the trenches, with his battalion going on to face some of the most harrowing campaigns of the war, including the Somme and Passchendaele.
             </div>
             <div class="bio-text">
                 Throughout the war, Goodman suffered physical impairments due to the harsh reality of service on the Western Front. By the time the Armistice was signed, his injuries meant he was no longer fit for duty. In January 1919, at the age of 33, he was honourably discharged as surplus to military requirements due to his medical impairments. Upon returning to civilian life, he was awarded the <a href="/stories/mh-ww1_silver_war_badge.html"  class="hybrid-fetch-trigger soldier-link" data-target="full-view">Silver War Badge</a>, a lapel pin worn on civilian clothes to signify to the public that he had served his country bravely and protecting him from being mistaken for a draft evader.
@@ -86,6 +86,12 @@
             <div class="bio-text">
                 Tragically, the physical toll of his wartime service followed him into the post-war era. Like many veterans whose lungs were compromised by poison gas or whose bodies carried deep shrapnel wounds, his health ultimately collapsed under the strain, and it is understood that he later succumbed to the long-term effects of his injuries. Because he passed away after his official discharge, he is locally remembered rather than carrying a standard military grave, with his name permanently honored on the Oakdale War Memorial alongside his fallen neighbours.
             </div> 
+            <!-- Archive Source Note -->
+            <div class="archive-source-note">
+                <span class="source-heading" id="service-number">[†] Historical Note on CWGC Recognition:</span>
+                <span class="source-data-italic">During the First World War, casualties who died on the battlefield were meticulously logged by their units. However, servicemen who were severely wounded, brought back to the UK, and subsequently discharged before passing away at home frequently slipped through administrative cracks. If local authorities or family members did not explicitly flag the death to the War Office as a direct consequence of active service, the soldier was omitted from the official Commonwealth War Graves Commission (CWGC) roll of honour. This explains why Private Goodman is proudly remembered on our local memorial, but lacks a standard CWGC record. </span>
+                <span class="source-data"><a href="#soldier-name" class="footnote-return" title="Return to text">&#11173;</a></span>
+            </div>
 
             <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
             <div class="profile-navigation-row" id="profile-nav-engine"></div>
@@ -113,18 +119,23 @@
   <template id="hybrid-summary-payload">
       <div class="mini-profile-content">
           <div class="sidebar-abbreviated-story">
-              <div class="war-front">The Return Home | Silver War Badge</div>
-              <h2 class="subhead_sm">Pte. Frederick George Goodman</h2>
-              <div class="bio-text">
-                  <strong>Fate:</strong> Discharged due to Impairment (Later Died of Wounds, Aged 33)
-              </div>
-              <hr class="basic">
-              <p class="display-text">Frederick George Goodman, a miner from Brithdir, served with the South Wales Borderers after arriving in France in September 1915. Having suffered impairment in the line of duty, Private Goodman was honorably discharged as surplus to military requirements in January 1919. In recognition of his honorable service and wounds, he was awarded the Silver War Badge. He is believed to have later succumbed to the wounds he sustained during his time on the Western Front. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/goodman_f_g.html">Read Full Profile</a></p>
-              <!-- Story Sidebar Trigger -->
-              <a href="/stories/mh-ww1_silver_war_badge.html" 
-                 class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
-                 <span class="artifact-label">Silver War Badge</span>
-              </a>
+            <div class="war-front">The Return Home | Silver War Badge</div>
+            <h2 class="subhead_sm">Pte. Frederick George Goodman</h2>
+            <div class="bio-text">
+                <strong>Fate:</strong> Discharged due to Impairment (Later Died of Wounds, Aged 33)
+            </div>
+            <hr class="basic">
+            <p class="display-text">
+                Frederick George Goodman, a miner from Brithdir, served with the South Wales Borderers after arriving in France in September 1915. Having suffered impairment in the line of duty, Private Goodman was honorably discharged as surplus to military requirements in January 1919. In recognition of his honorable service and wounds, he was awarded the Silver War Badge. He is believed to have later succumbed to the wounds he sustained during his time on the Western Front.
+            </p>
+            <div  class="display-text" style="margin-top: 10px;">
+                <span class="pointer">&#9658;</span><a href="/ww1/goodman_f_g.html">Read Full Profile...</a>
+            </div>
+            <!-- Story Sidebar Trigger -->
+            <a href="/stories/mh-ww1_silver_war_badge.html" 
+                class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                <span class="artifact-label">Silver War Badge</span>
+            </a>
           </div>
       </div>
   </template>

@@ -38,11 +38,11 @@
             </div>
 
             <div class="profile">
-                <div class="soldier-name">Samuel Fisher</div>
+                <div class="soldier-name" id="soldier-name">Samuel Fisher</div>
                 <div class="soldier-detail">Died: <strong>25 July 1917</strong></div>
                 <div class="soldier-detail">Age: <strong>44 years old</strong></div>
-                <div class="soldier-detail">Rank: <strong>Private</strong></div>
-                <div class="soldier-detail">Regtl. No.: <strong>3/13341</strong></div>
+                <div class="soldier-detail" style="margin-bottom: clamp(0px, 4vw, -30px) !important;">Rank: <strong>Private</strong></div>
+                <div class="soldier-detail" style="margin-top: clamp(0x, 4vw, -30px) !important;">Service No.: <strong>3/13341 <sup class="citation-link"><a href="#service-number">[†]</a></strong></div>
                 <div class="soldier-detail">Regiment: <strong>South Wales Borderers</strong></div>
                 <div class="soldier-detail">Medals: <strong>1914-1915 Star, Victory, British War</strong></div>
             </div>
@@ -78,7 +78,7 @@
             
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
             <div class="bio-text">
-                <strong>Samuel Fisher</strong> was a coal miner from Blackwood, South Wales, the son of the late Alfred and Sarah Fisher. He enlisted in the South Wales Borderers, receiving the service number 3/13341. The "3/" prefix indicates he initially joined the 3rd (Reserve) Battalion, a home-based unit responsible for training and processing recruits. However, his deployment details reveal a front-line reality: he arrived in the Balkans in June 1915, a timeline that perfectly aligns with the 4th Battalion, South Wales Borderers, which sailed that month to join the grueling and bloody <a href="/stories/mh-ww1_gallipoli_campaign.html" class="hybrid-fetch-trigger soldier-link">Gallipoli Campaign</a> against Ottoman forces.
+                <span class="bio-text-name">Samuel Fisher</span> was a coal miner from Blackwood, South Wales, the son of the late Alfred and Sarah Fisher. He enlisted in the South Wales Borderers, receiving the service number 3/13341. The "3/" prefix indicates he initially joined the 3rd (Reserve) Battalion, a home-based unit responsible for training and processing recruits. However, his deployment details reveal a front-line reality: he arrived in the Balkans in June 1915, a timeline that perfectly aligns with the 4th Battalion, South Wales Borderers, which sailed that month to join the grueling and bloody <a href="/stories/mh-ww1_gallipoli_campaign.html" class="hybrid-fetch-trigger soldier-link">Gallipoli Campaign</a> against Ottoman forces.
             </div>
             <!-- Bio Inline Thumbnail Trigger -->
             <div class="bio-inline-thumb">
@@ -100,7 +100,13 @@
                 As an experienced miner, Fisher was sent back into the South Wales valleys to work in the coals mines. Tragically, his return to civil employment was short-lived. The severe respiratory strain of working deep underground, coupled with a constitution permanently weakened by his combat injuries and the harsh environment of the Mediterranean, ultimately proved fatal. On 25 July 1917, at the age of 44, Private Fisher succumbed to pneumonia.
             </div>
             <div class="bio-text">
-                Because his death was directly linked to the illness and wounds suffered during his time in uniform, he was recognized as a casualty of the Great War. Today, he rests in the <a href="#modal-cemetery" class="hybrid-fetch-trigger" data-target="modal" class="soldier-link">Penmaen Chapelyard</a> near Blackwood beneath a permanent Commonwealth War Graves Commission headstone, and his sacrifice remains locally honored with his name inscribed upon the Oakdale War Memorial.
+                Because his death was directly linked to the illness and wounds suffered during his time in uniform, he was recognized as a casualty of the Great War. Today, he rests in the <a href="#modal-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Penmaen Chapelyard</a> near Blackwood beneath a permanent Commonwealth War Graves Commission headstone, and his sacrifice remains locally honored with his name inscribed upon the Oakdale War Memorial.
+            </div>
+             <!-- Archive Source Note -->
+            <div class="archive-source-note">
+                <span class="source-heading" id="service-number">[†] Historical Note on CWGC Recognition:</span>
+                <span class="source-data-italic">During the First World War, casualties who died on the battlefield were meticulously logged by their units. However, servicemen who were severely wounded, brought back to the UK, and subsequently discharged before passing away at home frequently slipped through administrative cracks. If local authorities or family members did not explicitly flag the death to the War Office as a direct consequence of active service, the soldier was omitted from the official Commonwealth War Graves Commission (CWGC) roll of honour. This explains why Private Fisher is proudly remembered on our local memorial, but lacks a standard CWGC record. </span>
+                <span class="source-data"><a href="#soldier-name" class="footnote-return" title="Return to text">&#11173;</a></span>
             </div>
 
             <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
@@ -135,7 +141,11 @@
                   <strong>Fate:</strong> Died of Pneumonia, 25 July 1917 (Aged 44)
               </div>
               <hr class="basic">
-              <p class="display-text">Samuel Fisher, a coal miner from Blackwood, served with the South Wales Borderers. In June 1915, he was deployed to the Balkans theater, entering the grueling Gallipoli Campaign against the Ottoman Empire. Sustaining wounds during the harsh coastal engagements, Private Fisher returned home to Wales and was transferred to the Class W Reserve. He later succumbed to pneumonia, likely related to his wartime injuries, on 25 July 1917, at the age of 44. He is buried locally in the Penmaen Chapelyard. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/fisher_s.html">Read Full Profile</a></p>
+              <p class="display-text">Samuel Fisher, a coal miner from Blackwood, served with the South Wales Borderers. In June 1915, he was deployed to the Balkans theater, entering the grueling Gallipoli Campaign against the Ottoman Empire. Sustaining wounds during the harsh coastal engagements, Private Fisher returned home to Wales and was transferred to the Class W Reserve. He later succumbed to pneumonia, likely related to his wartime injuries, on 25 July 1917, at the age of 44. He is buried locally in the Penmaen Chapelyard.
+            </p>
+            <div  class="display-text" style="margin-top: 10px;">
+                <span class="pointer">&#9658;</span><a href="/ww1/fisher_s.html">Read Full Profile...</a>
+            </div>
               <!-- Story Sidebar Trigger -->
               <a href="/stories/mh-ww1_gallipoli_campaign.html" 
                  class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
