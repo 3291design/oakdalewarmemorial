@@ -112,7 +112,7 @@
     font-family: var(--font-serif);
     font-size: clamp(14px, 2vw, 16px); 
     text-align: justify;
-    line-height: 1.7em; 
+    line-height: 1.7em;
 }
 .bio-thumb-caption {
     font-family: var(--font-sans);
@@ -496,13 +496,23 @@
     .profile { min-width: 0; }
     .soldier-name { white-space: normal; }
 }
+@media (max-width: 630px) {
+    /* Releases the caps exactly when flexbox forces medals to the next line */
+    .profile-artifact-dock{
+        max-width: 100%; 
+        display: flex;
+        justify-content: center;
+    }
+}
 
 /* 3. MEDAL ROW 2 WRAP (~630px and below) */
 @media (max-width: 630px) {
     /* Releases the caps exactly when flexbox forces medals to the next line */
     .medal-1, .medal-2, .medal-3 {
         max-width: 100%; 
-        justify-content: flex-start; 
+        display: flex;
+        justify-content: center;
+        padding-right: 10px;
     }
 }
 
@@ -550,7 +560,9 @@
         text-align: center; 
         margin: 10px 20px 10px 20px;
     }
-    .soldier-detail { max-width: 100%; }
+    .soldier-detail { 
+        max-width: 100%; 
+    }
 }
 
 @media (max-width: 320px) {
