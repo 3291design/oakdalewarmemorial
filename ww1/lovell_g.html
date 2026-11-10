@@ -45,9 +45,9 @@
                 <div class="soldier-detail">Died: <strong>13 May 1915</strong></div>
                 <div class="soldier-detail">Age: <strong>23 years old</strong></div>
                 <div class="soldier-detail">Rank: <strong>Lance Corporal</strong></div>
-                <div class="soldier-detail">Regtl. No.: <strong>1883</strong></div>
-                <div class="soldier-detail">Regiment: <strong>2nd Battalion Monmouth</strong></div>
-                <div class="soldier-detail">Medals: <strong>1914 Star, Victory, British War</strong></div>
+                <div class="soldier-detail">Service No.: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/200408/g-lovell/" target="_blank" class="soldier-link">1883</a></div>
+                <div class="soldier-detail">Regiment: <strong>Monmouthshire, 2nd Bn.</strong></div>
+                <div class="soldier-detail" style="letter-spacing: -.25px;">Medals: <strong>1914 Star, Victory, British War</strong></div>
             </div>
             
             <!-- Medal Trigger Structure (Gold Standard Applied) -->
@@ -81,6 +81,9 @@
             </div>
 
             <!-- Biography Body Paragraphs with Floating Thumbnail -->
+            <div class="bio-text">
+                <span class="bio-text-name">George Lovell</span>, a collier at Oakdale, second son of William and Lydia Lovell of 20 Beech Grove, Oakdale arrived in France in November 1914 in the 2nd Battalion Monmouth Regiment.
+            </div>
             <!-- Thumbnail Trigger (Gold Standard Applied with CSS Class) -->
             <div class="bio-inline-thumb">
                 <a href="#modal-bailleul-cemetery" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
@@ -100,13 +103,10 @@
                 </div>
             </div>
             <div class="bio-text">
-                <strong>George Lovell</strong>, a collier at Oakdale, second son of William and Lydia Lovell of 20 Beech Grove, Oakdale arrived in France in November 1914 in the 2nd Battalion Monmouth Regiment.
-            </div>
-            <div class="bio-text">
                 On 13 May 1915, Lance Corporal Lovell was killed in action—a day marked by ceaseless rain and crushing German shelling during the <a href="/stories/mh-ww1_2nd-battle-ypres.html" class="hybrid-fetch-trigger soldier-link">2nd Battle of Ypres</a>. His battalion, part of 12th Brigade, was in reserve at Shell Trap Farm near the Frezenberg Ridge. German attacks resulted in fierce fighting with great loss of life, but with little change in the frontlines.
             </div>
             <div class="bio-text">
-                Lance Corporal G Lovell (1883) was killed in action on 13 May 1915, aged 23. He lies in <a href="http://www.cwgc.org/find-a-cemetery/cemetery/2000048/BAILLEUL%20COMMUNAL%20CEMETERY%20EXTENSION,%20NORD" target="_blank" rel="noopener" class="profile-external-link">Bailleul Communal Cemetery Extension, France</a>. He is commemorated also on the Battalion Memorial in St Cadoc's Church, Trevethin, and on the 'H' Company Memorial, formerly in the now defunct St Mary's Church, Crumlin.
+                Lance Corporal G Lovell (<a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/200408/g-lovell/" target="_blank" class="soldier-link">1883</a>) was killed in action on 13 May 1915, aged 23. He lies in <a href="#modal-bailleul-cemetery" class="hybrid-fetch-trigger soldier-link" data-target="modal">Bailleul Communal Cemetery Extension, France</a>. He is also commemorated on the Battalion Memorial in St Cadoc's Church, Trevethin, and on the 'H' Company Memorial, formerly in the now defunct St Mary's Church, Crumlin.
             </div>
             <!-- Archive Source Note -->
             <div class="archive-source-note">
@@ -140,20 +140,25 @@
   <template id="hybrid-summary-payload">
       <div class="mini-profile-content">
           <div class="sidebar-abbreviated-story">
-              <div class="war-front">Western Front | 2nd Battle of Ypres</div>
-              <h2 class="subhead_sm">Lance Corporal George Lovell</h2>
-              
-              <div class="bio-text">
-                  <strong>Fate:</strong> Killed in Action, 13 May 1915 (Aged 23)
-              </div>
-              <hr class="basic">
-              
-              <p class="display-text">George Lovell, an Oakdale collier and the second son of William and Lydia Lovell, arrived in France in November 1914 with the 2nd Battalion Monmouth Regiment. On May 13, 1915—amidst ceaseless rain and heavy shelling near Shell Trap Farm and the Frezenberg Ridge—his battalion faced ferocious German assaults during the bitter engagements of the Second Battle of Ypres. Lance Corporal Lovell was killed in action that day at age 23 and now rests in the Bailleul Communal Cemetery Extension. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/lovell_g.html">Read Full Profile</a></p>
-              
-              <!-- IStory Sidebar Trigger -->
-                  <a href="/stories/mh-ww1_2nd-battle-ypres.html" class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
-                 <span class="artifact-label">2nd Battle of Ypres</span>
-                  </a>
+            <div class="war-front">Western Front | 2nd Battle of Ypres</div>
+            <h2 class="subhead_sm">Lance Corporal George Lovell</h2>
+            <div class="bio-text">
+                <strong>Fate:</strong> Killed in Action, 13 May 1915 (Aged 23)
+            </div>
+            <hr class="basic">
+            <p class="display-text">
+                George Lovell, an Oakdale collier and the second son of William and Lydia Lovell, arrived in France in November 1914 with the 2nd Battalion Monmouth Regiment. On May 13, 1915—amidst ceaseless rain and heavy shelling near Shell Trap Farm and the Frezenberg Ridge—his battalion faced ferocious German assaults during the bitter engagements of the Second Battle of Ypres. Lance Corporal Lovell was killed in action that day at age 23 and now rests in the Bailleul Communal Cemetery Extension. 
+            </p>
+            <div  class="display-text" style="margin-top: 10px;">
+                <span class="pointer">&#9658;</span><a href="/ww1/lovell_g.html">Read Full Profile...</a>
+            </div>
+            <!-- Story Sidebar Trigger -->
+            <a href="/stories/mh-ww1_2nd-battle-ypres.html" 
+                class="artifact-btn btn-story hybrid-fetch-trigger" 
+                style="margin-top: 20px;" 
+                data-target="sidebar">
+                <span class="artifact-label">2nd Battle of Ypres</span>
+            </a>
           </div>
       </div>
   </template>
