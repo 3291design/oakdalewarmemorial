@@ -280,7 +280,7 @@ img {
 
 .main-container { 
     background-color: var(--bg-panel); 
-    background-image: url('../images/NEW-poppies-bkgrd_01.jpg');
+    background-image: url('../images/NEW-poppies-bkgrd_01.webp');
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed; 
