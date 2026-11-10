@@ -280,7 +280,7 @@ img {
 
 .main-container { 
     background-color: var(--bg-panel); 
-    background-image: url('../images/NEW-poppies-bkgrd_01.webp');
+    background-image: url('/images/NEW-poppies-bkgrd_01.webp');
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed; 
@@ -347,7 +347,7 @@ img {
     display: block;
     overflow: hidden;       
     aspect-ratio: 820 / 220; 
-    background-image: url('/images/footer_image-ww1.jpg'); 
+    background-image: url('/images/footer_image-ww1.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -363,7 +363,7 @@ img {
     display: block;
     overflow: hidden;       
     aspect-ratio: 820 / 220; 
-    background-image: url('/images/footer_image-ww2.jpg'); 
+    background-image: url('/images/footer_image-ww2.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
