@@ -1,19 +1,17 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edmund Stanley Rowlands - Oakdale War Memorial</title>
-    <meta name="description" content="A website dedicated to the memory of men from Oakdale, Wales, UK who served during World War I.">
-    <meta name="keywords" content="Oakdale, Wales, Memorial, World War One, WWI, soldiers, died, commemorate, family history, Gwent, Caerphilly">
-    <meta name="author" content="Melanie Copleston, 3291design">
+    <title>Mini-Profiles - Oakdale War Memorial</title>
+    <meta name="description" content="A shared memorial profile for brothers from Oakdale who served in World War I.">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS -- USING ABSOLUTE PATHS! -->
-   <link rel="stylesheet" href="/css/odw-core.css">
-   <link rel="stylesheet" href="/css/odw-typography.css">
-   <link rel="stylesheet" href="/css/odw-profiles.css">
-   <link rel="stylesheet" href="/css/odw-components.css">
-  
+    <link rel="stylesheet" href="/css/odw-core.css">
+    <link rel="stylesheet" href="/css/odw-typography.css">
+    <link rel="stylesheet" href="/css/odw-profiles.css">
+    <link rel="stylesheet" href="/css/odw-components.css">
+
 </head>
 
 <!-- CRITICAL: data-era must be "ww1-profile" for the Prev/Next pagination to load -->
@@ -29,85 +27,136 @@
     <!-- ========================================== -->
     <!-- TIER 2: PAGE CORE (Main Content Blocks)    -->
     <!-- ========================================== -->
-    <div class="page-core profile-core-flush">
-
-        <!-- Flexbox Core Presentation Component -->
-        <div class="flex-container">
-            <div class="image">
-                <img src="/images/blank_man.gif" alt="Edmund Stanley Rowlands Portrait Placeholder" class="soldier-portrait-img">
-            </div>
-
-            <div class="profile">
-                <div class="soldier-name">Edmund S. Rowlands</div>
-                <div class="soldier-detail">Died: <strong>19 August 1916</strong></div>
-                <div class="soldier-detail">Age: <strong>21 years old</strong></div>
-                <div class="soldier-detail">Rank: <strong>Pioneer</strong></div>
-                <div class="soldier-detail">Regtl. No.: <strong>159318</strong></div>
-                <div class="soldier-detail">Regiment: <strong>South Wales Borderers / Royal Engineers</strong></div>
-                <div class="soldier-detail">Medals: <strong>Victory, British War</strong></div>
-            </div>
-            
-            <!-- Medal Trigger Structure (Gold Standard Applied) -->
-            <a href="#modal-medals" class="medal medal-2 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
-                <div class="soldier-medals-box">
-                    <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
-                </div>
-                <div class="soldier-medals-box">
-                    <img alt="British War Medal Ribbon" src="/images/medal_war_sm.jpg" class="medal-ribbon-img">
-                </div>
-            </a>
-        </div> 
+    <div class="page-core">
         
-        <!-- Narrative Biography Panel -->
-        <div class="bio-paragraph-wrap">
+        <main class="roster-content-panel">
             
-            <!-- Profile Artifact Dock (Dual Buttons - Story Triggers) -->
-            <div class="profile-artifact-dock">
-                <a href="/stories/mh-ww1_battle-fleurs.html" 
+            <div class="subhead" style="font-size: clamp(18px, 4vw, 28px) !important;">Micro-Histories &amp; Mini-Profiles!</div>
+
+            <!-- Interactive Artifact Action Dock -->
+            <div class="profile-artifact-dock"> 
+
+                <a href="/stories/mh-ww1_third-ypres.html" 
+                  class="artifact-btn btn-story hybrid-fetch-trigger" 
+                  data-target="sidebar">
+                  <span class="artifact-label">Passchendaele</span>
+                </a>
+                <a href="/stories/mh-ww1_hundred_days.html" 
+                  class="artifact-btn btn-story hybrid-fetch-trigger"
+                  data-target="sidebar">
+                  <span class="artifact-label">100 Days Offensive</span>
+                </a>
+                <a href="/stories/mh-ww1_1918-prisoners-pow.html" 
+                  class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" data-target="sidebar">
+                  <span class="artifact-label">Prisoners of War</span>
+                </a>
+                <a href="/stories/mh-ww1_homefront-labour.html" 
+                   class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" data-target="sidebar">
+                  <span class="artifact-label">The Return Home</span>
+                </a>
+                <a href="/stories/mh-ww1_hindenburg-epehy.html" 
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar"><span class="artifact-label">Battle of Flers–Courcelette</span>
+                   data-target="sidebar">
+                   <span class="artifact-label">Hindenburg Line</span>
                 </a>
-                <a href="/ww1/ww1-timeline.html?jump=event-19aug1916"
-               class="artifact-btn btn-timeline">
-                   <span class="artifact-label">View Timeline</span>
-               </a>
-            </div>
-            <!-- Biography Body Paragraphs with Floating Thumbnail -->
-            <div class="bio-inline-thumb">
-                <a href="#modal-penmaen" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
-                    <img src="/images/penmaen_chapel.jpg" alt="Quiet, historic stone walls of Penmaen Chapelyard in Wales">
-                </a>
-                <span class="bio-thumb-caption">
-                        Penmaen Chapelyard, Wales.<br>
-                    <span class="bio-thumb-sub">Local Archive View</span>
-                </span>
-                <div style="width: 100%; text-align: center; margin: 10px 0px;">
-                    <a href="/odw-local-grave-sites.html#penmaen" class="artifact-btn btn-gravestone" style="width: 200px;">
-                    <span class="artifact-label">Local War Graves
-                    </span></a>
-                </div>
-            </div>
-            <div class="bio-text">
-                <strong>Edmund Stanley Rowlands</strong> was an accomplished university student, the son of Charles Rowlands, a widower residing at Ty-pen-y-waun, Oakdale. A former pupil from 1908 to 1913 at the historic <a href="https://en.wikipedia.org/wiki/Lewis_School,_Pengam" target="_blank" rel="noopener" class="profile-external-link">Lewis School, Pengam</a>—an elite institution remarkably founded in 1729 and known affectionately as the "Eton of the Valleys"—he moved on to higher education at the University College of Wales, Aberystwyth. He eagerly enlisted there, joining the South Wales Borderers initially before transferring to a specialist technical role in the Royal Engineers.
-            </div>
-            <div class="bio-text">
-                Pioneer Rowlands deployed to the Western Front, where he was severely wounded during the heavy fighting at the <a href="/stories/mh-ww1_battle-fleurs.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Battle of Flers–Courcelette</a>, the initial stage of the <a href="/stories/mh-ww1_somme.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">Somme campaign</a> in 1916. He was evacuated back to the homefront via hospital ships, eventually arriving at a Salford Military Hospital in Manchester for specialized treatment.
-            </div>
-            <div class="bio-text">
-                Tragically, he died of wounds on 19 August 1916, aged just 21. Because he passed away on British soil, his family was able to bring him home to Monmouthshire; he was buried on 26 August in the family plot within Penmaen Chapelyard. His academic promise and ultimate sacrifice are permanently commemorated on the roll of honour at Lewis School, as well as on the bronze plaques detailed at the <a href="https://ww1.wales/ceredigion-memorials/aberystwyth-university-war-memorial/" target="_blank" rel="noopener" class="profile-external-link">Aberystwyth University War Memorial</a> archive.
-            </div>
-            
-            <!-- Archive Source Note -->
-            <div class="archive-source-note">
-                <span class="source-heading">Additional information taken from the Army Registers of Soldiers' Effects, 1901-1929:</span>
-                <span class="source-data-italic">Following his passing, his sister Maud was authorized to receive his remaining back-pay of £12 16s 6d, along with a standard war gratuity of £3.</span>
+                <a href="/stories/mh-ww1_palestine_campaign.html" 
+                 class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
+                 <span class="artifact-label">Palestine Campaign</span>
+              </a>
+               <a href="/stories/mh-ww1_battle_of_guillemont.html" 
+                 class="artifact-btn btn-story hybrid-fetch-trigger"  data-target="sidebar">
+                 <span class="artifact-label">Battle of Guillemont</span>
+              </a>
+              <a href="/stories/mh-ww1_gallipoli_campaign.html" 
+                   class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
+                   data-target="sidebar">
+                   <span class="artifact-label">Gallipoli Campaign</span>
+              </a>
+              <a href="/stories/mh-ww1_silver_war_badge.html" 
+                   class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" 
+                   data-target="sidebar"><span class="artifact-label">Silver War Badge</span>
+              </a>
+              <a href="/stories/mh-ww1_mesopotamian_campaign.html" 
+                  class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
+                  data-target="sidebar">
+                    <span class="artifact-label">Mesopotamian Campaign</span>
+              </a><a href="/stories/mh-ww1_battle_of_cambrai.html" 
+                  class="artifact-btn btn-story hybrid-fetch-trigger" 
+                   data-target="sidebar"><span class="artifact-label">Battle of Cambrai</span>
+              </a>
+              <a href="/stories/mh-ww1_2nd-battle-ypres.html" 
+                  class="artifact-btn btn-story hybrid-fetch-trigger"    
+                  data-target="sidebar">
+                  <span class="artifact-label">2nd Battle of Ypres</span>
+              </a>
+              <a href="/stories/mh-ww1_somme.html" 
+                  class="artifact-btn btn-story hybrid-fetch-trigger" 
+                  data-target="sidebar"><span class="artifact-label">Somme Campaign</span>
+              </a>
+              <a href="/stories/mh-ww1_royal_navy.html" 
+                class="artifact-btn btn-story btn-alt hybrid-fetch-trigger"
+                data-target="sidebar"><span class="artifact-label">Royal Navy Service</span>
+              </a>
+              <a href="/stories/mh-ww1_lens_sector.html" 
+                class="artifact-btn btn-story hybrid-fetch-trigger" 
+                data-target="sidebar"><span class="artifact-label">Attack on Lens</span>
+              </a>
+              <a href="/stories/mh-ww1_armentieres_1915.html" 
+                class="artifact-btn btn-story hybrid-fetch-trigger" 
+                data-target="sidebar">
+                <span class="artifact-label">Early Trench Warfare</span>
+              </a>
+              <a href="/stories/mh-ww1_battle-fleurs.html" 
+                class="artifact-btn btn-story hybrid-fetch-trigger" 
+                data-target="sidebar"><span class="artifact-label">Battle of Flers–Courcelette</span>
+              </a>
+
             </div>
 
-            <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
-            <div class="profile-navigation-row" id="profile-nav-engine"></div>
-        </div> <!-- END bio-paragraph-wrap -->
+            <hr class="main-half">
 
-    </div> <!-- END TIER 2: page-core wrapper -->
+            <div class="soldier-roster-grid">
+                <a href="coombs_t_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas G. Coombs</a>
+                <a href="daniels_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Jehoida Daniels</a>
+                <a href="davies_t.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas Davies</a>
+                <a href="dyer_a_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Edward Dyer</a>
+                <a href="ellway_m.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Milson Ellway</a>
+                <a href="evans_d_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">David John Evans*</a>
+                <a href="farrell_m.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Michael Farrell</a>
+                <a href="fisher_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Samuel Fisher</a>
+                <a href="goodman_f_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frederick George Goodman</a>
+                <a href="harvey_r_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Richard Henry Harvey*</a>
+                <a href="havard_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ernest Havard</a>
+                <a href="howard_f_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas Benjamin Havard</a>
+                <a href="howard_f_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frank Herbert Howard</a>
+                <a href="john_j_r.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">John Richard John</a>
+                <a href="john_w_c.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Charles John</a>
+                <a href="lloyd_w_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Arthur Lloyd</a>
+                <a href="lovell_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">George Lovell</a>
+                <a href="nelmes_i_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ivor James Nelmes</a>
+                <a href="onions_w_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Jones Onions</a>
+                <a href="owens_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Arthur Owens</a>
+                <a href="paulk_w_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William John Paulk</a>
+                <a href="phillips_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Gilbert Phillips</a>
+                <a href="price_a_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Stewart Price</a>
+                <a href="prosser_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ernest Prosser</a>
+                <a href="rees_d_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">David J. Rees</a>
+                <a href="rowlands_e_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Edmund Stanley Rowlands</a>
+                <a href="shaw_f.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frank Shaw</a>
+                <a href="symons_f_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frederick John Symons</a>
+                <a href="watkins_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Edward Watkins</a>
+                <a href="williams_j_t.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">John T. Williams</a>
+                <a href="williams_p_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Phillip Arthur Williams</a>
+                <a href="wiltshire_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">George Wiltshire*</a>
+                <a href="workman_w.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Wyndham Workman</a>
+                <a href="young_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Young</a>
+            </div>
+        </main>
+
+
+        </div><!-- END Responsive Footer Cards Container -->
+        
+    </div> <!-- CLOSE THE PAGE-CORE EARLY (Grid Tier 2) -->
 
     <!-- ========================================== -->
     <!-- TIER 3: ROSTER PHOTO BRIDGE                -->
@@ -125,68 +174,9 @@
   <!-- MODALS AND TEMPLATES                       -->
   <!-- ========================================== -->
 
-  <!-- MINI-PROFILE MODAL -->
-  <template id="hybrid-summary-payload">
-      <div class="mini-profile-content">
-          <div class="sidebar-abbreviated-story">
-              <div class="war-front">The Western Front | Battle of Flers-Courcelette</div>
-              <h2 class="subhead_sm">Pioneer Edmund S. Rowlands</h2>
-              
-              <div class="bio-text">
-                  <strong>Fate:</strong> Died of Wounds, 19 August 1916 (Aged 21)
-              </div>
-              <hr class="main">
-              
-              <p class="display-text">Edmund Stanley Rowlands was a former Lewis School student and university scholar from Oakdale who served as a Pioneer with the Royal Engineers. Severely wounded during operations on the Somme in 1916, he was evacuated to a military hospital in Manchester, where he tragically succumbed to his injuries on 19 August 1916 at the age of 21. Brought home to Wales, he rests in Penmaen Chapelyard. <span class="pointer">&#9658;&nbsp;</span><a href="/ww1/rowlands_e_s.html">Read Full Profile</a></p>
-              
-              <!-- Story Sidebar Triggers -->
-              <a href="/stories/mh-ww1_battle-fleurs.html" 
-                 class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
-                 <span class="artifact-label">Battle of Flers–Courcelette</span>
-              </a>
-          </div>
-      </div>
-  </template>
+  <!-- (Add any specific modals for the brothers here, formatted just like the master model) -->
 
-  <!-- MEDAL MODAL (Rowlands) -->
-  <template id="modal-medals-rowlands">
-      <div class="mini-profile-content">
-          <div class="award-verify">Award Verification</div>
-          <h2 class="subhead_sm">Medals Awarded: Pioneer Edmund S. Rowlands</h2>
-          <hr class="basic">
-          
-          <div class="medal-display-row">
-              <div class="medal-item">
-                  <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
-                  <p class="medal-title">Victory Medal</p>
-              </div>
-              
-              <div class="medal-item">
-                  <img alt="British War Medal" src="/images/medal_war_lg.jpg">
-                  <p class="medal-title">British War Medal</p>
-              </div>
-          </div>
-      </div>
-  </template> <!-- End Medal Modal -->
-
-   <!-- THUMBNAIL MODAL (Penmaen) -->
-  <template id="modal-penmaen">
-      <div class="modal-photo-showcase">
-          <img src="/images/penmaen_chapel.jpg" alt="Penmaen Chapel and historic gravestones, Wales">
-          
-          <div class="modal-caption">
-              Penmaen Chapelyard, Wales
-          </div>
-          
-          <div class="modal-showcase-link-wrap">
-              <a href="https://www.cwgc.org/visit-us/find-cemeteries-memorials/cemetery-details/42560/penmaen-congregational-chapelyard/" target="_blank" rel="noopener" class="plain-text">
-                  <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
-              </a>
-          </div>
-      </div>
-  </template> <!-- End Thumbnail Modal -->
-
-    <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
-    <script type="module" src="/scripts/odw-common.js"></script>
+  <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
+  <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
