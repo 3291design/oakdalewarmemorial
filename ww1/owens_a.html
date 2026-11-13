@@ -1,17 +1,19 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini-Profiles - Oakdale War Memorial</title>
-    <meta name="description" content="A shared memorial profile for brothers from Oakdale who served in World War I.">
+    <title>Arthur Owens - Oakdale War Memorial</title>
+    <meta name="description" content="A website dedicated to the memory of men from Oakdale, Wales, UK who served during World War I.">
+    <meta name="keywords" content="Oakdale, Wales, Memorial, World War One, WWI, soldiers, died, commemorate, family history, Gwent, Caerphilly">
+    <meta name="author" content="Melanie Copleston, 3291design">
     
     <!-- SYSTEM LAYOUT MODULAR STYLESHEETS -- USING ABSOLUTE PATHS! -->
-    <link rel="stylesheet" href="/css/odw-core.css">
-    <link rel="stylesheet" href="/css/odw-typography.css">
-    <link rel="stylesheet" href="/css/odw-profiles.css">
-    <link rel="stylesheet" href="/css/odw-components.css">
-
+   <link rel="stylesheet" href="/css/odw-core.css">
+   <link rel="stylesheet" href="/css/odw-typography.css">
+   <link rel="stylesheet" href="/css/odw-profiles.css">
+   <link rel="stylesheet" href="/css/odw-components.css">
+  
 </head>
 
 <!-- CRITICAL: data-era must be "ww1-profile" for the Prev/Next pagination to load -->
@@ -27,144 +29,76 @@
     <!-- ========================================== -->
     <!-- TIER 2: PAGE CORE (Main Content Blocks)    -->
     <!-- ========================================== -->
-    <div class="page-core">
-        
-        <main class="roster-content-panel">
+    <div class="page-core profile-core-flush">
+
+        <!-- Flexbox Core Presentation Component -->
+        <div class="flex-container">
+            <div class="image">
+                <img src="/images/blank_man.gif" alt="Arthur Owens Portrait Placeholder" class="soldier-portrait-img">
+            </div>
+
+            <div class="profile">
+                <div class="soldier-name">Arthur Owens</div>
+                <div class="soldier-detail">Died: <strong>24 March 1918</strong></div>
+                <div class="soldier-detail">Age: <strong>24 years old</strong></div>
+                <div class="soldier-detail">Rank: <strong>Private</strong></div>
+                <div class="soldier-detail">Service No.: <a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/1602962/arthur-owens/" target="_blank" class="soldier-link">39344</a></div>
+                <div class="soldier-detail">Regiment: <strong>Monmouthshire and S.W.B. 5th Bn.</strong></div>
+                <div class="soldier-detail">Medals: <strong>Victory, British War</strong></div>
+            </div>
             
-            <div class="subhead" style="font-size: clamp(18px, 4vw, 28px) !important;">Micro-Histories &amp; Mini-Profiles!</div>
-
-            <!-- Interactive Artifact Action Dock -->
-            <div class="profile-artifact-dock"> 
-
-                <a href="/stories/mh-ww1_third-ypres.html" 
-                  class="artifact-btn btn-story hybrid-fetch-trigger" 
-                  data-target="sidebar">
-                  <span class="artifact-label">Passchendaele</span>
-                </a>
-                <a href="/stories/mh-ww1_hundred_days.html" 
-                  class="artifact-btn btn-story hybrid-fetch-trigger"
-                  data-target="sidebar">
-                  <span class="artifact-label">100 Days Offensive</span>
-                </a>
-                <a href="/stories/mh-ww1_1918-prisoners-pow.html" 
-                  class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" data-target="sidebar">
-                  <span class="artifact-label">Prisoners of War</span>
-                </a>
-                <a href="/stories/mh-ww1_homefront-labour.html" 
-                   class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" data-target="sidebar">
-                  <span class="artifact-label">The Return Home</span>
-                </a>
-                <a href="/stories/mh-ww1_hindenburg-epehy.html" 
-                   class="artifact-btn btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar">
-                   <span class="artifact-label">Hindenburg Line</span>
-                </a>
-                <a href="/stories/mh-ww1_palestine_campaign.html" 
-                 class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
-                 <span class="artifact-label">Palestine Campaign</span>
-              </a>
-               <a href="/stories/mh-ww1_battle_of_guillemont.html" 
-                 class="artifact-btn btn-story hybrid-fetch-trigger"  data-target="sidebar">
-                 <span class="artifact-label">Battle of Guillemont</span>
-              </a>
-              <a href="/stories/mh-ww1_gallipoli_campaign.html" 
-                   class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar">
-                   <span class="artifact-label">Gallipoli Campaign</span>
-              </a>
-              <a href="/stories/mh-ww1_silver_war_badge.html" 
-                   class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar"><span class="artifact-label">Silver War Badge</span>
-              </a>
-              <a href="/stories/mh-ww1_mesopotamian_campaign.html" 
-                  class="artifact-btn btn-alt btn-story hybrid-fetch-trigger" 
-                  data-target="sidebar">
-                    <span class="artifact-label">Mesopotamian Campaign</span>
-              </a><a href="/stories/mh-ww1_battle_of_cambrai.html" 
-                  class="artifact-btn btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar"><span class="artifact-label">Battle of Cambrai</span>
-              </a>
-              <a href="/stories/mh-ww1_2nd-battle-ypres.html" 
-                  class="artifact-btn btn-story hybrid-fetch-trigger"    
-                  data-target="sidebar">
-                  <span class="artifact-label">2nd Battle of Ypres</span>
-              </a>
-              <a href="/stories/mh-ww1_somme.html" 
-                  class="artifact-btn btn-story hybrid-fetch-trigger" 
-                  data-target="sidebar"><span class="artifact-label">Somme Campaign</span>
-              </a>
-              <a href="/stories/mh-ww1_royal_navy.html" 
-                class="artifact-btn btn-story btn-alt hybrid-fetch-trigger"
-                data-target="sidebar"><span class="artifact-label">Royal Navy Service</span>
-              </a>
-              <a href="/stories/mh-ww1_lens_sector.html" 
-                class="artifact-btn btn-story hybrid-fetch-trigger" 
-                data-target="sidebar"><span class="artifact-label">Attack on Lens</span>
-              </a>
-              <a href="/stories/mh-ww1_armentieres_1915.html" 
-                class="artifact-btn btn-story hybrid-fetch-trigger" 
-                data-target="sidebar">
-                <span class="artifact-label">Early Trench Warfare</span>
-              </a>
-              <a href="/stories/mh-ww1_battle-fleurs.html" 
-                class="artifact-btn btn-story hybrid-fetch-trigger" 
-                data-target="sidebar"><span class="artifact-label">Battle of Flers–Courcelette</span>
-              </a>
-              <a href="/stories/mh-ww1_givenchy-trenches.html" 
-                class="artifact-btn btn-story hybrid-fetch-trigger">
-                <span class="artifact-label">Givenchy Sector</span>
-              </a>
-              <a href="/stories/mh-ww1_spring_offensive.html" 
+            <!-- Medal Trigger Structure (Gold Standard Applied) -->
+            <a href="#modal-medals" class="medal medal-2 hybrid-fetch-trigger" data-target="modal" title="Click to view enlarged medals">
+                <div class="soldier-medals-box">
+                    <img alt="Victory Medal Ribbon" src="/images/medal_victory_sm.jpg" class="medal-ribbon-img">
+                </div>
+                <div class="soldier-medals-box">
+                    <img alt="British War Medal Ribbon" src="/images/medal_war_sm.jpg" class="medal-ribbon-img">
+                </div>
+            </a>
+        </div> 
+        
+        <!-- Narrative Biography Panel -->
+        <div class="bio-paragraph-wrap">
+            
+            <!-- Profile Artifact Dock (Single Button - No Gravestone) -->
+            <div class="profile-artifact-dock">
+                <a href="/stories/mh-ww1_spring_offensive.html" 
                    class="artifact-btn btn-story hybrid-fetch-trigger" 
                    data-target="sidebar"><span class="artifact-label">German Spring Offensive</span>
-              </a>
-
+                </a>
+                <a href="/ww1/ww1-timeline.html?jump=event-24mar1918"
+               class="artifact-btn btn-timeline">
+                   <span class="artifact-label">View Timeline</span>
+               </a>
             </div>
 
-            <hr class="main-half">
-
-            <div class="soldier-roster-grid">
-                <a href="coombs_t_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas G. Coombs</a>
-                <a href="daniels_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Jehoida Daniels</a>
-                <a href="davies_t.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas Davies</a>
-                <a href="dyer_a_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Edward Dyer</a>
-                <a href="ellway_m.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Milson Ellway</a>
-                <a href="evans_d_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">David John Evans*</a>
-                <a href="farrell_m.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Michael Farrell</a>
-                <a href="fisher_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Samuel Fisher</a>
-                <a href="goodman_f_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frederick George Goodman</a>
-                <a href="harvey_r_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Richard Henry Harvey*</a>
-                <a href="havard_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ernest Havard</a>
-                <a href="howard_f_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Thomas Benjamin Havard</a>
-                <a href="howard_f_h.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frank Herbert Howard</a>
-                <a href="john_j_r.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">John Richard John</a>
-                <a href="john_w_c.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Charles John</a>
-                <a href="lloyd_w_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Arthur Lloyd</a>
-                <a href="lovell_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">George Lovell</a>
-                <a href="nelmes_i_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ivor James Nelmes</a>
-                <a href="onions_w_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William Jones Onions</a>
-                <a href="owens_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Arthur Owens</a>
-                <a href="paulk_w_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">William John Paulk</a>
-                <a href="phillips_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Gilbert Phillips</a>
-                <a href="price_a_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Stewart Price</a>
-                <a href="prosser_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Ernest Prosser</a>
-                <a href="rees_d_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">David J. Rees</a>
-                <a href="rowlands_e_s.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Edmund Stanley Rowlands</a>
-                <a href="shaw_f.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frank Shaw</a>
-                <a href="symons_f_j.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Frederick John Symons</a>
-                <a href="watkins_e.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Edward Watkins</a>
-                <a href="williams_j_t.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">John T. Williams</a>
-                <a href="williams_p_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Phillip Arthur Williams</a>
-                <a href="wiltshire_g.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">George Wiltshire*</a>
-                <a href="workman_w.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Wyndham Workman</a>
-                <a href="young_a.html" class="hybrid-fetch-trigger soldier-link" data-target="full-view">Albert Young</a>
+            <!-- Biography Body Paragraphs with Floating Thumbnail -->
+            <div class="bio-text">
+                <span class="bio-text-name">Arthur Owens</span>, husband of Ada Jane, served initially in the Monmouthshire Regiment before transferring to the 5th (Service) Battalion, South Wales Borderers. By early 1918, this highly specialized unit was operating as the vital pioneer battalion for the 19th (Western) Division, attached to the British Third Army.
             </div>
-        </main>
+            <!-- Thumbnail Trigger -->
+            <div class="bio-inline-thumb">
+                <a href="#modal-arras" class="hybrid-fetch-trigger" data-target="modal" title="Click to enlarge">
+                    <img src="/images/arras_memorial.jpg" alt="Beautiful wide stone cloister panorama of the Arras Memorial, France, showing columns inscribed with names of the missing">
+                </a>
+                <span class="bio-thumb-caption">
+                    The Arras Memorial, France.<br>
+                    <span class="bio-thumb-sub">Photo: CWGC Archive</span>
+                </span>
+            </div>
+            <div class="bio-text">
+                On 24 March 1918, during the opening clashes of the First Battle of Bapaume—a critical, high-intensity phase of the <a href="/stories/mh-ww1_spring_offensive.html" class="hybrid-fetch-trigger soldier-link" data-target="sidebar">German Spring Offensive</a> (<em>Kaiserschlacht</em>)—the British lines faced overwhelming numbers, forcing a fighting retreat across the old Somme battlefields to prevent a total breakthrough.
+            </div>
+            <div class="bio-text">
+                Private A Owens (<a href="https://www.cwgc.org/find-records/find-war-dead/casualty-details/1602962/arthur-owens/" target="_blank" class="soldier-link">39344</a>) was tragically killed in action during this stubborn defensive withdrawal on 24 March 1918, aged 24. Because his resting place could not be identified or recovered following the retreat, he is missing in action and is commemorated on the historic <a href="#modal-arras" class="hybrid-fetch-trigger soldier-link" data-target="modal">Arras Memorial</a>, France. His name stands among those who fell in the Arras and Artois sectors with no known grave.
+            </div>
 
+            <!-- PROJECT GREEN: AUTOMATED SYSTEM NAVIGATION ENGINE SOCKET -->
+            <div class="profile-navigation-row" id="profile-nav-engine"></div>
+        </div> <!-- END bio-paragraph-wrap -->
 
-        </div><!-- END Responsive Footer Cards Container -->
-        
-    </div> <!-- CLOSE THE PAGE-CORE EARLY (Grid Tier 2) -->
+    </div> <!-- END TIER 2: page-core wrapper -->
 
     <!-- ========================================== -->
     <!-- TIER 3: ROSTER PHOTO BRIDGE                -->
@@ -182,9 +116,69 @@
   <!-- MODALS AND TEMPLATES                       -->
   <!-- ========================================== -->
 
-  <!-- (Add any specific modals for the brothers here, formatted just like the master model) -->
+  <!-- MICRO-PROFILE -->
+  <template id="hybrid-summary-payload">
+      <div class="mini-profile-content">
+          <div class="sidebar-abbreviated-story">
+              <div class="war-front">The Western Front | German Spring Offensive</div>
+              <h2 class="subhead_sm">Pte. Arthur Owens</h2>
+              <div class="bio-text">
+                  <strong>Fate:</strong> Killed in Action, 24 March 1918 (Aged 24)
+              </div>
+              <hr class="basic">
+              <p class="display-text">
+                Arthur Owens served as a pioneer with the 5th (Service) Battalion, South Wales Borderers. During the opening days of the devastating German Spring Offensive in March 1918, his division was caught in the desperate First Battle of Bapaume. Overwhelmed by sheer numbers, British forces fought a bitter retreating action across the old Somme battlefields. Private Owens was killed in action during this withdrawal at the age of 24. With no known grave, he is remembered on the Arras Memorial.
+            </p>
+            <div  class="display-text" style="margin-top: 10px;">
+                <span class="pointer">&#9658;</span><a href="/ww1/owens_a.html">Read Full Profile</a>
+            </div>
+            <!-- Story Sidebar Trigger -->
+            <a href="/stories/mh-ww1_spring_offensive.html" 
+                class="artifact-btn btn-story hybrid-fetch-trigger" style="margin-top: 20px;" data-target="sidebar">
+                <span class="artifact-label">German Spring Offensive</span>
+            </a>
+          </div>
+      </div>
+  </template>
+  <!-- End MINI PROFILE -->
 
-  <!-- MASTER UNIFIED INJECTION ENGINE (v5.10)-->
+  <!-- MEDAL MODAL -->
+  <template id="modal-medals">
+      <div class="mini-profile-content modal-medals-2">
+          <div class="award-verify">Award Verification</div>
+          <h2 class="subhead_sm">Medals Awarded: Pte. Arthur Owens</h2>
+          <hr class="basic">
+          <div class="medal-display-row">
+              <div class="medal-item">
+                  <img alt="Victory Medal" src="/images/medal_victory_lg.jpg">
+                  <p class="medal-title">Victory Medal</p>
+              </div>
+              <div class="medal-item">
+                  <img alt="British War Medal" src="/images/medal_war_lg.jpg">
+                  <p class="medal-title">British War Medal</p>
+              </div>
+          </div>
+      </div>
+  </template>
+  <!-- END MEDAL MODAL -->
+
+  <!-- THUMBNAIL MODAL -->
+  <template id="modal-arras">
+      <div class="modal-photo-showcase">
+          <img src="/images/arras_memorial.jpg" alt="Beautiful wide stone cloister panorama of the Arras Memorial, France, showing columns inscribed with names of the missing">
+          <div class="modal-caption">
+              The Arras Memorial, France
+          </div>
+          <div class="modal-showcase-link-wrap">
+              <a href="http://www.cwgc.org/find-a-cemetery/cemetery/82700/ARRAS%20MEMORIAL" target="_blank" rel="noopener" class="plain-text">
+                  <span class="pointer">&#9658;&nbsp;</span>Visit Official Cemetery Registry Website
+              </a>
+          </div>
+      </div>
+  </template> 
+  <!-- End THUMBNAIL MODAL -->
+
+  <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
   <script type="module" src="/scripts/odw-common.js"></script>
 </body>
 </html>
