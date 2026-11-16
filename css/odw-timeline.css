@@ -1,47 +1,242 @@
- /* =================================================== */
-/* OAKDALE WAR MEMORIAL: MODULAR TIMELINE ENGINE 
-   19 September 2026 - version 3.0 
-   File Version: v3.0 - Token Architecture (19 September 2026)
-   Refactored Horizontal layout for mobile/vertical orientation
-   =================================================== */
+/* ==========================================================================
+   OAKDALE WAR MEMORIAL: UNIFIED TIMELINE ENGINE (odw-timeline.css)
+   File Version: v3.2 (13 November 2026)
+   Architecture: Dual-Era Tokens (WWI & WWII), Event Jumper TOC, 
+                 & 3-Tier Viewport-Aware Image Overlay System
+   ==========================================================================
+   TABLE OF CONTENTS:
+   00. Timeline Master Control Panel (WWI & WWII Era Tokens)
+   01. Universal Box Model & Timeline Guide / Quick-Jump Dropdown Bar
+   02. Timeline Narrative (.timeline-desc) & Caption (.timeline-caption) Typography
+   03. Viewport, Horizontal Track & Massive Year Watermarks
+   04. Node Architecture (Widths, Top/Bottom Panels & Axis Bands)
+   05. 3-Tier Viewport-Aware Image Overlay System (.overlay-sm, -md, -lg)
+   06. Bookmark Navigation (Notebook Year Tabs)
+   07. Standard Timeline Images, Lightbox & Floating Ghost Indicator
+   08. Drag-to-Scroll Physics & Desktop Hidden Utilities
+   09. Mobile & Tablet Responsive Refactor (max-width: 768px & 380px fixes)
+   ========================================================================== */
 
 /* =================================================== */
-/* UNIVERSAL BOX MODEL FIX                             */
-/* Forces padding/borders to compute INWARD            */
+/* 00. TIMELINE MASTER CONTROL PANEL (WWI & WWII)      */
+/* =================================================== */
+:root,
+body[data-era="ww1-master"] {
+    /* --- Shared Structural Dimensions --- */
+    --top-node-height: 306px; 
+    --node-axis-band-height: 68px; 
+
+    /* --- WWI Default Palette (Cool Steel & Warm Stone) --- */
+    --timeline-bg: #f0f2f5;
+    --year-spacer: rgba(255, 255, 255, 0.85);
+    --year-text: rgba(79, 94, 104, 0.35);
+    --node-color: rgba(231, 231, 231, 0.50);
+    --node-color-alt: rgba(211, 211, 211, 0.50);
+    --node-axis-band: rgba(79, 94, 104, 0.25);
+}
+
+/* --- WWII Palette Option A (STANDBY): RAF Slate & Warm Parchment ---
+body[data-era="ww2-master"] {
+    --timeline-bg: #ebeef2;
+    --year-spacer: rgba(255, 255, 255, 0.88);
+    --year-text: rgba(62, 78, 92, 0.32);
+    --node-color: #f4f3ef;
+    --node-color-alt: #e6eaee;
+    --node-axis-band: #cfd8e0;
+}
+*/
+
+/* --- WWII Palette Option B (ACTIVE): Mediterranean Olive & Sand --- */
+body[data-era="ww2-master"] {
+    --timeline-bg: #efeee9;
+    --year-spacer: rgba(255, 255, 255, 0.88);
+    --year-text: rgba(78, 84, 72, 0.32);
+    --node-color: #f5f2eb;            /* Soft Desert Sand */
+    --node-color-alt: #ebede8;        /* Whisper-Light Sage / Olive Tint */
+    --node-axis-band: #dfe3da;        /* Muted Olive-Stone Axis Band */
+}
+
+/* =================================================== */
+/* 01. BOX MODEL & TIMELINE GUIDE / QUICK-JUMP BAR     */
 /* =================================================== */
 .multi-track-timeline, 
 .multi-track-timeline * {
     box-sizing: border-box;
 }
 
-/* --- 1. THE VIEWPORT --- */
+.timeline-guide-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+    background-color: var(--bg-note);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--odw-node-blue);
+    box-shadow: var(--shadow-subtle);
+    padding: 12px 18px;
+    margin: 14px 0 20px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline-guide-text {
+    flex: 1 1 100%;
+    min-width: 0;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--text-body);
+}
+
+.timeline-guide-title {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-right: 6px;
+}
+
+.timeline-guide-actions {
+    display: flex;
+    align-items: center;
+    flex: 0 1 320px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Custom Editorial Select Frame */
+.timeline-select-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.timeline-toc-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    max-width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Custom SVG Chevron in --odw-node-blue (#4f5e68) */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234f5e68' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 11px 7px;
+    border: 1px solid var(--border-dark);
+    border-left: 3px solid var(--odw-red);
+    border-radius: 0;
+    padding: 8px 34px 8px 12px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.timeline-toc-select:hover,
+.timeline-toc-select:focus {
+    outline: none;
+    border-color: var(--odw-node-blue);
+    border-left-color: var(--odw-red);
+    background-color: #fcfbfa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    /* Chevron shifts to --odw-red (#990033) on hover/focus */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23990033' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+}
+
+/* Styling the Dropdown Optgroups & Options */
+.timeline-toc-select optgroup {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    color: var(--odw-node-blue);
+    background-color: #f0f2f5;
+    padding: 12px;
+}
+
+.timeline-toc-select option {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 18px;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.timeline-toc-select option[disabled] {
+    font-size: 0.45rem;
+    line-height: 0.45rem;
+    background-color: #ffffff;
+}
+
+/* =================================================== */
+/* 02. TIMELINE NARRATIVE & PHOTO CAPTION TYPOGRAPHY   */
+/* =================================================== */
+/* 1. Historical Event & Battle Descriptions */
+.timeline-desc {
+    display: block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(0.82rem, 1.5vw, 0.92rem);
+    line-height: 1.42;
+    color: var(--text-body);
+    margin-bottom: 10px;
+}
+
+/* 2. Thumbnail Photo Captions */
+.timeline-caption {
+    display: block;
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: clamp(0.75rem, 1.2vw, 0.84rem);
+    line-height: 1.35;
+    color: var(--text-muted);
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* Fallback for any legacy <i> tags inside timeline cards */
+.node-content-top i,
+.node-content-bottom i,
+.node-content-bottom-alt i {
+    display: block;
+    font-size: clamp(0.80rem, 1.4vw, 0.88rem);
+    line-height: 1.38;
+    font-style: italic;
+}
+
+/* =================================================== */
+/* 03. VIEWPORT, TRACK & MASSIVE YEAR WATERMARKS       */
+/* =================================================== */
 .horizontal-timeline-container {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    
-    /* Vintage Paper Seamless Background Setup */
     background-color: var(--timeline-bg);
-    background-image: url('#'); 
-    background-repeat: repeat;
-    
-    /* Formal, squared-off frame with DEEPER inner shadow */
     border: 1px solid var(--border-light);
     border-radius: 0; 
     box-shadow: inset 0px 4px 12px rgba(0,0,0,0.25); 
-    
     margin: 20px 0 0 0; 
     padding: 20px 0 20px 0; 
-    
     -webkit-overflow-scrolling: touch; 
 }
-
-/* Formal, square scrollbar */
 .horizontal-timeline-container::-webkit-scrollbar { height: 16px; }
 .horizontal-timeline-container::-webkit-scrollbar-track { background: #d9e2ea; border-radius: 0; box-shadow: inset 0px 3px 8px rgba(0,0,0,0.35); }
 .horizontal-timeline-container::-webkit-scrollbar-thumb { width: 100px; background: var(--odw-node-blue); border-radius: 0; }
 
-/* --- 2. THE TIMELINE TRACK --- */
 .horizontal-timeline-track {
     display: flex;
     flex-direction: row;
@@ -51,29 +246,24 @@
     align-items: stretch; 
 }
 
-/* --- THE YEAR MARKER (Massive Watermark) --- */
 .rail-year-node {
     flex: 0 0 150px;
     display: flex;
     flex-direction: column;
 }
-
 .year-top-spacer {
     height: var(--top-node-height);
     background-color: var(--year-spacer);
 }
-
 .year-bottom-spacer {
     flex-grow: 1; 
     min-height: auto; 
     background-color: var(--year-spacer);
 }
-
 .year-text-wrapper {
     position: relative;
     height: 0;
 }
-
 .year-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 9rem; 
@@ -88,7 +278,9 @@
     z-index: 2;
 }
 
-/* --- 3. THE NODES --- */
+/* =================================================== */
+/* 04. NODE ARCHITECTURE (PANELS & AXIS BANDS)         */
+/* =================================================== */
 .node-base {
     display: flex;
     flex-direction: column;
@@ -96,7 +288,6 @@
     min-height: 100%; 
     box-sizing: border-box;
 }
-
 .node-event { flex: 0 0 180px; } 
 .node-battle { flex: 0 0 260px; } 
 .node-battle-large { flex: 0 0 300px; } 
@@ -108,14 +299,12 @@
     display: flex;
     flex-direction: column;
 }
-
 .node-top-section-alt {
     background-color: var(--node-color-alt);
     min-height: var(--top-node-height);
     display: flex;
     flex-direction: column;
 }
-
 .node-date-badge {
     width: 120px;
     background-color: rgba(255, 255, 255, 0.65);
@@ -125,57 +314,91 @@
     padding: 5px 10px;
     text-align: center;
 }
-
 .node-casualty-badge {
     width: 120px;
-    background-color: none;
+    background-color: transparent;
     border: 1px solid var(--border-dark);
     margin-left: 15px; 
     margin-top: 15px;
     padding: 5px 10px;
     text-align: center;
 }
-
 .node-content-top {
     padding: 15px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     flex-grow: 1; 
-    border: 0px solid #ff0000;
 }
-
 .node-content-top .track-event {
     margin-top: auto; 
     margin-bottom: 0;
 }
-
 .node-axis-band {
     height: var(--node-axis-band-height); 
     width: 100%;
     padding: 15px;
     background-color: var(--node-axis-band); 
 }
-
-.node-axis-band-alt {
-    height: var(--node-axis-band-height); 
-    width: 100%;
-    padding: 15px;
-    background-color: var(--node-axis-band-alt); 
-}
-
 .node-content-bottom {
     background-color: var(--node-color);
     padding: 15px;
     flex-grow: 1; 
 }
-
 .node-content-bottom-alt {
     background-color: var(--node-color-alt);
     padding: 15px;
     flex-grow: 1; 
 }
 
-/* --- BOOKMARK NAVIGATION (NOTEBOOK TABS) --- */
+/* =================================================== */
+/* 05. 3-TIER VIEWPORT-AWARE IMAGE OVERLAY SYSTEM      */
+/* =================================================== */
+/* Wrapper sits inside .node-content-top below title/text */
+.node-overlay-box {
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+/* Link floats out of flow on Desktop so image bridges .node-axis-band */
+.node-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+/* Preset 1: Small Event Portrait (e.g., Churchill in 180px .node-event) */
+.timeline-image.overlay-sm {
+    width: 130px;
+    max-width: 130px;
+    object-fit: cover;
+}
+
+/* Preset 2: Medium Feature (e.g., Battle of the Atlantic in 300px .node-battle-large) */
+.timeline-image.overlay-md {
+    width: 240px;
+    max-width: 240px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Preset 3: Large Bookend Poster (e.g., Chamberlain / Declaration of War in 340px .node-battle-exlarge) */
+.timeline-image.overlay-lg {
+    width: 280px;
+    max-width: 280px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Desktop clearance for bottom-panel text sitting under an .overlay-lg image */
+.overlay-push-lg {
+    margin-top: 85px;
+}
+
+/* =================================================== */
+/* 06. BOOKMARK NAVIGATION (NOTEBOOK TABS)             */
+/* =================================================== */
 .timeline-bookmarks {
     display: flex;
     justify-content: flex-start;
@@ -185,38 +408,32 @@
     border: none;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif; 
-    font-size: 0.85em; /* Slightly tighter type scale */
+    font-size: 0.85em;
     font-weight: 800;
 }
-
 .timeline-bookmarks span { 
     color: var(--text-muted); 
     text-transform: uppercase; 
     letter-spacing: 1px; 
     padding: 6px 12px 6px 0;
 }
-
 .timeline-bookmarks a { 
     position: relative;
     background: var(--timeline-bg);
-    padding: 4px 11px; /* Tighter horizontal footprint */
+    padding: 4px 11px;
     color: #555555; 
     text-decoration: none; 
     border: none;
     transition: background-color 0.15s ease, color 0.15s ease;
 }
-
 .timeline-bookmarks a:hover { 
     background: var(--odw-red-hover);
     color: #fffafa; 
 }
-
 .timeline-bookmarks a.active {
     background-color: var(--odw-node-blue);
     color: #fff;
 }
-
-/* Shape the Top Tabs (pointing UP, subtle 4px chamfer upper-left) */
 .tabs-top {
     display: none; 
 }
@@ -224,8 +441,6 @@
     border-radius: 0;
     clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%, 0 4px);
 }
-
-/* Shape the Bottom Tabs (hanging DOWN, subtle 4px chamfer lower-left) */
 .tabs-bottom {
     margin-bottom: 40px;
 }
@@ -234,8 +449,9 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 8px 100%, 0 calc(100% - 8px));
 }
 
-/* ---------- END BOOKMARK NAVIGATION ----------*/
-
+/* =================================================== */
+/* 07. TIMELINE IMAGES, LIGHTBOX & GHOST INDICATOR     */
+/* =================================================== */
 .timeline-image {
     width: 100%;
     max-width: 220px; 
@@ -247,18 +463,13 @@
     display: block; 
     transition: box-shadow 0.2s ease-in-out; 
 }
-
 a.image-lightbox-link {
     cursor: zoom-in; 
 }
-
 a.image-lightbox-link:hover .timeline-image {
     box-shadow: var(--shadow-lightbox); 
 }
 
-/* =================================================== */
-/* FLOATING GHOST YEAR INDICATOR                       */
-/* =================================================== */
 #floating-year-indicator {
     position: absolute;
     bottom: 50px; 
@@ -276,67 +487,58 @@ a.image-lightbox-link:hover .timeline-image {
 }
 
 /* =================================================== */
-/* DRAG-TO-SCROLL CURSOR STATES                        */
+/* 08. DRAG-TO-SCROLL & DESKTOP HIDDEN UTILITIES       */
 /* =================================================== */
 #timeline-viewport {
     cursor: grab;
 }
-
 #timeline-viewport.is-dragging {
     cursor: grabbing;
 }
-
 #timeline-viewport.is-dragging .horizontal-timeline-track {
     user-select: none;
     -webkit-user-select: none;
 }
 
-/* =================================================== */
-/* DESKTOP/TABLET HIDDEN ELEMENTS                      */
-/* =================================================== */
-
-/* 1. Hide the Back to Top button on horizontal view */
-#page-timeline .back-to-top-btn {
-    display: none;
-}
-
-/* 2. Hide the Top Notebook Tabs on horizontal view */
+#page-timeline .back-to-top-btn,
 #page-timeline .tabs-top {
     display: none;
 }
 
 /* =================================================== */
+/* 09. MOBILE TIMELINE REFACTOR (Max-width: 768px)     */
 /* =================================================== */
-/* MOBILE TIMELINE REFACTOR (Max-width: 768px)         */
-/* =================================================== */
-/* =================================================== */
-
 @media screen and (max-width: 768px) {
-    
-    /* 1. Reset the Viewport (Kill horizontal scroll constraint) */
+    .timeline-guide-bar {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+    .timeline-guide-actions {
+        flex: 1 1 100%;
+    }
+    .timeline-toc-select {
+        font-size: 0.8rem;
+        padding: 7px 30px 7px 10px;
+    }
+
     .horizontal-timeline-container {
         overflow-x: hidden;
         overflow-y: visible;
         height: auto; 
         padding: 10px 0px;
-        box-sizing: border-box; /* THE FIX: Ensures padding doesn't push the width past 100% */
+        box-sizing: border-box;
         width: 100%;
         margin-top: 0px;
     }
-
-    /* 2. Switch Track to Vertical Stack */
     .horizontal-timeline-track {
         flex-direction: column;
-        
-        /* THE FIX: Override the desktop width constraints */
         min-width: 0; 
         width: 100%;
+        padding: 0 10px;
         margin-left: 0px;
         box-sizing: border-box;
-        overflow-wrap: break-word; /* Safeguard: forces long URLs or words to wrap instead of pushing the screen wide */
+        overflow-wrap: break-word;
     }
-
-    /* 3. Reformat the Giant Year Markers into Header Rows */
     .rail-year-node {
         flex: auto;
         flex-direction: row; 
@@ -345,140 +547,116 @@ a.image-lightbox-link:hover .timeline-image {
         height: auto; 
         background-color: #fdfdfd;
         padding: 20px 15px; 
-        
-        /* THE FIX: 40px top gap, 0px bottom gap to sit flush with the first event */
         margin: 20px 0 0 0; 
         border-left: none !important;
         border-bottom: none !important;
     }
-
-    /* Hide horizontal-specific year elements */
     .year-top-spacer, 
     .year-bottom-spacer,
     .rail-year-node .node-axis-band {
         display: none; 
     }
-
     .year-text-wrapper {
         height: auto;
         width: 100%; 
-        display: block; /* Normalizes the container */
+        display: block;
     }
-
-    /* Rotate the text back to normal and scale down */
     .year-text {
         position: static;
         writing-mode: horizontal-tb;
         transform: none;
-        font-size: 6rem; /* Pulled back slightly so it doesn't break very narrow screens */
+        font-size: 6rem;
         letter-spacing: -6px;
-        line-height: 1; /* THE FIX: Stops the browser from adding weird invisible spacing above/below */
+        line-height: 1;
         margin: 0; 
     }
-
-    /* 4. Fluid Nodes & The Left Spine */
     .node-base {
-        flex: auto !important; /* Override all the fixed flex widths (180, 260, 340) */
+        flex: auto !important;
         width: 100%;
         margin-bottom: 0px;
-        padding-left: 0px; /* Pushes content slightly away from the spine */
+        padding-left: 0px;
+        border-left: none; 
+        min-height: 100%; 
     }
-
-    /* 5. Flatten the Content Areas */
     .node-top-section, 
     .node-top-section-alt {
         min-height: auto; 
         padding: 10px 10px;
     }
-
     .node-content-bottom, 
     .node-content-bottom-alt {
         min-height: auto; 
-        padding-left: 20px;
+        padding: 10px 25px 15px 25px;
     }
-
-    /* Adjust the center band (where the story buttons live) */
-    .node-axis-band, 
-    .node-axis-band-alt {
+    .node-axis-band {
         height: auto; 
-        padding-left: 20px;
+        padding-left: 15px;
     }
-
     .node-date-badge {
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 15px;
-        display: inline-block; /* Prevents it from stretching full width */
+        display: inline-block;
     }
 
-    /* 6. Override Inline Image Styles */
-    .timeline-image {
-        width: 100%;
+    /* --- MOBILE OVERLAY RESET (Option A: Snap cleanly into vertical flow!) --- */
+    .node-overlay-box {
+        position: static;
+        margin-top: 10px;
+    }
+    .node-overlay-link {
+        position: static !important;
+        display: inline-block;
+    }
+    .timeline-image,
+    .timeline-image.overlay-sm,
+    .timeline-image.overlay-md,
+    .timeline-image.overlay-lg {
+        width: 100% !important;
         max-width: 220px !important; 
-        height: auto !important; /* Prevents stretching */
-        margin-top: 15px;
+        height: auto !important;
+        margin-top: 10px;
+    }
+    .overlay-push-lg {
+        margin-top: 0 !important;
     }
 
-    /* 7. Notebook Tabs for Mobile */
+    /* --- 380px-Safe Mobile Year Bookmarks (Fits 8 WWII Tabs Cleanly) --- */
     .timeline-bookmarks {
-        padding: 0 10px;
+        padding: 0 4px;
         flex-wrap: nowrap; 
         gap: 2px; 
+        width: 100%;
         max-width: 100%; 
         box-sizing: border-box;
         overflow-x: auto; 
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none; 
     }
-    
     .timeline-bookmarks::-webkit-scrollbar { 
         display: none; 
     }
-
     .timeline-bookmarks a {
-        padding: 6px 8px; 
-        font-size: 0.8rem; 
+        padding: 6px 6px; 
+        font-size: 0.76rem; 
         flex-shrink: 0; 
     }
-
-    /* THE FIX: Add the #page-timeline ID to overpower the desktop 'display: none' */
     #page-timeline .tabs-top {
         display: flex; 
-        justify-content: flex-end; 
-        margin-top: 30px; 
+        justify-content: flex-start; 
+        margin-top: 20px; 
     }
-
-    /* You don't need the ID here because .tabs-bottom was never hidden globally */
     .tabs-bottom {
         margin-bottom: 30px; 
     }
-
-    .timeline-bookmarks span {
-        display: none; 
-    }
-
-    /* 8. Hide Desktop Only Elements */
+    .timeline-bookmarks span,
     #floating-year-indicator {
         display: none; 
     }
-
-    /* 9. Utility class to hide specific elements on mobile */
     .hide-on-mobile {
         display: none !important;
-        border-left: 4px solid var(--text-dark) !important;
-        border-bottom: 3px solid var(--text-dark) !important;
     }
-
-    .node-base {
-        display: flex;
-        flex-direction: column;
-        border-left: none; 
-        min-height: 100%; 
-        box-sizing: border-box;
-    }
-   
-    /* 10. Utility class to show specific elements on mobile */
     #page-timeline .back-to-top-btn {
         display: block;
-}
+    }
 }
