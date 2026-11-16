@@ -1,11 +1,12 @@
 <!--==========================================================================
-   OAKDALE WAR MEMORIAL - Timeline 
-   File Version: v3.1 (19 September 2026)
+   OAKDALE WAR MEMORIAL - WWI Timeline 
+   File Version: v3.2 (15 November 2026)
    Refactored Horizontal layout for mobile/vertical orientation & Deep-Link Ready
+   Clean Semantic Typography (.timeline-desc & .timeline-caption) + 3-Tier Overlays
    ========================================================================== -->
    
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,27 +23,26 @@
     <link rel="stylesheet" href="/css/odw-timeline.css">
     
 </head>
-
 <body id="page-timeline" data-era="ww1-master" data-root="/">
   
   <div class="main-container">
-
     <!-- Automated Header Sockets (Grid Tier 1) -->
     <div id="header-socket"></div>
-
     <div class="page-core">
         
-        <!-- Element 1: MAIN INTRO TEXT BLOCK -->
-        <div class="subhead" style="font-size: clamp(18px, 4vw, 28px) !important;">Chronological Cross-Reference: 1907 – 1919</div>
-        <div class="deck">
-            The Great War reshaped Europe and the Middle East, sweeping Oakdale's men into history's most devastating battles.
+        <!-- Element 1: MAIN INTRO & GUIDE TEXT -->
+        <div class="subhead" style="font-size: clamp(18px, 4vw, 28px) !important;">Chronological Cross-Reference: 1907 – 1920</div>
+        
+        <div class="timeline-guide-text" style="margin: 10px 0 18px 0;">
+            <span class="timeline-guide-title">How This Timeline Works:</span>
+            Click and drag to pan horizontally or use the tabs to jump to a specific year. Click any campaign button for battle context, or select a soldier's name to view his profile.
         </div>
         
         <!-- Oakdale War Memorial: Modular Timeline -->
         <section class="multi-track-timeline">
           
-        <!-- NEW TOP NAV (Hidden on Desktop, Visible on Mobile) -->
-        <div class="timeline-bookmarks tabs-top">
+        <!-- TOP NAV (Hidden on Desktop, Visible on Mobile) -->
+        <div class="timeline-bookmarks tabs-top" style="text-align: left;">
             <span>Jump to Year:</span>
             <a href="#year-1907" class="active">1907</a>
             <a href="#year-1914">1914</a>
@@ -51,12 +51,13 @@
             <a href="#year-1917">1917</a>
             <a href="#year-1918">1918</a>
             <a href="#year-1919">1919</a>
+            <a href="#year-1920">1920</a>
         </div>
 
-    <!-- THE NEW INVISIBLE MASTER WRAPPER -->
+        <!-- THE INVISIBLE MASTER WRAPPER -->
         <div class="timeline-master-wrapper" style="position: relative;">
     
-        <!-- 1. THE VIEWPORT -->
+          <!-- 1. THE VIEWPORT -->
           <div class="horizontal-timeline-container" id="timeline-viewport">
             
             <!-- 2. THE TIMELINE TRACK -->
@@ -77,15 +78,14 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">1907</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">The sinking of Oakdale Colliery's mine shafts begins.</i>
-                        <a href="/images/oakdale-colliery_02_lg.jpg" data-lightbox="artifact" data-caption="The sinking of three mine shafts for the new colliery at Oakdale began in 1907. The north shaft was 626 yards deep and south 650 yards deep, making them the largest diameter mine shafts in South Wales at the time.
-                        <br>[ Photo credit: <a href='https://storymaps.arcgis.com/stories/82136a5a1bfd441387d456a01871d541' target='_blank'>Cadw / Story Maps</a> ]" class="image-lightbox-link">  
+                        <span class="timeline-desc">The sinking of Oakdale Colliery's mine shafts begins.</span>
+                        <a href="/images/oakdale-colliery_02_lg.jpg" data-lightbox="artifact" data-caption="The sinking of three mine shafts for the new colliery at Oakdale began in 1907. The north shaft was 626 yards deep and south 650 yards deep, making them the largest diameter mine shafts in South Wales at the time.<br>[ Photo credit: <a href='https://storymaps.arcgis.com/stories/82136a5a1bfd441387d456a01871d541' target='_blank'>Cadw / Story Maps</a> ]" class="image-lightbox-link">  
                         <img src="/images/oakdale-colliery_01_vsm.jpg" class="timeline-image" style="width: 140px; height: 158px;" alt="Oakdale Colliery.">
                         </a>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
-                <div class="node-content-bottom-hide"></div>
+                <div class="node-content-bottom hide-on-mobile"></div>
               </div>
 
               <!-- ================= 1911 ================= -->
@@ -100,15 +100,15 @@
 
               <!-- NODE (SMALL EVENT) -->
               <div class="node-base node-event">
-                <div class="node-top-section">
+                <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">1911</div>
                     <div class="node-content-top">
-                        <i>By 1911, Oakdale Colliery had proven to be an engineering triumph. Boasting the largest shaft diameters in South Wales, the state-of-the-art pit even generated its own electricity.</i>
+                        <span class="timeline-desc">By 1911, Oakdale Colliery had proven to be an engineering triumph. Boasting the largest shaft diameters in South Wales, the state-of-the-art pit even generated its own electricity.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
-                <div class="node-content-bottom">
-                    <i>The revolutionary "model village" to house the colliery workers begins &mdash; the brainchild of Mr A S Tallis, manager of the Tredegar Iron and Coal Company.</i>
+                <div class="node-content-bottom-alt">
+                    <span class="timeline-desc">The revolutionary "model village" to house the colliery workers begins &mdash; the brainchild of Mr A S Tallis, manager of the Tredegar Iron and Coal Company.</span>
                 </div>
               </div>
 
@@ -127,36 +127,33 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">13 March</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">A new hotel for Oakdale is proposed.</i>
-                        <a href="/images/oakdale-hotel_01_lg.jpg" data-lightbox="artifact" data-caption="The Oakdale Hotel, 2016.
-                        <br>[ Photo credit: <a href='https://storymaps.arcgis.com/stories/82136a5a1bfd441387d456a01871d541' target='_blank'>Cadw / Story Maps</a> ]" class="image-lightbox-link">  
+                        <span class="timeline-desc">A new hotel for Oakdale is proposed.</span>
+                        <a href="/images/oakdale-hotel_01_lg.jpg" data-lightbox="artifact" data-caption="The Oakdale Hotel, 2016.<br>[ Photo credit: <a href='https://storymaps.arcgis.com/stories/82136a5a1bfd441387d456a01871d541' target='_blank'>Cadw / Story Maps</a> ]" class="image-lightbox-link">  
                         <img src="/images/oakdale-hotel_01_vsm.jpg" class="timeline-image" style="width: 140px; height: 158px;" alt="Oakdale Hotel, 2016.">
                         </a>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
-                <div class="node-content-bottom"></div>
+                <div class="node-content-bottom hide-on-mobile"></div>
               </div>
 
               <!-- NODE (LARGE BATTLE NODE) -->
-                <div class="node-base node-battle-exlarge">
-                    <div class="node-top-section-alt">
-                        <div class="node-date-badge display-text">04 August</div>
-                        <div class="node-content-top">
-                            <div style="font-family: Georgia, serif; font-size: clamp(15px, 4vw, 22px); font-weight: 800; line-height: 1.2; color: #222222; padding-left: 30px; background-image: linear-gradient(to right, #000080 8px, transparent 8px, transparent 11px, #903 11px); background-position: left; background-size: 19px 100%; background-repeat: no-repeat; letter-spacing: 1px; margin-bottom: 0px; text-transform: uppercase;">Britain Declares War on Germany</div>
-                            
-                            <div style="margin-top: 15px; position: relative; z-index: 10;">
-                                <a href="/images/britain-declares-war_02_lg.jpg" data-lightbox="artifact" data-caption="Britain Declares War! Crowds outside Buckingham Palace cheer King George, Queen Mary and the Prince of Wales (who can just be seen on the balcony) following the Declaration of War in August 1914.<br>[ Photo collage/credit: <a href='https://www.iwm.org.uk/collections/item/object/205022448' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link hide-on-mobile" style="position: absolute; top: 0; left: 0;"> 
-                                
-                                <img src="/images/britain-declares-war_02_sm.jpg" class="timeline-image" style="height: 320px; max-width: 280px; object-fit: cover;" alt="Britain Declares War!">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="node-axis-band hide-on-mobile"></div>
-                    <div class="node-content-bottom-alt hide-on-mobile"></div>
-                </div>
+              <div class="node-base node-battle-exlarge" id="event-war-declared-1914">
+                  <div class="node-top-section-alt">
+                      <div class="node-date-badge display-text">04 August</div>
+                      <div class="node-content-top">
+                          <div style="font-family: Georgia, serif; font-size: clamp(15px, 4vw, 22px); font-weight: 800; line-height: 1.2; color: #222222; padding-left: 30px; background-image: linear-gradient(to right, #000080 8px, transparent 8px, transparent 11px, #903 11px); background-position: left; background-size: 19px 100%; background-repeat: no-repeat; letter-spacing: 1px; margin-bottom: 0px; text-transform: uppercase;">Britain Declares War on Germany</div>
+                          
+                          <div class="node-overlay-box">
+                              <a href="/images/britain-declares-war_02_lg.jpg" data-lightbox="artifact" data-caption="Britain Declares War! Crowds outside Buckingham Palace cheer King George, Queen Mary and the Prince of Wales (who can just be seen on the balcony) following the Declaration of War in August 1914.<br>[ Photo collage/credit: <a href='https://www.iwm.org.uk/collections/item/object/205022448' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                  <img src="/images/britain-declares-war_02_sm.jpg" class="timeline-image overlay-lg" alt="Britain Declares War!">
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="node-axis-band hide-on-mobile"></div>
+                  <div class="node-content-bottom-alt hide-on-mobile"></div>
+              </div>
 
               <!-- NODE (SMALL EVENT) -->
               <div class="node-base node-event">
@@ -164,7 +161,7 @@
                     <div class="node-date-badge display-text">23 August</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Battle of Mons</div>
-                        <i style="margin-bottom: 10px;">The British Army's first major clash of WWI &mdash; defending the Mons–Condé Canal, Belgium and inflicting heavy casualties on the German First Army.</i>
+                        <span class="timeline-desc">The British Army's first major clash of WWI &mdash; defending the Mons–Condé Canal, Belgium and inflicting heavy casualties on the German First Army.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -177,17 +174,16 @@
                     <div class="node-date-badge display-text">19 October</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">First Battle of Ypres</div>
-                        <i style="margin-bottom: 10px;">Allied and German forces collided in Belgium, ending Germany’s "Race to the Sea" and cementing bloody trench warfare.</i>
+                        <span class="timeline-desc">Allied and German forces collided in Belgium, ending Germany’s "Race to the Sea" and cementing bloody trench warfare.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom-alt hide-on-mobile"></div>
               </div>
 
-            <!-- ======================================== -->
-            <!-- ================= 1915 ================= -->
-            <!-- ======================================== -->
-
+              <!-- ======================================== -->
+              <!-- ================= 1915 ================= -->
+              <!-- ======================================== -->
               <div class="rail-year-node" id="year-1915">
                   <div class="year-top-spacer"></div>
                   <div class="node-axis-band" style="width: 100%;"></div>
@@ -197,47 +193,30 @@
                   <div class="year-bottom-spacer"></div>
               </div>
 
-              <!-- NODE (SMALL EVENT) -->
-              <div class="node-base node-battle-large">
-                <div class="node-top-section">
-                    <div class="node-date-badge display-text" style="width: 140px !important;">February 1915</div>
-                    <div class="node-content-top">
-                        <div class="battle-sub-style" style="margin-bottom: 10px;">Dardanelles Campaign</div>
-                        <i>A naval operation led by British and French warships. The goal was to force a passage through the Dardanelles Strait, controlled by the Ottoman Empire and open a sea route to Russia. Failing to break through,the Allied command realized naval power alone would not suffice.</i>
-                    </div>
-                </div>
-                <div class="node-axis-band-alt hide-on-mobile"></div>
-                <div class="node-content-bottom">
-                    <i>The Dardanelles Campaign was the primary operation that dramatically shifted the scale of World War I beyond the Western Front, turning a deadlocked European conflict into a truly global war.</i>
-                </div>
-              </div>
-
-            <!--------------------------------------------->
-            <!-- NODE (Early Trench Warfare in Flanders) -->
-            <!--------------------------------------------->
-            
+              <!--------------------------------------------->
+              <!-- NODE (Early Trench Warfare in Flanders) -->
+              <!--------------------------------------------->
               <div class="node-base node-battle-large" id="event-flanders">
-                <div class="node-top-section-alt">
+                <div class="node-top-section">
                     <div class="node-date-badge display-text" style="width: 120px;">1914 &ndash; 1915</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Early Trench Warfare in Flanders</div>
-                        <i>The opening months of the First World War on the Western Front subjected the British Expeditionary Force to unprecedented violence, culminating in a desperate struggle for survival.</i>
+                        <span class="timeline-desc">The opening months of the First World War on the Western Front subjected the British Expeditionary Force to unprecedented violence, culminating in a desperate struggle for survival.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
-                <div class="node-content-bottom-alt hide-on-mobile"></div>
+                <div class="node-content-bottom hide-on-mobile"></div>
               </div>
               
               <!-- NODE (EVENT WITH CASUALTY - ALBERT PRICE) -->
-              <div class="node-base node-battle-lg" style="border-left: 0px !important;" id="event-05apr1915">
-                <div class="node-top-section-alt">
+              <div class="node-base node-battle-large" style="border-left: 0px !important;" id="event-05apr1915">
+                <div class="node-top-section">
                     <div class="node-casualty-badge display-text">05 April</div>
                     <div class="node-content-top">
-                        <a href="/images/british-awaiting-word_lg.jpg" data-lightbox="artifact" data-caption="British raiding party await the word.
-                        <br>[ Photo credit: <a href='https://www.nam.ac.uk/explore/first-world-war' target='_blank'>National Army Museum</a> ]" class="image-lightbox-link">  
+                        <a href="/images/british-awaiting-word_lg.jpg" data-lightbox="artifact" data-caption="British raiding party await the word.<br>[ Photo credit: <a href='https://www.nam.ac.uk/explore/first-world-war' target='_blank'>National Army Museum</a> ]" class="image-lightbox-link">  
                         <img class="timeline-image" src="/images/british-awaiting-word_vsm.jpg" alt="British raiding party await the word.">
                         </a>
-                        <i style="margin-top: 6px;">British raiding party await the word.</i>
+                        <span class="timeline-caption">British raiding party await the word.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -245,24 +224,37 @@
                     <span class="artifact-label">Early Trench Warfare</span>
                     </a>
                 </div>
-                <div class="node-content-bottom-alt">
+                <div class="node-content-bottom">
                     <div class="track-oakdale casualty-event">
-                    <a href="/ww1/price_a_s.html" class="hybrid-fetch-trigger soldier-link">Pte. Albert Stewart Price</a>
-                    <span class="casualty-detail">- died of wounds, France</span>
+                    <a href="/ww1/price_a_s.html" class="hybrid-fetch-trigger soldier-link">Pte. Albert Stewart Price</a><br><span class="casualty-detail">- died of wounds, France</span>
                   </div>
                 </div>
               </div>
-             
-            <!---------------------------------->
-            <!-- NODE (SECOND BATTLEOF YPRES) -->
-            <!---------------------------------->
 
-               <div class="node-base node-battle-large" id="event-2ndypres">
+              <!-- NODE (DARDANELLES CAMPAIGN - SWAPPED AFTER FLANDERS) -->
+              <div class="node-base node-battle-large" id="event-dardanelles">
+                <div class="node-top-section-alt">
+                    <div class="node-date-badge display-text" style="width: 120px !important;">February 1915</div>
+                    <div class="node-content-top">
+                        <div class="battle-sub-style" style="margin-bottom: 10px;">Dardanelles Campaign</div>
+                        <span class="timeline-desc">A naval operation led by British and French warships. The goal was to force a passage through the Dardanelles Strait, controlled by the Ottoman Empire, and open a sea route to Russia. Failing to break through, the Allied command realized naval power alone would not suffice.</span>
+                    </div>
+                </div>
+                <div class="node-axis-band hide-on-mobile"></div>
+                <div class="node-content-bottom-alt">
+                    <span class="timeline-desc">The Dardanelles Campaign was the primary operation that dramatically shifted the scale of World War I beyond the Western Front, turning a deadlocked European conflict into a truly global war.</span>
+                </div>
+              </div>
+             
+              <!---------------------------------->
+              <!-- NODE (SECOND BATTLE OF YPRES)-->
+              <!---------------------------------->
+              <div class="node-base node-battle-large" id="event-2ndypres">
                 <div class="node-top-section">
                     <div class="node-date-badge display-text" style="width: 180px !important;">22 Apr. – 25 May 1915</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Second Battle of Ypres</div>
-                        <i>Germany’s first mass use of lethal chlorine gas on the Western Front. The devastating chemical attack shattered Allied lines, but fierce resistance successfully blocked the German advance toward the strategic town of Ypres.</i>
+                        <span class="timeline-desc">Germany’s first mass use of lethal chlorine gas on the Western Front. The devastating chemical attack shattered Allied lines, but fierce resistance successfully blocked the German advance toward the strategic town of Ypres.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -274,11 +266,10 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">08 May</div>
                     <div class="node-content-top">
-                        <a href="/images/2nd-battle-ypres_01_lg.jpg"  data-lightbox="artifact" data-caption="First successful use of chlorine gas by the Germans at the 2nd Battle of Ypres, 22 April 1915.
-                        <br>[ Photo credit: <a href='https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2015/04/22/world-war-one-first-successful-gas-attack-second-battle-of-ypres' target='_blank'>Parramatta History and Heritage</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/2nd-battle-ypres_01_lg.jpg" data-lightbox="artifact" data-caption="First successful use of chlorine gas by the Germans at the 2nd Battle of Ypres, 22 April 1915.<br>[ Photo credit: <a href='https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2015/04/22/world-war-one-first-successful-gas-attack-second-battle-of-ypres' target='_blank'>Parramatta History and Heritage</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/2nd-battle-ypres_01_vsm.jpg" alt="First successful use of chlorine gas by the Germans at the 2nd Battle of Ypres, 22 April 1915.">
                         </a>
-                        <i style="margin-top: 6px;"><span style="font-size: 22px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First use of chlorine gas at the 2nd Battle of Ypres.</i>
+                        <span class="timeline-caption"><span style="font-size: 20px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First use of chlorine gas at the 2nd Battle of Ypres.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -305,11 +296,10 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">13 May</div>
                     <div class="node-content-top">
-                        <a href="/images/2nd-battle-ypres_02_lg.jpg"  data-lightbox="artifact" data-caption="Diary and notes of Lieutenant E W Cotton during his service at the Second Battle of Ypres.
-                        <br>[ To view and read this document in detail, please visit: <a href='https://www.iwm.org.uk/collections/item/object/1030001540' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/2nd-battle-ypres_02_lg.jpg" data-lightbox="artifact" data-caption="Diary and notes of Lieutenant E W Cotton during his service at the Second Battle of Ypres.<br>[ To view and read this document in detail, please visit: <a href='https://www.iwm.org.uk/collections/item/object/1030001540' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/2nd-battle-ypres_02_vsm.jpg" alt="Diary and notes of Lieutenant E W Cotton during his service at the Second Battle of Ypres.">
                         </a>
-                        <i style="margin-top: 6px;">Notes of Lieutenant E W Cotton at 2nd Battle of Ypres.</i>
+                        <span class="timeline-caption">Notes of Lieutenant E W Cotton at 2nd Battle of Ypres.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -324,19 +314,18 @@
                 </div>
               </div>
 
-            <!---------------------------------->
-            <!-- NODE (GALLIPOLI CAMPAIGN) ----->
-            <!---------------------------------->
-            
-               <div class="node-base node-battle-large" id="event-gallipoli">
+              <!---------------------------------->
+              <!-- NODE (GALLIPOLI CAMPAIGN) ----->
+              <!---------------------------------->
+              <div class="node-base node-battle-large" id="event-gallipoli">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 210px;">19 Feb. 1915 - 9 Jan. 1916</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Gallipoli Campaign</div>
-                        <i>Because the naval assault failed, the Allies launched a massive eight-month amphibious land battle invasion on 25 April 1915 to capture the Gallipoli Peninsula. The objective was to neutralize the Ottoman shore artillery so the warships could  pass through the Dardanelles Straight.</i>
+                        <span class="timeline-desc">Because the naval assault failed, the Allies launched a massive eight-month amphibious land invasion to capture the Gallipoli Peninsula. The objective was to neutralize the Ottoman shore artillery so the warships could pass through the Dardanelles Strait.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt hide-on-mobile"></div>
+                <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom-alt hide-on-mobile"></div>
               </div>
 
@@ -345,14 +334,13 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">24 August</div>
                     <div class="node-content-top">
-                        <a href="/images/gallipoli_02_lg.jpg"  data-lightbox="artifact" data-caption="Troops and transport from 29th Division at 'Lancashire Landing' on 'W' Beach, Cape Helles, Gallipoli, 27 April 1915.
-                        <br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205224474' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/gallipoli_02_lg.jpg" data-lightbox="artifact" data-caption="Troops and transport from 29th Division at 'Lancashire Landing' on 'W' Beach, Cape Helles, Gallipoli, 27 April 1915.<br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205224474' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/gallipoli_02_vsm.jpg" alt="Troops and transport from 29th Division at 'Lancashire Landing' on 'W' Beach, Cape Helles, Gallipoli, 27 April 1915.">
                         </a>
-                        <i style="margin-top: 6px;">Troops and transport from 29th Division at 'Lancashire Landing'</i>
+                        <span class="timeline-caption">Troops and transport from 29th Division at 'Lancashire Landing'</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt">
+                <div class="node-axis-band">
                     <a href="/stories/mh-ww1_gallipoli_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Gallipoli Campaign</span>
                     </a>
@@ -369,29 +357,27 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">30 November</div>
                     <div class="node-content-top">
-                        <a href="/images/gallipoli_01_lg.jpg"  data-lightbox="artifact" data-caption="Frost-bitten soldiers lying on straw in shelters constructed of biscuit boxes at a store dump at Suvla, after the frost at the end of November 1915.
-                        <br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205193307' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/gallipoli_01_lg.jpg" data-lightbox="artifact" data-caption="Frost-bitten soldiers lying on straw in shelters constructed of biscuit boxes at a store dump at Suvla, after the frost at the end of November 1915.<br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205193307' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/gallipoli_01_vsm.jpg" alt="Frost-bitten soldiers lying on straw in shelters constructed of biscuit boxes at a store dump at Suvla, after the frost at the end of November 1915.">
                         </a>
-                        <i style="margin-top: 6px;">Frost-bitten soldiers lying on straw in shelters</i> 
+                        <span class="timeline-caption">Frost-bitten soldiers lying on straw in makeshift shelters.</span> 
                     </div>
                 </div>
-                <div class="node-axis-band-alt">
+                <div class="node-axis-band">
                     <a href="/stories/mh-ww1_gallipoli_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Gallipoli Campaign</span>
                     </a>
                 </div>
                 <div class="node-content-bottom-alt">
                     <div class="track-oakdale casualty-event">
-                    <a href="/ww1/lloyd_w_a.html" class="hybrid-fetch-trigger soldier-link">Sapper William Arthur Lloyd</a><span class="casualty-detail">- killed in action, Gallipoli</span>
+                    <a href="/ww1/lloyd_w_a.html" class="hybrid-fetch-trigger soldier-link">Sapper William Arthur Lloyd</a><br><span class="casualty-detail">- killed in action, Gallipoli</span>
                   </div>
                 </div>
               </div>
 
-            <!-- ======================================== -->
-            <!-- ================= 1916 ================= -->
-            <!-- ======================================== -->
-
+              <!-- ======================================== -->
+              <!-- ================= 1916 ================= -->
+              <!-- ======================================== -->
               <div class="rail-year-node" id="year-1916">
                   <div class="year-top-spacer"></div>
                   <div class="node-axis-band" style="width: 100%;"></div>
@@ -407,7 +393,7 @@
                      <div class="node-date-badge display-text" style="width: 150px !important;">February 1916</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Battle of Verdun</div>
-                        <i>Beginning with a massive German artillery bombardment, this became WWI’s longest, symbolising fierce resistance and devastating attrition.</i>
+                        <span class="timeline-desc">Beginning with a massive German artillery bombardment, this became WWI’s longest battle, symbolising fierce resistance and devastating attrition.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -418,7 +404,12 @@
               <div class="node-base node-battle" id="event-31mar1916">
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">31 March</div>
-                    <div class="node-content-top"></div>
+                    <div class="node-content-top">
+                        <a href="/images/training-camps_02_lg.jpg" data-lightbox="artifact" data-caption="New recruits were then given months of basic training in camps all over the country where they learned to be soldiers.<br>[ Photo credit: <a href='https://www.iwm.org.uk/history/first-world-war/participation/joining-up' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/training-camps_02_vsm.jpg" alt="New recruits were then given months of basic training in camps all over the country where they learned to be soldiers.">
+                        </a>
+                        <span class="timeline-caption">Reserve Battalions prepared raw recruits before sending them to active-service battalions on the front lines.</span> 
+                    </div>
                 </div>
                 <div class="node-axis-band">
                     <a href="/stories/mh-ww1_return-home.html" 
@@ -433,21 +424,20 @@
                 </div>
               </div>
 
-            <!------------------------------------->
-            <!-- NODE (MESOPOTAMIAN CAMPAIGN) ----->
-            <!------------------------------------->
-            
-               <div class="node-base node-battle-large" id="event-mesopotamia">
+              <!------------------------------------->
+              <!-- NODE (MESOPOTAMIAN CAMPAIGN) ----->
+              <!------------------------------------->
+              <div class="node-base node-battle-large" id="event-mesopotamia">
                 <div class="node-top-section">
-                    <div class="node-date-badge display-text" style="width: 210px;">6 Nov. 1914 – 14 Nov. 1918 </div>
+                    <div class="node-date-badge display-text" style="width: 210px;">6 Nov. 1914 – 14 Nov. 1918</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Mesopotamian<br/>Campaign</div>
-                        <i>Fought primarily in modern-day Iraq, the campaign was defined by the Siege of Kut-al-Amara, resulting in one of the most humiliating defeats in British military history. British relief efforts failed disastrously, costing up to 40,000 casualties.</i>
+                        <span class="timeline-desc">Fought primarily in modern-day Iraq, the campaign was defined by the Siege of Kut-al-Amara, resulting in one of the most humiliating defeats in British military history. British relief efforts failed disastrously, costing up to 40,000 casualties.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt hide-on-mobile"></div>
+                <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom hide-on-mobile">
-                    <i>Starving and diseased, General Townshend surrendered 13,000 troops in April 1916; thousands subsequently died during brutal Ottoman death marches.</i>
+                    <span class="timeline-desc">Starving and diseased, General Townshend surrendered 13,000 troops in April 1916; thousands subsequently died during brutal Ottoman death marches.</span>
                 </div>
               </div>
               
@@ -456,14 +446,13 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">09 April</div>
                     <div class="node-content-top">
-                        <a href="/images/mesopotamia_01_lg.jpg"  data-lightbox="artifact" data-caption="Diary and other documents relating to J E Beckett and his service with the Army Service Corps (ASC) attached to the 14th Light Armoured Motor Battery in Mesopotamia, 1915 - 1919.
-                        <br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/1030014110' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/mesopotamia_01_lg.jpg" data-lightbox="artifact" data-caption="Diary and other documents relating to J E Beckett and his service with the Army Service Corps (ASC) attached to the 14th Light Armoured Motor Battery in Mesopotamia, 1915 - 1919.<br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/1030014110' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/mesopotamia_01_vsm.jpg" alt="Diary and other documents relating to J E Beckett and his service with the Army Service Corps (ASC) attached to the 14th Light Armoured Motor Battery in Mesopotamia, 1915 - 1919.">
                         </a>
-                        <i style="margin-top: 6px;">Private papers of J E Beckett and his service in Mesopotamia...</i> 
+                        <span class="timeline-caption">The private papers of J E Beckett record his service in Mesopotamia.</span> 
                     </div>
                 </div>
-                <div class="node-axis-band-alt"> 
+                <div class="node-axis-band"> 
                     <a href="/stories/mh-ww1_mesopotamian_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Mesopotamian Campaign</span>
                     </a>
@@ -480,14 +469,13 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">22 April</div>
                     <div class="node-content-top">
-                        <a href="/images/mesopotamia_02_lg.jpg"  data-lightbox="artifact" data-caption="British and Indian machine gunners with a Vickers machine gun, Lewis gun and range-finder, 1917.
-                        <br>[ Photo credit: <a href='https://collection.nam.ac.uk/detail.php?acc=1983-03-41-2-23' target='_blank'>National Army Museum</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/mesopotamia_02_lg.jpg" data-lightbox="artifact" data-caption="British and Indian machine gunners with a Vickers machine gun, Lewis gun and range-finder, 1917.<br>[ Photo credit: <a href='https://collection.nam.ac.uk/detail.php?acc=1983-03-41-2-23' target='_blank'>National Army Museum</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/mesopotamia_02_vsm.jpg" alt="British and Indian machine gunners with a Vickers machine gun, Lewis gun and range-finder, 1917.">
                         </a>
-                        <i style="margin-top: 6px;">British and Indian gunners with a Vickers machine gun...</i> 
+                        <span class="timeline-caption">British and Indian gunners pose with a Vickers machine gun.</span> 
                     </div>
                 </div>
-                <div class="node-axis-band-alt"> 
+                <div class="node-axis-band"> 
                     <a href="/stories/mh-ww1_mesopotamian_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Mesopotamian Campaign</span>
                     </a>
@@ -499,16 +487,15 @@
                 </div>
               </div>
 
-            <!--------------------------------------------->
-            <!-- NODE (Givenchy-lès-la-Bassée Sector) ----->
-            <!--------------------------------------------->
-            
-               <div class="node-base node-battle-large" id="event-givenchy">
+              <!--------------------------------------------->
+              <!-- NODE (Givenchy-lès-la-Bassée Sector) ----->
+              <!--------------------------------------------->
+              <div class="node-base node-battle-large" id="event-givenchy">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 180px;">Dec. 1915 – May 1916</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Givenchy-lès-la-Bassée Sector</div>
-                        <i>Because the naval assault failed, the Allies launched a massive eight-month amphibious land battle invasion on 25 April 1915 to capture the Gallipoli Peninsula. The objective was to neutralize the Ottoman shore artillery so the warships could  pass through the Dardanelles Straight.</i>
+                        <span class="timeline-desc">Characterised by waterlogged clay soil and high water tables, the Givenchy sector forced troops to fight from built-up breastworks (as opposed to trenches) while underground tunnelling companies waged a terrifying subterranean war of mines and counter-mines beneath No Man's Land.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -520,11 +507,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">25 May</div>
                     <div class="node-content-top">
-                        <a href="/images/givenchy-trenches_lg.jpg" data-lightbox="artifact" data-caption="British soldiers standing in knee deep water in a trench.
-                        <br>[ Photo credit: <a href='https://collections.theworldwar.org/argus/final/Portal/Default.aspx?component=AAAS&record=7a8d0c01-af5c-4158-8b29-9fc94b694f41' target='_blank'>National War Museum</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/givenchy-trenches_lg.jpg" data-lightbox="artifact" data-caption="British soldiers standing in knee deep water in a trench.<br>[ Photo credit: <a href='https://collections.theworldwar.org/argus/final/Portal/Default.aspx?component=AAAS&record=7a8d0c01-af5c-4158-8b29-9fc94b694f41' target='_blank'>National War Museum</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/givenchy-trenches_vsm.jpg" alt="British soldiers standing in knee deep water in a trench.">
                         </a>
-                         <i style="margin-top: 6px;">British soldiers standing in knee deep water in a trench.</i>
+                        <span class="timeline-caption">British soldiers standing in knee deep water in a trench.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -545,10 +531,10 @@
                     <div class="node-date-badge display-text">31 May</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Battle of Jutland</div>
-                        <i>This erupted as the largest naval clash of WWI. Britain's Grand Fleet engaged Germany's High Seas Fleet, securing strategic British control.</i>
+                        <span class="timeline-desc">This erupted as the largest naval clash of WWI. Britain's Grand Fleet engaged Germany's High Seas Fleet, securing strategic British control.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt hide-on-mobile"></div>
+                <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom hide-on-mobile"></div>
               </div>
 
@@ -557,7 +543,7 @@
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">08 June</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Voluntary enlistment replaced by conscription</i>
+                        <span class="timeline-desc">Voluntary enlistment replaced by conscription</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -569,28 +555,32 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">03 July</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">First foundation stone for Oakdale Institute laid</i>
+                        <span class="timeline-desc">The first foundation stones are laid for the Oakdale Miners Institute by Harry Blount and Alfred S Tallis.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/oakdale-stone_01_lg.jpg" data-lightbox="artifact" data-caption="First foundation stones for Oakdale Institute laid by Harry Blount &ndash; original member of the Oakdale Workmens Institute Committee, formed in 1913.<br>[ Photo credit: <a href='https://museum.wales/blog/1647/Building-on-strong-foundations-Oakdale-Workmens-Institute-/' target='_blank'>St. Fagans National Museum of History</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                <img src="/images/oakdale-stone_01_vsm.jpg" class="timeline-image overlay-sm" alt="First foundation stones for Oakdale Institute laid by Harry Blount &ndash; original member of the Oakdale Workmens Institute Committee, formed in 1913.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom hide-on-mobile"></div>
               </div>
 
-            <!----------------------------------->
-            <!-- NODE (BATTLE OF THE SOMME) ----->
-            <!----------------------------------->
-            
-               <div class="node-base node-battle-large" id="event-somme">
+              <!----------------------------------->
+              <!-- NODE (BATTLE OF THE SOMME) ----->
+              <!----------------------------------->
+              <div class="node-base node-battle-large" id="event-somme">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 180px;">1 Jul. – 18 Nov. 1916</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Battle of The Somme</div>
-                        <i>This began as the British Army's bloodiest day. The massive joint Anglo-French offensive aimed to relieve pressure on Verdun. The attack on Flers–Courcelette famously marked the first battlefield deployment of tanks in military history.</i>
+                        <span class="timeline-desc">This began as the British Army's bloodiest day. The massive joint Anglo-French offensive aimed to relieve pressure on Verdun. The attack on Flers–Courcelette famously marked the first battlefield deployment of tanks in military history.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom-alt">
-                    <i>The campaign also featured the pivotal Battle of Guillemont, where British troops captured a vital stronghold to link Allied lines along the Western Front. </i>
+                    <span class="timeline-desc">The campaign also featured the pivotal Battle of Guillemont, where British troops captured a vital stronghold to link Allied lines along the Western Front.</span>
                 </div>
               </div>
 
@@ -599,11 +589,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">19 August</div>
                     <div class="node-content-top">
-                        <a href="/images/flers-courcelette_lg.jpg" data-lightbox="artifact" data-caption="The first ever tanks used in combat were unleashed onto the battlefield during the Battle of Flers-Courcelette on 15 September 1916.
-                        <br>[ Photo credit: <a href='https://thehistorypress.co.uk/article/the-battle-of-flers-courcelette/' target='_blank'>The History Press</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/flers-courcelette_lg.jpg" data-lightbox="artifact" data-caption="The first ever tanks used in combat were unleashed onto the battlefield during the Battle of Flers-Courcelette on 15 September 1916.<br>[ Photo credit: <a href='https://thehistorypress.co.uk/article/the-battle-of-flers-courcelette/' target='_blank'>The History Press</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/flers-courcelette_vsm.jpg" alt="The first ever tanks used in combat were unleashed onto the battlefield during the Battle of Flers-Courcelette on 15 September 1916.">
                         </a>
-                        <i style="margin-top: 6px;"><span style="font-size: 22px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>The first tanks used in combat were during the Battle of Flers-Courcelette.</i>
+                        <span class="timeline-caption"><span style="font-size: 20px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>The first tanks used in combat were during the Battle of Flers-Courcelette.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -623,11 +612,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">05 September</div>
                     <div class="node-content-top">
-                        <a href="/images/guillemont_lg.jpg" data-lightbox="artifact" data-caption="The road to Guillemont viewed from Waterlot Farm during the Battle of the Somme, 11 September 1916.
-                        <br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205193928' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/guillemont_lg.jpg" data-lightbox="artifact" data-caption="The road to Guillemont viewed from Waterlot Farm during the Battle of the Somme, 11 September 1916.<br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205193928' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/guillemont_vsm.jpg" alt="The road to Guillemont viewed from Waterlot Farm during the Battle of the Somme, 11 September 1916.">
                         </a>
-                        <i style="margin-top: 6px;">The road to Guillemont viewed from Waterlot Farm...</i>
+                        <span class="timeline-caption">The road to Guillemont viewed from Waterlot Farm...</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -647,11 +635,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">08 September</div>
                     <div class="node-content-top">
-                        <a href="/images/somme_01_lg.jpg"  data-lightbox="artifact" data-caption="Machine guns inflicted heavy casualties on both sides.
-                        <br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/somme_01_lg.jpg" data-lightbox="artifact" data-caption="Machine guns inflicted heavy casualties on both sides.<br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/somme_01_vsm.jpg" alt="Machine guns inflicted heavy casualties on both sides.">
                         </a>
-                        <i style="margin-top: 6px;">Machine guns inflicted heavy casualties on both sides.</i>
+                        <span class="timeline-caption">Machine guns inflicted heavy casualties on both sides.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -671,11 +658,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">23 September</div>
                     <div class="node-content-top">
-                        <a href="/images/somme_02_lg.jpg"  data-lightbox="artifact" data-caption="Bad weather turned much of the battlefield into a quagmire.
-                         <br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/somme_02_lg.jpg" data-lightbox="artifact" data-caption="Bad weather turned much of the battlefield into a quagmire.<br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/somme_02_vsm.jpg" alt="Bad weather turned much of the battlefield into a quagmire.">
                         </a>
-                        <i style="margin-top: 6px;">Bad weather turned much of the battlefield into a quagmire.</i>
+                        <span class="timeline-caption">Bad weather turned much of the battlefield into a quagmire.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -695,11 +681,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">23 November</div>
                     <div class="node-content-top">
-                        <a href="/images/somme_03_lg.jpg"  data-lightbox="artifact" data-caption="The British Fourth Army is said to have advanced just 900m between 15 July and 14 September at the cost of 82,000 casualties.
-                         <br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
+                        <a href="/images/somme_03_lg.jpg" data-lightbox="artifact" data-caption="The British Fourth Army is said to have advanced just 900m between 15 July and 14 September at the cost of 82,000 casualties.<br>[ <a href='https://www.bbc.co.uk/news/in-pictures-36587877' target='_blank'>Photo credit: BBC News</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/somme_03_vsm.jpg" alt="The British Fourth Army is said to have advanced just 900m between 15 July and 14 September at the cost of 82,000 casualties.">
                         </a>
-                        <i style="margin-top: 6px;">The British Fourth Army is said to have advanced just 900m...</i>
+                        <span class="timeline-caption">The British Fourth Army is said to have advanced just 900m...</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -719,7 +704,12 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">07 December</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">David Lloyd George becomes Prime Minister of Britain</i>
+                        <span class="timeline-desc">David Lloyd George becomes Prime Minister. As a national leader, his dynamism and self-confidence helped maintain public morale throughout 1917 and 1918.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/david_lloyd_george_01_lg.jpg" data-lightbox="artifact" data-caption="Politically ambitious, especially after becoming Secretary of State for War in June 1916, Lloyd George, with Conservative support, edged Asquith from power. He became Prime Minister in December 1916.<br>[ Photo credit: <a href='https://www.iwm.org.uk/history/first-world-war/home-front/who-was-david-lloyd-george' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                <img src="/images/david_lloyd_george_01_vsm.jpg" class="timeline-image overlay-sm" alt="Politically ambitious, especially after becoming Secretary of State for War in June 1916, Lloyd George, with Conservative support, edged Asquith from power. He became Prime Minister in December 1916.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -729,7 +719,6 @@
             <!-- ======================================== -->
             <!-- ================= 1917 ================= -->
             <!-- ======================================== -->
-
               <div class="rail-year-node" id="year-1917">
                   <div class="year-top-spacer"></div>
                   <div class="node-axis-band" style="width: 100%;"></div>
@@ -744,7 +733,12 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">16 January</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">The Zimmerman telegram intercepted and decoded by Room 40</i>
+                        <span class="timeline-desc">The Zimmerman telegram intercepted and decoded by the British Admiralty in "Room 40".</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/zimmerman_01_lg.jpg" data-lightbox="artifact" data-caption="The Zimmerman telegram intercepted and decoded by the British in 'Room 40'.<br>[ Photo credit: <a href='https://history.blog.gov.uk/2017/01/16/the-zimmermann-telegram-and-room-40/' target='_blank'>Gov.UK</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                <img src="/images/zimmerman_01_vsm.jpg" class="timeline-image overlay-sm" alt="The Zimmerman telegram intercepted and decoded by the British in 'Room 40'.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -756,23 +750,27 @@
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">15 March</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Czar Nicholas II abdicates the Russian throne</i>
+                        <span class="timeline-desc">Czar Nicholas II abdicates the Russian throne ending 300-year-old rule by the House of Romanov.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/nicholas_01_lg.jpg" data-lightbox="artifact" data-caption="Czar Nicholas II abdicates the Russian throne ending 300-year-old rule by the House of Romanov.<br>[ Photo credit: <a href='https://www.britannica.com/biography/Nicholas-II-tsar-of-Russia/Abdication-and-death' target='_blank'>Britannica</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                <img src="/images/nicholas_01_vsm.jpg" class="timeline-image overlay-sm" alt="Czar Nicholas II abdicates the Russian throne ending 300-year-old rule by the House of Romanov.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
-                <div class="node-content-bottom-al hide-on-mobilet"></div>
+                <div class="node-content-bottom-alt hide-on-mobile"></div>
               </div>
 
             <!---------------------------------->
             <!-- NODE (ATTACK ON LENS) --------->
             <!---------------------------------->
-            
                <div class="node-base node-battle-large" id="event-lens">        
-               <div class="node-top-section">
-                     <div class="node-date-badge display-text" style="width: 200px !important;">Spring &amp; Summer 1917</div>
+                <div class="node-top-section">
+                    <div class="node-date-badge display-text" style="width: 200px !important;">Spring &amp; Summer 1917</div>
                     <div class="node-content-top">
-                        <div class="battle-sub-style" style="margin-bottom: 10px;">Lens Sector & Attack on Lens</div>
-                        <i>Germany’s first mass use of lethal chlorine gas on the Western Front. The devastating chemical attack shattered Allied lines, but fierce resistance successfully blocked the German advance toward the strategic town of Ypres.</i>
+                        <div class="battle-sub-style" style="margin-bottom: 10px;">Lens Sector &amp; Attack on Lens</div>
+                        <span class="timeline-desc">Fought across the shattered coal-mining towns and slag heaps of northern France, Allied and Canadian divisions launched fierce urban assaults around Lens and Hill 70 to pin down German reserves and cripple enemy positions.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -784,11 +782,11 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">26 May</div>
                     <div class="node-content-top">
-                        <a href="/images/lens_02_lg.jpg"  data-lightbox="artifact" data-caption="A shell bursts in the outskirts of Lens, August 1917. First major action led by a Canadian commander.
+                        <a href="/images/lens_02_lg.jpg" data-lightbox="artifact" data-caption="A shell bursts in the outskirts of Lens, August 1917. First major action led by a Canadian commander.
                          <br>[ <a href='https://scholars.wlu.ca/cgi/viewcontent.cgi?article=1475&context=cmh' target='_blank'>Photo credit: Canadian Military History, Vol. 17 [2008], Iss. 1, Art. 2</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/lens_02_vsm.jpg" alt="A shell bursts in the outskirts of Lens, August 1917. First major action led by a Canadian commander.">
                         </a>
-                        <i style="margin-top: 6px;"><span style="font-size: 22px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First major action led by a Canadian commander...</i>
+                        <span class="timeline-caption"><span style="font-size: 20px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First major action led by a Canadian commander...</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -808,11 +806,11 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">04 June</div>
                     <div class="node-content-top">
-                        <a href="/images/lens_01_lg.jpg"  data-lightbox="artifact" data-caption="Lens, France, the devastated coal mining region of northern France, 220 coal pits rendered useless. First large-scale use of modern urban warfare.
+                        <a href="/images/lens_01_lg.jpg" data-lightbox="artifact" data-caption="Lens, France, the devastated coal mining region of northern France, 220 coal pits rendered useless. First large-scale use of modern urban warfare.
                         <br>[ <a href='https://www.theatlantic.com/photo/2014/04/world-war-i-in-photos-the-western-front-part-ii-and-armistice/507338/' target='_blank'>Photo credit: The Atlantic</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/lens_01_vsm.jpg" alt="Lens, France, the devastated coal mining region of northern France, 220 coal pits rendered useless.">
                         </a>
-                        <i style="margin-top: 6px;"><span style="font-size: 22px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First large-scale use of modern urban warfare.</i>
+                        <span class="timeline-caption"><span style="font-size: 20px; font-style: normal !important; color: #903;">&#10026;&nbsp;</span>First large-scale use of modern urban warfare.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -832,13 +830,13 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">25 July</div>
                     <div class="node-content-top">
-                        <a href="/images/gallipoli_03_lg.jpg"  data-lightbox="artifact" data-caption="The toilet facilities at Gallipoli were far from luxurious. Latrines in a war zone are never of a particularly high standard, but the cramped nature of the peninsula, the difficulty of keeping clean, and the widespread dysentery meant those at Gallipoli were in an especially poor state.<br>[ Photo credit: <a href='https://www.iwm.org.uk/history/first-world-war/gallipoli/why-gallipoli-was-one-of-the-worst-fighting-fronts' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
-                        <img class="timeline-image" src="/images/gallipoli_03_vsm.jpg" alt="The toilet facilities at Gallipoli were far from luxurious. Latrines in a war zone are never of a particularly high standard, but the cramped nature of the peninsula, the difficulty of keeping clean, and the widespread dysentery meant those at Gallipoli were in an especially poor state.">
+                        <a href="/images/gallipoli_03_lg.jpg" data-lightbox="artifact" data-caption="The toilet facilities at Gallipoli were far from luxurious. Latrines in a war zone are never of a particularly high standard, but the cramped nature of the peninsula, the difficulty of keeping clean, and the widespread dysentery meant those at Gallipoli were in an especially poor state.<br>[ Photo credit: <a href='https://www.iwm.org.uk/history/first-world-war/gallipoli/why-gallipoli-was-one-of-the-worst-fighting-fronts' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/gallipoli_03_vsm.jpg" alt="The toilet facilities at Gallipoli were far from luxurious.">
                         </a>
-                        <i style="margin-top: 6px;">The toilet facilities at Gallipoli were far from luxurious.</i>
+                        <span class="timeline-caption">The toilet facilities at Gallipoli were far from luxurious.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt">
+                <div class="node-axis-band">
                     <a href="/stories/mh-ww1_gallipoli_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Gallipoli Campaign</span>
                     </a>
@@ -853,13 +851,12 @@
             <!--------------------------------->
             <!-- NODE (PASSCHENDAELE) --------->
             <!--------------------------------->
-            
                <div class="node-base node-battle-large" id="event-passchendaele">
                 <div class="node-top-section">
                     <div class="node-date-badge display-text" style="width: 150px;">Jul. - Nov. 1917</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Passchendaele Offensive</div>
-                        <i> Aiming to break  German lines and capture submarine bases in Belgium, the Allied offensive became infamous for torrential rain, thick mud, and horrific casualties, symbolising the brutal attrition of trench warfare.</i>
+                        <span class="timeline-desc">Aiming to break German lines and capture submarine bases in Belgium, the Allied offensive became infamous for torrential rain, thick mud, and horrific casualties, symbolising the brutal attrition of trench warfare.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -870,11 +867,11 @@
               <div class="node-base node-battle" style="border-left: 0px !important;" id="event-30jul1917">
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">30 July</div>
-                        <div class="node-content-top">
-                            <a href="/images/paschendaele_01_lg.jpg" data-lightbox="artifact" data-caption="Battle of Menin Ridge Road, East of Fresenberg Ridge. <br>[ <a href='https://www.iwm.org.uk/history/first-world-war/passchendaele' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
-                            <img class="timeline-image" src="/images/paschendaele_01_vsm.jpg" alt="Battle of Menin Ridge Road, East of Fresenberg Ridge.">
+                    <div class="node-content-top">
+                        <a href="/images/paschendaele_01_lg.jpg" data-lightbox="artifact" data-caption="Battle of Menin Ridge Road, East of Fresenberg Ridge. <br>[ <a href='https://www.iwm.org.uk/history/first-world-war/passchendaele' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/paschendaele_01_vsm.jpg" alt="Battle of Menin Ridge Road, East of Fresenberg Ridge.">
                         </a>
-                        <i style="margin-top: 6px;">Battle of Menin Ridge Road, East of Fresenberg Ridge.</i>
+                        <span class="timeline-caption">Battle of Menin Ridge Road, East of Fresenberg Ridge.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -893,11 +890,11 @@
               <div class="node-base node-battle" style="border-left: 0px !important;" id="event-11aug1917">
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">11 August</div>
-                        <div class="node-content-top">
-                            <a href="/images/paschendaele_02_lg.jpg" data-lightbox="artifact" data-caption="Battle of Pilckem Ridge. British troops loading a pack horse with wiring staples, 31 July 1917. <br>[ <a href='https://www.iwm.org.uk/history/first-world-war/passchendaele' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
-                            <img class="timeline-image" src="/images/paschendaele_02_vsm.jpg" alt="Battle of Pilckem Ridge. British troops loading a pack horse with wiring staples, 31 July 1917.">
-                            </a>
-                            <i style="margin-top: 6px;">British troops loading a pack horse, Battle of Pilckem Ridge.</i>
+                    <div class="node-content-top">
+                        <a href="/images/paschendaele_02_lg.jpg" data-lightbox="artifact" data-caption="Battle of Pilckem Ridge. British troops loading a pack horse with wiring staples, 31 July 1917. <br>[ <a href='https://www.iwm.org.uk/history/first-world-war/passchendaele' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/paschendaele_02_vsm.jpg" alt="Battle of Pilckem Ridge. British troops loading a pack horse with wiring staples, 31 July 1917.">
+                        </a>
+                        <span class="timeline-caption">British troops loading a pack horse, Battle of Pilckem Ridge.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -920,7 +917,7 @@
                         <a href="/images/paschendaele_03_lg.jpg" data-lightbox="artifact" data-caption="A derelict tank stuck in the mud during the assault on Passchendaele. <br>[ <a href='https://www.iwm.org.uk/history/first-world-war/passchendaele' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/paschendaele_03_vsm.jpg" alt="A derelict tank stuck in the mud during the assault on Passchendaele.">
                         </a>
-                        <i style="margin-top: 6px;">A derelict tank stuck in the mud during the assault...</i>
+                        <span class="timeline-caption">A derelict tank stuck in the mud during the assault...</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -940,7 +937,12 @@
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">10 September</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Oakdale Institute officially opened</i>
+                        <span class="timeline-desc">Oakdale Miners Institute officially opened, becoming a focal point of the community, which included a library, billiards room and meeting hall.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/oakdale-institute_01_lg.jpg" data-lightbox="artifact" data-caption="Oakdale Miners Institute officially opened, becoming a focal point of the community, which included a library, billiards room and meeting hall.<br>[ Photo credit: <a href='https://museum.wales/collections/historic-buildings/25/Oakdale-Workmens-Institute/' target='_blank'>St. Fagans National Museum of History</a> ]" class="image-lightbox-link node-overlay-link"> 
+                            <img src="/images/oakdale-institute_01_vsm.jpg" class="timeline-image overlay-sm" alt="Oakdale Miners Institute officially opened, becoming a focal point of the community, which included a library, billiards room and meeting hall.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -952,7 +954,7 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">07 November</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Bolsheviks overthrow the Russian government</i>
+                        <span class="timeline-desc">Bolsheviks overthrow the Russian government.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -962,13 +964,12 @@
             <!------------------------------------->
             <!-- NODE (BATTLE OF CAMBRAI) --------->
             <!------------------------------------->
-            
                <div class="node-base node-battle-large" id="event-cambrai">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 180px;">Dec. 1917 - Feb. 1918</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Battle of Cambrai</div>
-                        <i>This marked history’s first large-scale, mass deployment of tanks to puncture the formidable German Hindenburg Line. Dramatic initial successes were later rolled back by German counter-attacks, it proved armor's future dominance.</i>
+                        <span class="timeline-desc">This marked history’s first large-scale, mass deployment of tanks to puncture the formidable German Hindenburg Line. Dramatic initial successes were later rolled back by German counter-attacks, yet it proved armor's future dominance.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -983,7 +984,7 @@
                         <a href="/images/cambrai_01_lg.jpg" data-lightbox="artifact" data-caption="Men of the 11th Battalion, Royal Inniskilling Fusiliers in a captured German communications trench near Havrincourt during the Battle of Cambrai, November 1917. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205213168' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/cambrai_01_vsm.jpg" alt="Men of the 11th Battalion, Royal Inniskilling Fusiliers in a captured German communications trench near Havrincourt during the Battle of Cambrai, November 1917."> 
                         </a>
-                        <i style="margin-top: 6px;">Men of the 11th Battalion in a captured German trench.</i>
+                        <span class="timeline-caption">Men of the 11th Battalion in a captured German trench.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1003,7 +1004,7 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">17 December</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Armistice between new Russian government and Central Powers</i>
+                        <span class="timeline-desc">Armistice between new Russian government and Central Powers.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1013,16 +1014,15 @@
             <!------------------------------------->
             <!-- NODE (PALESTINE CAMPAIGN) --------->
             <!------------------------------------->
-            
                <div class="node-base node-battle-large" id="event-palestine">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 180px;">Dec. 1917 - Feb. 1918</div>
                     <div class="node-content-top">
-                        <div class="battle-sub-style" style="margin-bottom: 10px;">PALESTINE CAMPAIGN</div>
-                        <i>The British-led Egyptian Expeditionary Force rebounded from two bloody defeats at the First and Second Battles of Gaza. Under General Edmund Allenby, the Allies broke Ottoman lines at Beersheba and successfully captured Jerusalem by December.</i>
+                        <div class="battle-sub-style" style="margin-bottom: 10px;">Palestine Campaign</div>
+                        <span class="timeline-desc">The British-led Egyptian Expeditionary Force rebounded from two bloody defeats at the First and Second Battles of Gaza. Under General Edmund Allenby, the Allies broke Ottoman lines at Beersheba and successfully captured Jerusalem by December.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt hide-on-mobile"></div>
+                <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom-alt hide-on-mobile"></div>
               </div>
               
@@ -1034,10 +1034,10 @@
                         <a href="/images/palestine_01_lg.jpg" data-lightbox="artifact" data-caption="British soldiers with members of the Egyptian Camel Transport Corps, carrying water for troops, Sheik Nakhrur, 1917. <br>[ <a href='https://collection.nam.ac.uk/detail.php?acc=2002-05-1-88' target='_blank'>Photo credit: National Army Museum</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/palestine_01_vsm.jpg" alt="British soldiers with members of the Egyptian Camel Transport Corps, carrying water for troops, Sheik Nakhrur, 1917."> 
                         </a>
-                        <i style="margin-top: 6px;">British soldiers with the Egyptian Camel Trans. Corps.</i>
+                        <span class="timeline-caption">British soldiers with the Egyptian Camel Trans. Corps.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt">
+                <div class="node-axis-band">
                     <a href="/stories/mh-ww1_palestine_campaign.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
                     <span class="artifact-label">Palestine Campaign</span>
                     </a>
@@ -1052,7 +1052,6 @@
             <!-- ======================================== -->
             <!-- ================= 1918 ================= -->
             <!-- ======================================== -->
-
               <div class="rail-year-node" id="year-1918">
                   <div class="year-top-spacer"></div>
                   <div class="node-axis-band" style="width: 100%;"></div>
@@ -1067,7 +1066,12 @@
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">08 January</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">President Woodrow Wilson issues his 14 Points for peace</i>
+                        <span class="timeline-desc">US President Woodrow Wilson issues his 14 Points for peace.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/woodrow-wilson_01_lg.jpg" data-lightbox="artifact" data-caption="US President Woodrow Wilson issues his 14 Points for peace.<br>[ Photo credit: <a href='https://www.worldwar1centennial.org/index.php/communicate/press-media/wwi-centennial-news/6914-woodrow-wilson-got-the-flu-in-a-pandemic-during-the-world-war-i-peace-talks.html' target='_blank'>U.S. World War One Centennial Commission and Doughboy Foundation</a> ]" class="image-lightbox-link node-overlay-link"> 
+                            <img src="/images/woodrow-wilson_01_vsm.jpg" class="timeline-image overlay-sm" alt="US President Woodrow Wilson issues his 14 Points for peace.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1082,7 +1086,7 @@
                         <a href="/images/cambrai_02_lg.jpg" data-lightbox="artifact" data-caption="An artillery observation officer on top of a ruined wall at Havrincourt, 20 November 1917. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205213170' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/cambrai_02_vsm.jpg" alt="An artillery observation officer on top of a ruined wall at Havrincourt, 20 November 1917.">
                         </a>
-                        <i style="margin-top: 6px;">An artillery observation officer on top of a ruined wall...</i>
+                        <span class="timeline-caption">An artillery observation officer on top of a ruined wall...</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1100,13 +1104,12 @@
             <!------------------------------------------->
             <!-- NODE (GERMAN SPRING OFFENSIVE) --------->
             <!------------------------------------------->
-            
                <div class="node-base node-battle-large" id="event-german">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 150px;">Mar. – Apr. 1918</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">German Spring Offensive</div>
-                        <i>The massive German Spring Offensive (Kaiserschlacht) utilized elite tactics and overwhelming artillery smashing through Allied lines and achieving the deepest advances since 1914. However, overextended supply lines and heavy casualties exhausted the drive before victory.</i>
+                        <span class="timeline-desc">The massive German Spring Offensive (Kaiserschlacht) utilized elite tactics and overwhelming artillery smashing through Allied lines and achieving the deepest advances since 1914. However, overextended supply lines and heavy casualties exhausted the drive before victory.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1118,10 +1121,10 @@
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">24 March</div>
                     <div class="node-content-top">
-                        <a href="/images/spring-offensive_01_lg.jpg" data-lightbox="artifact" data-caption="German Stormtroopers leaving a trench at the beginning of an assault . The tactics developed for these troops contributed greatly to the German success in Spring 1918. <br>[ <a href='https://www.worcestershireandmercianregimentmuseum.org/brief-history-of-the-worcestershire-regiment/world-war-1/the-kaiserschlacht-german-spring-offensive-1918/' target='_blank'>Photo credit: Mercian Regiment Museum</a> ]" class="image-lightbox-link"> 
-                        <img class="timeline-image" src="/images/spring-offensive_01_vsm.jpg" alt="German Stormtroopers leaving a trench at the beginning of an assault. The tactics developed for these troops contributed greatly to the German success in Spring 1918.">
+                        <a href="/images/spring-offensive_01_lg.jpg" data-lightbox="artifact" data-caption="German Stormtroopers leaving a trench at the beginning of an assault. The tactics developed for these troops contributed greatly to the German success in Spring 1918. <br>[ <a href='https://www.worcestershireandmercianregimentmuseum.org/brief-history-of-the-worcestershire-regiment/world-war-1/the-kaiserschlacht-german-spring-offensive-1918/' target='_blank'>Photo credit: Mercian Regiment Museum</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/spring-offensive_01_vsm.jpg" alt="German Stormtroopers leaving a trench at the beginning of an assault.">
                         </a>
-                         <i style="margin-top: 6px;">German Stormtroopers beginning of an assault.</i>
+                        <span class="timeline-caption">German Stormtroopers beginning of an assault.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1144,7 +1147,7 @@
                         <a href="/images/spring-offensive_02_lg.jpg" data-lightbox="artifact" data-caption="German A7V tanks, the first one named 'Wotan', passing through a town, June 1918. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205283471' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/spring-offensive_02_vsm.jpg" alt="German A7V tanks, the first one named 'Wotan', passing through a town, June 1918.">
                         </a>
-                        <i style="margin-top: 6px;">German A7V tanks passing through a town, June 1918.</i>
+                        <span class="timeline-caption">German A7V tanks passing through a town, June 1918.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1159,12 +1162,17 @@
                 </div>
               </div>
 
-               <!-- NODE (RED BARON SHOT DOWN) -->
+              <!-- NODE (RED BARON SHOT DOWN) -->
               <div class="node-base node-event">
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">Spring 1918</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">The Red Baron is shot down</i>
+                        <span class="timeline-desc">The Red Baron, Germany’s most prolific flying ace is shot down.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/red-baron_03_lg.jpg" data-lightbox="artifact" data-caption="The Red Baron, Germanys most prolific flying ace is shot down.<br>[ Photo credit: <a href='https://www.sandboxx.us/news/the-true-story-of-the-red-baron-is-crazier-than-fiction/' target='_blank'>Sandboxx News</a> ]" class="image-lightbox-link node-overlay-link"> 
+                            <img src="/images/red-baron_03_vsm.jpg" class="timeline-image overlay-sm" alt="The Red Baron, Germany’s most prolific flying ace is shot down.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1174,13 +1182,12 @@
             <!------------------------------------------->
             <!-- NODE (100 DAYS OFFENSIVE) -------------->
             <!------------------------------------------->
-            
               <div class="node-base node-battle-large" id="event-100days">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text" style="width: 150px;">Aug. – Nov. 1918</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">100 Days Offensive</div>
-                        <i>Launched on 8 August 1918, this was the decisive Allied campaign that ended World War I. Beginning with the stunning victory at Amiens, a series of coordinated, rapid offensives broke through the Hindenburg Line, forcing a collapsed German Army to sign the Armistice on 11 November.</i>
+                        <span class="timeline-desc">Launched on 8 August 1918, this was the decisive Allied campaign that ended World War I. Beginning with the stunning victory at Amiens, a series of coordinated, rapid offensives broke through the Hindenburg Line, forcing a collapsed German Army to sign the Armistice on 11 November.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1195,7 +1202,7 @@
                         <a href="/images/hundred-days_01_lg.jpg" data-lightbox="artifact" data-caption="A British patrol on the move in a field of barbed wire. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205346718' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/hundred-days_01_vsm.jpg" alt="A British patrol on the move in a field of barbed wire.">
                         </a>
-                        <i style="margin-top: 6px;">A British patrol on the move in a field of barbed wire.</i>
+                        <span class="timeline-caption">A British patrol on the move in a field of barbed wire.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1218,7 +1225,7 @@
                         <a href="/images/hundred-days_02_lg.jpg" data-lightbox="artifact" data-caption="Official entry into Lille. The march past of the British 47th Division in the Grande Place, 28 October 1918. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205247032' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/hundred-days_02_vsm.jpg" alt="Official entry into Lille. The march past of the British 47th Division in the Grande Place, 28 October 1918.">
                         </a>
-                        <i style="margin-top: 6px;">British march into Lille by the Grande Place.</i>
+                        <span class="timeline-caption">British march into Lille by the Grande Place.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1236,13 +1243,12 @@
             <!------------------------------------------->
             <!-- NODE (HINDENBURG LINE) ----------------->
             <!------------------------------------------->
-            
               <div class="node-base node-battle-large" id="event-hindenburg">
                 <div class="node-top-section">
                     <div class="node-date-badge display-text" style="width: 180px;">Sept. – Oct. 1918</div>
                     <div class="node-content-top">
                         <div class="battle-sub-style" style="margin-bottom: 10px;">Assault on the Hindenburg Line</div>
-                        <i>The Allies launched an attack on the backbone of German defenses. Driven by British, Australian, and American forces, the epic breach at the St. Quentin Canal shattered German military morale, permanently breaking their defenses and directly precipitating the end of the war.</i>
+                        <span class="timeline-desc">The Allies launched an attack on the backbone of German defenses. Driven by British, Australian, and American forces, the epic breach at the St. Quentin Canal shattered German military morale, permanently breaking their defenses and directly precipitating the end of the war.</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1254,16 +1260,16 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">18 September</div>
                     <div class="node-content-top">
-                        <a href="/images/hindenburg_01_lg.jpg" data-lightbox="artifact" data-caption="Men of the 11th Royal Inniskillig Fusilers advancing over the German second line, near Havrincourt captured by the 62nd Division on the 20th November 1917. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205247032' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
-                        <img class="timeline-image" src="/images/hindenburg_01_vsm.jpg" alt="Men of the 11th Royal Inniskillig Fusilers advancing over the German second line, near Havrincourt captured by the 62nd Division on the 20th November 1917.">
+                        <a href="/images/hindenburg_01_lg.jpg" data-lightbox="artifact" data-caption="Men of the 11th Royal Inniskilling Fusiliers advancing over the German second line, near Havrincourt captured by the 62nd Division on the 20th November 1917. <br>[ <a href='https://www.iwm.org.uk/collections/item/object/205247032' target='_blank'>Photo credit: Imperial War Museums</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/hindenburg_01_vsm.jpg" alt="Men of the 11th Royal Inniskilling Fusiliers advancing over the German second line.">
                         </a>
-                        <i style="margin-top: 6px;">Royal Fusilers advancing over the German second line.</i>
+                        <span class="timeline-caption">Royal Fusiliers advancing over the German second line.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
-                        <a href="/stories/mh-ww1_hindenburg-epehy.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
-                        <span class="artifact-label">Hindenburg Line</span>
-                        </a>
+                    <a href="/stories/mh-ww1_hindenburg-epehy.html" class="artifact-btn btn-story hybrid-fetch-trigger" data-target="sidebar">
+                    <span class="artifact-label">Hindenburg Line</span>
+                    </a>
                 </div>
                 <div class="node-content-bottom">
                     <div class="track-oakdale casualty-event">
@@ -1280,14 +1286,14 @@
                         <a href="/images/ww1-british-pows_lg.jpg" data-lightbox="artifact" data-caption="British soldiers taken prisoner by the Germans in March 1918.<br>[ <a href='https://the-past.com/feature/the-men-behind-the-wire-british-pows-in-the-first-world-war/' target='_blank'>Photo credit: The Past</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/ww1-british-pows_vsm.jpg" alt="British soldiers taken prisoner by the Germans in March 1918.">
                         </a>
-                        <i style="margin-top: 6px;">British soldiers taken prisoner by the Germans in 1918.</i>
+                        <span class="timeline-caption">British soldiers taken prisoner by the Germans in 1918.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
-                    <a href="/stories/mh-ww1_1918-prisoners-pow.html" class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar">
-                    <span class="artifact-label">Prisoners of War</span>
-                    </a>
+                    <a href="/stories/mh-ww1_1918-prisoners-pow.html" 
+                  class="artifact-btn btn-story btn-alt2 hybrid-fetch-trigger" data-target="sidebar">
+                  <span class="artifact-label">Prisoners of War</span>
+                </a>
                 </div>
                 <div class="node-content-bottom-alt">
                     <div class="track-oakdale casualty-event">
@@ -1301,7 +1307,12 @@
                 <div class="node-top-section">
                     <div class="node-date-badge display-text">09 November</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">German Kaiser Wilhelm II abdicates and flees to Holland</i>
+                        <span class="timeline-desc">German Kaiser Wilhelm II abdicates the throne and flees to Holland.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/kaiser_01_lg.jpg" data-lightbox="artifact" data-caption="German Kaiser Wilhelm II abdicates the throne and flees to Holland.<br>[ Photo credit: <a href='https://www.iwm.org.uk/collections/item/object/205125475' target='_blank'>Imperial War Museums</a> ]" class="image-lightbox-link node-overlay-link"> 
+                            <img src="/images/kaiser_01_vsm.jpg" class="timeline-image overlay-sm" alt="German Kaiser Wilhelm II abdicates the throne and flees to Holland.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1309,12 +1320,17 @@
               </div>
 
               <!-- NODE (ARMISTICE SIGNED LARGE BATTLE NODE) -->
-              <div class="node-base node-battle-large">
+              <div class="node-base node-battle-large" id="event-armistice">
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">11 November</div>
                     <div class="node-content-top">
-                        <div style="font-family: Georgia, serif; font-size: clamp(15px, 4vw, 22px); font-weight: 800; line-height: 1.2; color: #222222; padding-left: 20px; background-image: linear-gradient(to right, #000080 5px, transparent 5px, transparent 7px, #903 7px, #903 8px); background-position: left; background-size: 12px 100%; background-repeat: no-repeat; letter-spacing: 1px; margin-bottom: 0px; text-transform: uppercase; margin-bottom: 6px;">Germany Signs the Armistice</div>
-                        <i>Signed in a railway carriage at Compiègne, the Armistice of 11 Nov. 1918 took effect at 11:00 a.m., ending four years of horrific combat. The agreement forced Germany to withdraw, surrender vast military hardware, and paved the way for the Treaty of Versailles.</i>
+                        <div style="font-family: Georgia, serif; font-size: clamp(15px, 4vw, 22px); font-weight: 800; line-height: 1.2; color: #222222; padding-left: 20px; background-image: linear-gradient(to right, #000080 5px, transparent 5px, transparent 7px, #903 7px, #903 8px); background-position: left; background-size: 12px 100%; background-repeat: no-repeat; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;">Germany Signs the Armistice</div>
+                        <span class="timeline-desc">Signed in a railway carriage at Compiègne, the Armistice ended four years of horrific combat. The agreement forced Germany to withdraw, surrender vast military hardware, and paved the way for the Treaty of Versailles.</span>
+                        <div class="node-overlay-box">
+                            <a href="/images/armistice-1918_02_lg.jpg" data-lightbox="artifact" data-caption="The Armistice of 11 Nov. 1918 took effect at 11:00 a.m., ending four years of horrific combat.<br>[ Photo credit: <a href='https://thehistorypress.co.uk/article/the-signing-of-armistice/' target='_blank'>The History Press</a> ]" class="image-lightbox-link node-overlay-link"> 
+                                <img src="/images/armistice-1918_02_vsm.jpg" class="timeline-image overlay-md" alt="The Armistice of 11 Nov. 1918 took effect at 11:00 a.m., ending four years of horrific combat.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
@@ -1329,14 +1345,13 @@
                         <a href="/images/hms-implaccable_01_lg.jpg" data-lightbox="artifact" data-caption="HMS Implacable after the addition of fire control platforms to her foremast and mainmast. <br>[ Photo credit: <a href='https://en.wikipedia.org/wiki/HMS_Implacable_%281899%29' target='_blank'> Wikipedia: HMS Implacable (1899)</a> ]" class="image-lightbox-link"> 
                         <img class="timeline-image" src="/images/hms-implaccable_01_vsm.jpg" alt="HMS Implacable after the addition of fire control platforms to her foremast and mainmast.">
                         </a>
-                        <i style="margin-top: 6px;">HMS Implacable with fire control platforms.</i>
+                        <span class="timeline-caption">HMS Implacable with fire control platforms.</span>
                     </div>
                 </div>
-                <div class="node-axis-band-alt">
-                    <a href="/stories/mh-ww1_royal_navy.html" 
-                    class="artifact-btn btn-story btn-alt hybrid-fetch-trigger"
-                    data-target="sidebar"><span class="artifact-label">Royal Navy Service</span>
-                </a>
+                <div class="node-axis-band">
+                    <a href="/stories/mh-ww1_royal_navy.html" class="artifact-btn btn-story btn-alt hybrid-fetch-trigger" data-target="sidebar">
+                        <span class="artifact-label">Royal Navy Service</span>
+                    </a>
                 </div>
                 <div class="node-content-bottom">
                     <div class="track-oakdale casualty-event">
@@ -1348,7 +1363,6 @@
             <!-- ======================================== -->
             <!-- ================= 1919 ================= -->
             <!-- ======================================== -->
-
               <div class="rail-year-node" id="year-1919">
                   <div class="year-top-spacer"></div>
                   <div class="node-axis-band" style="width: 100%;"></div>
@@ -1362,17 +1376,21 @@
               <div class="node-base node-battle" id="event-jan1919">
                 <div class="node-top-section-alt">
                     <div class="node-casualty-badge display-text">January</div>
-                    <div class="node-content-top"></div>
+                    <div class="node-content-top">
+                        <a href="/images/silver-war-badge_01_lg.jpg" data-lightbox="artifact" data-caption="The Silver War Badge was awarded to military personnel who had been honourably discharged due to wounds, sickness, or age.<br>[ Photo credit: <a href='https://en.wikipedia.org/wiki/Silver_War_Badge' target='_blank'> Wikipedia: Silver War Badge</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/silver-war-badge_01_vsm.jpg" alt="The Silver War Badge was awarded to military personnel who had been honourably discharged due to wounds, sickness, or age.">
+                        </a>
+                        <span class="timeline-caption">The Silver War Badge was awarded to military personnel who had been honourably discharged due to wounds.</span>
+                    </div>
                 </div>
                 <div class="node-axis-band">
-                    <a href="/stories/mh-ww1_silver_war_badge.html" 
-                   class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" 
-                   data-target="sidebar"><span class="artifact-label">Silver War Badge</span>
-                </a>
+                    <a href="/stories/mh-ww1_silver_war_badge.html" class="artifact-btn btn-alt2 btn-story hybrid-fetch-trigger" data-target="sidebar">
+                        <span class="artifact-label">Silver War Badge</span>
+                    </a>
                 </div>
                 <div class="node-content-bottom-alt">
                     <div class="track-oakdale casualty-event">
-                        <a href="/ww1/goodman_f_g.html" class="hybrid-fetch-trigger soldier-link">Pte. Frederick G. Goodman</a><br><span class="casualty-detail">honourably discharged, assumed to have later died of wounds.</span>
+                        <a href="/ww1/goodman_f_g.html" class="hybrid-fetch-trigger soldier-link">Pte. Frederick G. Goodman</a><br><span class="casualty-detail">- honourably discharged, assumed to have later died of wounds.</span>
                     </div>
                 </div>
               </div>
@@ -1382,7 +1400,10 @@
                 <div class="node-top-section">
                     <div class="node-casualty-badge display-text">06 April</div>
                     <div class="node-content-top">
-                        
+                        <a href="/images/return-home_01_lg.jpg" data-lightbox="artifact" data-caption="Convalescing soldiers and Voluntary Aid Detachment nurses (known as VADs) at the St Fagans Red Cross Hospital, 1916-18.<br>[ Photo credit: <a href='https://museum.wales/blog/986/Volunteering-at-St-Fagans-during-the-First-World-War/' target='_blank'>St. Fagans National History Museum</a> ]" class="image-lightbox-link"> 
+                        <img class="timeline-image" src="/images/return-home_01_vsm.jpg" alt="Convalescing soldiers and Voluntary Aid Detachment nurses (known as VADs) at the St Fagans Red Cross Hospital, 1916-18.">
+                        </a>
+                        <span class="timeline-caption">Convalescing soldiers and volunteer nurses at the St Fagans Red Cross Hospital, 1916-18.</span>
                     </div>
                 </div>
                 <div class="node-axis-band">
@@ -1402,47 +1423,63 @@
                 <div class="node-top-section-alt">
                     <div class="node-date-badge display-text">28 June</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Treaty of Versailles signed</i>
+                        <span class="timeline-desc">Treaty of Versailles signed</span>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom-alt hide-on-mobile"></div>
               </div>
 
-              <!-- NODE (CENOTAPH UNVEILED) -->
+            <!-- ======================================== -->
+            <!-- ================= 1920 ================= -->
+            <!-- ======================================== -->
+              <div class="rail-year-node" id="year-1920">
+                  <div class="year-top-spacer"></div>
+                  <div class="node-axis-band" style="width: 100%;"></div>
+                  <div class="year-text-wrapper">
+                      <span class="year-text">1920</span>
+                  </div>
+                  <div class="year-bottom-spacer"></div>
+              </div>
+
+             <!-- NODE (CENOTAPH UNVEILED) -->
               <div class="node-base node-event">
                 <div class="node-top-section">
-                    <div class="node-date-badge display-text">19 July</div>
+                    <div class="node-date-badge display-text">11 November</div>
                     <div class="node-content-top">
-                        <i style="margin-bottom: 10px;">Cenotaph Unveiled in London</i>
+                        <span class="timeline-desc">Unveiling of the Cenotaph and the Funeral of the Unknown Warrior, Armistice Day, 1920. Arguably the most important work of architecture erected in Britain in our period.</span>                    
+                        <div class="node-overlay-box">
+                            <a href="/images/cenotaph_01_lg.jpg" data-lightbox="artifact" data-caption="Unveiling of the Cenotaph and the Funeral of the Unknown Warrior, Armistice Day, 1920.<br>[ Photo credit: <a href='https://c20society.org.uk/100-buildings/1920-the-cenotaph-london' target='_blank'>Twentieth Century Society</a> ]" class="image-lightbox-link node-overlay-link"> 
+                            <img src="/images/cenotaph_01_vsm.jpg" class="timeline-image overlay-sm" alt="Unveiling of the Cenotaph and the Funeral of the Unknown Warrior, Armistice Day, 1920.">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="node-axis-band hide-on-mobile"></div>
                 <div class="node-content-bottom hide-on-mobile"></div>
               </div>
 
-            </div> <!-- closes -- 1. The Timeline Track -- .horizontal-timeline-track -->
-          </div> <!-- closes -- 2. The Viewport -- .horizontal-timeline-container -->
+            </div> <!-- closes -- 2. The Timeline Track -- .horizontal-timeline-track -->
+          </div> <!-- closes -- 1. The Viewport -- .horizontal-timeline-container -->
 
           <!-- THE GHOST LIVES HERE (Outside the scroller, inside the wrapper) -->
-            <div id="floating-year-indicator">1907</div>
+          <div id="floating-year-indicator">1907</div>
+        </div>
 
-          </div>
-
-          <!-- NEW BOTTOM NAV (Visible on Desktop & Mobile) -->
-            <div class="timeline-bookmarks tabs-bottom">
-                <span>Jump to Year:</span>
-                <a href="#year-1907">1907</a>
-                <a href="#year-1914">1914</a>
-                <a href="#year-1915">1915</a>
-                <a href="#year-1916">1916</a>
-                <a href="#year-1917">1917</a>
-                <a href="#year-1918">1918</a>
-                <a href="#year-1919">1919</a>
-            </div>
+        <!-- BOTTOM NAV (Visible on Desktop & Mobile) -->
+        <div class="timeline-bookmarks tabs-bottom">
+            <span>Jump to Year:</span>
+            <a href="#year-1907" class="active">1907</a>
+            <a href="#year-1914">1914</a>
+            <a href="#year-1915">1915</a>
+            <a href="#year-1916">1916</a>
+            <a href="#year-1917">1917</a>
+            <a href="#year-1918">1918</a>
+            <a href="#year-1919">1919</a>
+            <a href="#year-1920">1920</a>
+        </div>
           
         </section>
-
         <hr class="main-half">
             
        <!-- Responsive Footer Cards Container (Horizontal Sub-Section Nav) -->
@@ -1451,23 +1488,21 @@
            <!-- Footer Card: WWI - The Fallen -->
             <div class="story-card-item">
               <div>
-                  <img class="story-card-img" src="/images/blank_man_square.jpg" alt="Monmouthshire Men" class="story-footnote-thumb">
+                  <img class="story-card-img" src="/images/blank_man_square.jpg" alt="Monmouthshire Men">
                   <span class="subhead_sm2"><a href="/ww1/ww1-fallen.html">WWI - The Fallen</a></span>
-                  <span class="story-card-text">View the registry of the men commemorated on the Oakddale War Memorial. <span class="pointer" style="color: #903; vertical-align: top;">&#9658;&nbsp;</span><a href="/ww1/ww1-fallen.html">Read more...</a></span>
+                  <span class="story-card-text">View the complete registry of the WWI soldiers commemorated on the Oakdale War Memorial.<span class="pointer">&#9658;</span><a href="/ww1/ww1-fallen.html">Read more...</a></span>
               </div>
             </div>
             
              <!-- Footer Card: WWI - Stories -->
             <div class="story-card-item">
                 <div>
-                    <img class="story-card-img" src="/images/monmouthshire-regiment_square.jpg" alt="Monmouthshire Men" class="story-footnote-thumb">
+                    <img class="story-card-img" src="/images/monmouthshire-regiment_square.jpg" alt="Monmouthshire Men">
                     <span class="subhead_sm2"><a href="/ww1/ww1-stories.html">WWI - Stories</a></span>
-                    <span class="story-card-text">Explore the experiences of the soldiers from Oakdale who paid the ultimate price.<span class="pointer" style="color: #903; vertical-align: top;">&#9658;&nbsp;</span><a href="/ww1/ww1-stories.html">Read more...</a></span>
+                    <span class="story-card-text">Explore the experiences of the soldiers from Oakdale who paid the ultimate price.<span class="pointer">&#9658;</span><a href="/ww1/ww1-stories.html">Read more...</a></span>
                 </div>
             </div> 
-
         </div><!-- END Responsive Footer Cards Container -->
-
     </div> <!-- CLOSES PAGE-CORE (Grid Tier 2) -->
 
     <!-- NOW THE BRIDGE SITS DIRECTLY IN THE MAIN-CONTAINER -->
@@ -1480,7 +1515,6 @@
 
     <!-- THE UNIVERSAL FOOTER SOCKET (Grid Tier 4 Floor) -->
     <div id="footer-placeholder"></div>
-
   </div> <!-- /main-container -->
 
   <!-- MASTER UNIFIED SCRIPT LOADER ENGINE -->
@@ -1496,10 +1530,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const bookmarks = document.querySelectorAll('.timeline-bookmarks a');
     
     if (!viewport) return; 
-
     const yearNodes = Array.from(bookmarks)
         .map(link => document.getElementById(link.getAttribute('href').substring(1)))
-        .filter(node => node !== null);
+        .filter((node, index, self) => node !== null && self.indexOf(node) === index);
 
     // ==========================================
     // 2. THE SCROLLING ENGINE
@@ -1507,7 +1540,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function scrollToTarget(targetId) {
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
-
         if (window.innerWidth <= 768) {
             // Mobile: Standard vertical scroll
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1527,7 +1559,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateActiveState() {
         let activeNodeId = "";
         const isMobile = window.innerWidth <= 768;
-
         if (isMobile) {
             const triggerLine = window.innerHeight * 0.35;
             yearNodes.forEach(node => {
@@ -1540,7 +1571,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if ((node.offsetLeft - viewport.offsetLeft) <= tripwire) activeNodeId = node.id;
             });
         }
-
         if (activeNodeId) {
             const cleanYear = activeNodeId.replace('year-', '');
             if (ghostIndicator && ghostIndicator.textContent !== cleanYear) {
@@ -1557,7 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. EVENT LISTENERS
+    // 4. EVENT LISTENERS (Bookmarks + Event Jumper Dropdown)
     // ==========================================
     bookmarks.forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -1565,6 +1595,13 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToTarget(this.getAttribute('href').substring(1));
         });
     });
+
+    const eventJumper = document.getElementById('timeline-event-jumper');
+    if (eventJumper) {
+        eventJumper.addEventListener('change', function() {
+            if (this.value) scrollToTarget(this.value);
+        });
+    }
 
     viewport.addEventListener('scroll', updateActiveState);
     window.addEventListener('scroll', updateActiveState);
@@ -1587,18 +1624,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. THE STEALTH ROUTER (The Fix!)
     // ==========================================
     function handleExternalJump() {
-        // Read the URL for our secret ?jump= instruction
         const urlParams = new URLSearchParams(window.location.search);
         const jumpTarget = urlParams.get('jump');
-
         if (jumpTarget) {
-            // Wait a fraction of a second for CSS layout to settle
             setTimeout(() => {
                 const targetElement = document.getElementById(jumpTarget);
                 if (targetElement) {
-                    // First, scroll the main page down to the timeline container
                     viewport.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    // Then, slide the timeline horizontally to the exact node
                     scrollToTarget(jumpTarget);
                     updateActiveState();
                 }
@@ -1607,8 +1639,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateActiveState(); 
         }
     }
-
-    // Run stealth router ONLY when the page is 100% fully loaded
     window.addEventListener('load', handleExternalJump);
 });
 </script>
