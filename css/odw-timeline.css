@@ -25,14 +25,13 @@ body[data-era="ww1-master"] {
     /* --- Shared Structural Dimensions --- */
     --top-node-height: 306px; 
     --node-axis-band-height: 68px; 
-
-    /* --- WWI Default Palette (Cool Steel & Warm Stone) --- */
-    --timeline-bg: #f0f2f5;
-    --year-spacer: rgba(255, 255, 255, 0.85);
+    /* --- WWI Default Palette (Cool Steel & Warm Stone — Solid Hex) --- */
+    --timeline-bg: #e2e5ea;                     /* Stepped down from #f0f2f5 for clean card lift */
+    --year-spacer: #f8f9fa;                     /* Solid crisp off-white for year column */
     --year-text: rgba(79, 94, 104, 0.35);
-    --node-color: rgba(231, 231, 231, 0.50);
-    --node-color-alt: rgba(211, 211, 211, 0.50);
-    --node-axis-band: rgba(79, 94, 104, 0.25);
+    --node-color: #eceef0;                      /* Solid equivalent of the original light node */
+    --node-color-alt: #e1e3e6;                  /* Solid equivalent of the original alt node */
+    --node-axis-band: #cdd3d8;                  /* Solid cool-steel axis spine (stepped down a touch) */
 }
 
 /* --- WWII Palette Option A (STANDBY): RAF Slate & Warm Parchment ---
@@ -48,14 +47,13 @@ body[data-era="ww2-master"] {
 
 /* --- WWII Palette Option B (ACTIVE): Mediterranean Olive & Sand --- */
 body[data-era="ww2-master"] {
-    --timeline-bg: #efeee9;
+    --timeline-bg: #e3e1da;            /* Stepped down from #efeee9 so #f5f2eb cards pop */
     --year-spacer: rgba(255, 255, 255, 0.88);
     --year-text: rgba(78, 84, 72, 0.32);
-    --node-color: #f5f2eb;            /* Soft Desert Sand */
-    --node-color-alt: #ebede8;        /* Whisper-Light Sage / Olive Tint */
-    --node-axis-band: #dfe3da;        /* Muted Olive-Stone Axis Band */
+    --node-color: #f5f2eb;             /* Soft Desert Sand (Unchanged) */
+    --node-color-alt: #ebede8;         /* Whisper-Light Sage / Olive Tint (Unchanged) */
+    --node-axis-band: #d1d6cb;         /* Stepped down from #dfe3da for a firmer axis spine */
 }
-
 /* =================================================== */
 /* 01. BOX MODEL & TIMELINE GUIDE / QUICK-JUMP BAR     */
 /* =================================================== */
@@ -359,7 +357,6 @@ body[data-era="ww2-master"] {
     z-index: 10;
     margin-top: 10px;
 }
-
 /* Link floats out of flow on Desktop so image bridges .node-axis-band */
 .node-overlay-link {
     position: absolute;
@@ -367,22 +364,20 @@ body[data-era="ww2-master"] {
     left: 0;
     display: block;
 }
-
 /* Preset 1: Small Event Portrait (e.g., Churchill in 180px .node-event) */
 .timeline-image.overlay-sm {
     width: 130px;
     max-width: 130px;
+    height: 140px;
     object-fit: cover;
 }
-
 /* Preset 2: Medium Feature (e.g., Battle of the Atlantic in 300px .node-battle-large) */
 .timeline-image.overlay-md {
-    width: 240px;
-    max-width: 240px;
+    width: 200px;
+    max-width: 200px;
     height: 200px;
     object-fit: cover;
 }
-
 /* Preset 3: Large Bookend Poster (e.g., Chamberlain / Declaration of War in 340px .node-battle-exlarge) */
 .timeline-image.overlay-lg {
     width: 280px;
@@ -390,8 +385,10 @@ body[data-era="ww2-master"] {
     height: 320px;
     object-fit: cover;
 }
-
 /* Desktop clearance for bottom-panel text sitting under an .overlay-lg image */
+.overlay-push-md {
+    margin-top: 55px;
+}
 .overlay-push-lg {
     margin-top: 85px;
 }
@@ -617,10 +614,11 @@ a.image-lightbox-link:hover .timeline-image {
         height: auto !important;
         margin-top: 10px;
     }
+    .overlay-push-md,
     .overlay-push-lg {
-        margin-top: 0 !important;
+        margin-top: 0px !important;
     }
-
+    
     /* --- 380px-Safe Mobile Year Bookmarks (Fits 8 WWII Tabs Cleanly) --- */
     .timeline-bookmarks {
         padding: 0 4px;
